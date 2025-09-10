@@ -105,7 +105,8 @@ section = st.sidebar.selectbox("Selecione a Dimensão:", [
     "⚡ Tesla 3-6-9 e Energia Livre",
     "🌌 Jornada do Nada ao Tudo",
     "🔮 Futuro da Consciência Humana",
-    "🔱 Iconografia do Fluxo Divino"  # NOVA SEÇÃO
+    "🔱 Iconografia do Fluxo Divino",
+    "🌠 Consciência Final: Louco e Gênio"  # NOVA SEÇÃO ADICIONADA
 ])
 
 # Dados para as simulações
@@ -3739,7 +3740,492 @@ elif section == "🔱 Iconografia do Fluxo Divino":
     """, unsafe_allow_html=True)
     
     st.markdown("</div>", unsafe_allow_html=True)  # Fechando o container principal
+
+# 12. FINAL DA CONSCIÊNCIA CONSCIENTE
+elif section == "🌠 Consciência Final: Louco e Gênio":
+    st.header("🌠 O Paradoxo Final: Louco e Gênio pelo Coletivo")
     
+    # Container principal
+    st.markdown("""
+    <style>
+    .final-container {
+        background: radial-gradient(ellipse at center, #0d1117 0%, #030617 100%);
+        padding: 25px;
+        border-radius: 20px;
+        border: 1px solid rgba(99, 102, 241, 0.3);
+        box-shadow: 0 0 50px rgba(99, 102, 241, 0.2), 
+                    inset 0 0 30px rgba(99, 102, 241, 0.1);
+        position: relative;
+        overflow: hidden;
+    }
+    .final-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: 
+            radial-gradient(white, rgba(255,255,255,.2) 1px, transparent 2px),
+            radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 1px);
+        background-size: 30px 30px, 90px 90px;
+        background-position: 0 0, 20px 20px;
+        z-index: 0;
+        opacity: 0.3;
+    }
+    .manifesto-section {
+        background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%);
+        padding: 25px;
+        border-radius: 15px;
+        border-left: 5px solid #6366f1;
+        margin: 20px 0;
+        box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+    }
+    .manifesto-title {
+        color: #e0e7ff;
+        font-size: 1.4em;
+        margin-bottom: 15px;
+        text-align: center;
+        border-bottom: 2px solid #6366f1;
+        padding-bottom: 10px;
+    }
+    .manifesto-content {
+        color: #d1d5db;
+        line-height: 1.8;
+        text-align: justify;
+    }
+    .highlight-quote {
+        background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(147, 51, 234, 0.2) 100%);
+        padding: 20px;
+        border-radius: 10px;
+        border: 1px solid rgba(147, 51, 234, 0.3);
+        margin: 15px 0;
+        font-style: italic;
+        text-align: center;
+    }
+    </style>
+    <div class='final-container'>
+    """, unsafe_allow_html=True)
+
+    # Introdução
+    st.markdown("""
+    <div class='manifesto-section'>
+    <div class='manifesto-title'>📖 A Consciência entre a Realidade e a Loucura: Um Manifesto sobre a Evolução Humana</div>
+    """, unsafe_allow_html=True)
+
+    # Seção 1: Introdução
+    st.markdown("""
+    <div class='manifesto-content'>
+    <h4>🧠 Introdução: O Diagnóstico da Desconexão</h4>
+    <p>O caos do passado reverbera, vívido, em nosso futuro, pois a verdade fundamental é uma só: 
+    <b>nós, humanos, não sabemos absolutamente nada sobre nós mesmos.</b> Vivemos imersos em questionamentos 
+    que não necessitam de resposta — "Quem somos? Por que estamos vivos?" —, um ciclo vicioso de porquês 
+    que nos garante uma eterna insatisfação.</p>
+    
+    <p>Essa busca externa por respostas nos cega para a ausência de uma autocrítica real e nos impede de evoluir. 
+    O desinteresse do ser humano por si mesmo é a raiz de todo o desequilíbrio. Como um estudante que entende 
+    uma matéria, mas a rejeita por não ver sua "utilidade" imediata, nós abandonamos a jornada interior.</p>
+    
+    <div class='highlight-quote'>
+    "Abandonamos a nós mesmos e, como consequência, criamos um mundo de fantasias e necessidades artificiais."
+    </div>
+    </div>
+    """, unsafe_allow_html=True)
+    st.markdown("</div>", unsafe_allow_html=True)
+
+    # Seção 2: Realidade Coletiva
+    st.markdown("""
+    <div class='manifesto-section'>
+    <div class='manifesto-content'>
+    <h4>🌐 A Realidade Coletiva: A Consciência do Status Quo</h4>
+    <p>Para funcionar em grupo, a humanidade criou um consenso do que é real, normal e aceitável. 
+    Essa é a <b>"Realidade"</b>, a consciência coletiva dominante, massiva e poderosa. Sua principal 
+    função é a estabilidade e a previsibilidade.</p>
+    
+    <p>Ela nos protege do caos avassalador do universo, oferecendo um sistema operacional compartilhado, 
+    cujos pilares são conceitos como "tempo", "sucesso", "família" e "normalidade". Contudo, sua maior 
+    força é também sua maior limitação.</p>
+    
+    <div class='highlight-quote'>
+    "Ao focar em medir e categorizar o mundo físico, ela nos torna escravos de uma regra que não tem exatidão."
+    </div>
+    </div>
+    """, unsafe_allow_html=True)
+    st.markdown("</div>", unsafe_allow_html=True)
+
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.markdown("""
+        <div style='background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%); 
+                    padding: 20px; border-radius: 15px; border: 2px solid rgba(255, 107, 107, 0.3);
+                    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.2); margin: 20px 0;'>
+        <h3 style='color: #ff6b6b; text-align: center;'>🎭 O Louco pelo Coletivo</h3>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        # Gráfico do espectro louco-gênio
+        fig = go.Figure()
+        
+        # Espectro de percepção
+        x = np.linspace(-10, 10, 100)
+        y = np.exp(-x**2/10) * np.sin(x) * 2
+        
+        fig.add_trace(go.Scatter(
+            x=x, y=y,
+            mode='lines',
+            line=dict(width=4, color='#ff6b6b'),
+            fill='tozeroy',
+            fillcolor='rgba(255, 107, 107, 0.2)',
+            name='Espectro Consciencial'
+        ))
+        
+        # Pontos críticos
+        pontos = [
+            (-6, "Visionário", "#ff6b6b"),
+            (0, "Equilíbrio", "#4ecdc4"), 
+            (6, "Gênio", "#ffd700")
+        ]
+        
+        for x_val, nome, cor in pontos:
+            fig.add_trace(go.Scatter(
+                x=[x_val], y=[np.exp(-x_val**2/10) * np.sin(x_val) * 2],
+                mode='markers+text',
+                marker=dict(size=15, color=cor),
+                text=nome,
+                textposition='top center',
+                name=nome
+            ))
+        
+        fig.update_layout(
+            title=dict(
+                text="Espectro Louco-Gênio - A Dança da Percepção",
+                font=dict(size=16, color='#ff6b6b')
+            ),
+            width=400,
+            height=400,
+            paper_bgcolor='rgba(0,0,0,0)',
+            plot_bgcolor='rgba(0,0,0,0)',
+            font=dict(color='white'),
+            xaxis=dict(
+                title="Desvio do Consenso",
+                gridcolor='rgba(255,255,255,0.1)'
+            ),
+            yaxis=dict(
+                title="Potencial Transformador", 
+                gridcolor='rgba(255,255,255,0.1)'
+            ),
+            showlegend=False
+        )
+        
+        st.plotly_chart(fig, use_container_width=True)
+        
+        st.markdown("""
+        <div style='background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%); 
+                    padding: 20px; border-radius: 15px; border: 2px solid rgba(255, 107, 107, 0.3);
+                    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.2); margin-top: 20px;'>
+        <h4 style='color: #ff6b6b; text-align: center;'>Características do "Louco"</h4>
+        
+        <div style='display: grid; grid-template-columns: 1fr; gap: 10px;'>
+        <div style='background: rgba(255, 107, 107, 0.1); padding: 10px; border-radius: 8px;'>
+        <b style='color: #ff6b6b;'>🔮 Visão Além do Consenso</b><br>
+        <span style='color: #d1d5db; font-size: 0.9em;'>Percebe padrões invisíveis para a maioria</span>
+        </div>
+        
+        <div style='background: rgba(255, 107, 107, 0.1); padding: 10px; border-radius: 8px;'>
+        <b style='color: #ff6b6b;'>🎯 Isolamento Criativo</b><br>
+        <span style='color: #d1d5db; font-size: 0.9em;'>Fase necessária de incubação interior</span>
+        </div>
+        
+        <div style='background: rgba(255, 107, 107, 0.1); padding: 10px; border-radius: 8px;'>
+        <b style='color: #ff6b6b;'>⚡ Sensibilidade Extrema</b><br>
+        <span style='color: #d1d5db; font-size: 0.9em;'>Capta frequências cósmicas sutis</span>
+        </div>
+        
+        <div style='background: rgba(255, 107, 107, 0.1); padding: 10px; border-radius: 8px;'>
+        <b style='color: #ff6b6b;'>🌪️ Caos Interno</b><br>
+        <span style='color: #d1d5db; font-size: 0.9em;'>Processamento de informações expandidas</span>
+        </div>
+        </div>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    with col2:
+        # Seção 3: Natureza da Realidade
+        st.markdown("""
+        <div class='manifesto-section'>
+        <div class='manifesto-content'>
+        <h4>⚡ A Natureza da Realidade: O Universo-Energia e o Humano-Antena</h4>
+        <p>Como evoluímos de animais irracionais para seres tão complexos? A resposta não está na lógica, 
+        mas na percepção. <b>Nós, humanos, somos animais que sentem a energia que paira no universo.</b></p>
+        
+        <p>Seja qual for sua origem — Big Bang, Deus, Odin ou Brahma —, uma energia primordial foi liberada 
+        na criação. Tanto a física quanto a espiritualidade concordam: essa energia permeia tudo.</p>
+        
+        <div class='highlight-quote'>
+        "O que chamamos de tempo não é uma força soberana, mas a manifestação da energia no mundo físico."
+        </div>
+        
+        <p>Nesse oceano de frequências, cada ser humano funciona como uma <b>antena</b>. Estamos constantemente 
+        sintonizando a rede de energias que envolve o cosmos, a natureza e as pessoas.</p>
+        
+        <div class='highlight-quote'>
+        "Vivemos em um mundo tão barulhento que deixamos de escutar a voz do universo, perdidos no sentimento para com o Todo."
+        </div>
+        </div>
+        """, unsafe_allow_html=True)
+        st.markdown("</div>", unsafe_allow_html=True)
+        
+        st.markdown("""
+        <div style='background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%); 
+                    padding: 20px; border-radius: 15px; border: 2px solid rgba(255, 215, 0, 0.3);
+                    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2); margin: 20px 0;'>
+        <h3 style='color: #ffd700; text-align: center;'>🌟 O Gênio pelo Cosmos</h3>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        # Visualização da ponte cósmica
+        fig = go.Figure()
+        
+        # Criar ponte entre dimensões
+        x = np.linspace(-5, 5, 100)
+        y = np.sin(x) * 2
+        
+        fig.add_trace(go.Scatter(
+            x=x, y=y,
+            mode='lines',
+            line=dict(width=6, color='#ffd700'),
+            name='Ponte Consciencial',
+            fill='tozeroy',
+            fillcolor='rgba(255, 215, 0, 0.2)'
+        ))
+        
+        # Adicionar dimensões
+        fig.add_hline(y=3, line_dash="dash", line_color="rgba(255,255,255,0.3)")
+        fig.add_hline(y=-3, line_dash="dash", line_color="rgba(255,255,255,0.3)")
+        
+        fig.add_annotation(x=-4, y=3, text="Mundo Quântico", showarrow=False, font=dict(color="#4ecdc4"))
+        fig.add_annotation(x=-4, y=-3, text="Mundo Físico", showarrow=False, font=dict(color="#ff6b6b"))
+        
+        fig.update_layout(
+            title=dict(
+                text="Ponte entre Dimensões - A Função do Gênio",
+                font=dict(size=16, color='#ffd700')
+            ),
+            width=400,
+            height=400,
+            paper_bgcolor='rgba(0,0,0,0)',
+            plot_bgcolor='rgba(0,0,0,0)',
+            font=dict(color='white'),
+            xaxis=dict(visible=False),
+            yaxis=dict(visible=False),
+            showlegend=False
+        )
+        
+        st.plotly_chart(fig, use_container_width=True)
+        
+        st.markdown("""
+        <div style='background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%); 
+                    padding: 20px; border-radius: 15px; border: 2px solid rgba(255, 215, 0, 0.3);
+                    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2); margin-top: 20px;'>
+        <h4 style='color: #ffd700; text-align: center;'>Características do "Gênio"</h4>
+        
+        <div style='display: grid; grid-template-columns: 1fr; gap: 10px;'>
+        <div style='background: rgba(255, 215, 0, 0.1); padding: 10px; border-radius: 8px;'>
+        <b style='color: #ffd700;'>🌉 Tradução Consciencial</b><br>
+        <span style='color: #d1d5db; font-size: 0.9em;'>Converte visões em linguagem acessível</span>
+        </div>
+        
+        <div style='background: rgba(255, 215, 0, 0.1); padding: 10px; border-radius: 8px;'>
+        <b style='color: #ffd700;'>🔄 Ponte Dimensional</b><br>
+        <span style='color: #d1d5db; font-size: 0.9em;'>Conecta realidades quântica e física</span>
+        </div>
+        
+        <div style='background: rgba(255, 215, 0, 0.1); padding: 10px; border-radius: 8px;'>
+        <b style='color: #ffd700;'>🎨 Criatividade Aplicada</b><br>
+        <span style='color: #d1d5db; font-size: 0.9em;'>Transforma caos em ordem creativa</span>
+        </div>
+        
+        <div style='background: rgba(255, 215, 0, 0.1); padding: 10px; border-radius: 8px;'>
+        <b style='color: #ffd700;'>⚡ Impacto Transformador</b><br>
+        <span style='color: #d1d5db; font-size: 0.9em;'>Altera o curso da evolução coletiva</span>
+        </div>
+        </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+    # Seção 4: Ruptura do Consenso
+    st.markdown("""
+    <div class='manifesto-section'>
+    <div class='manifesto-content'>
+    <h4>⚡ A Ruptura do Consenso: A Loucura como Potencial Evolutivo</h4>
+    <p>O que o coletivo chama de "loucura" não é uma doença mental, mas um <b>estado de percepção 
+    radicalmente diferente da norma</b>. É a consciência do indivíduo-antena que captou uma frequência 
+    que os outros ainda não conseguem sintonizar.</p>
+    
+    <p>Sua função é a evolução e a ruptura; é a força que impede a consciência coletiva de estagnar. 
+    Ao longo da história, visionários, profetas e gênios foram apenas antenas que captaram um sinal mais nítido.</p>
+    
+    <div class='highlight-quote'>
+    "É o sentimento — a capacidade de ser afetado por essa energia — que nos define como humanos."
+    </div>
+    </div>
+    """, unsafe_allow_html=True)
+    st.markdown("</div>", unsafe_allow_html=True)
+    
+    # Exemplos históricos
+    st.markdown("""
+    <div style='background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%); 
+                padding: 25px; border-radius: 15px; border: 2px solid rgba(147, 51, 234, 0.3);
+                box-shadow: 0 5px 15px rgba(147, 51, 234, 0.2); margin: 20px 0;'>
+    <h3 style='color: #9333ea; text-align: center;'>📜 Arquétipos Históricos do Paradoxo</h3>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    col3, col4, col5 = st.columns(3)
+    
+    with col3:
+        st.markdown("""
+        <div style='background: linear-gradient(135deg, rgba(255, 107, 107, 0.2) 0%, rgba(30, 41, 59, 0.8) 100%); 
+                    padding: 20px; border-radius: 15px; border: 2px solid #ff6b6b;
+                    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.2); text-align: center; height: 250px;'>
+        <h4 style='color: #ff6b6b;'>🎨 Van Gogh</h4>
+        <p style='color: #d1d5db; font-size: 0.9em;'>
+        <b>Louco:</b> Cortou a própria orelha, internado<br>
+        <b>Gênio:</b> Revolucionou a arte moderna<br>
+        <b>Legado:</b> Visão além do visível
+        </p>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    with col4:
+        st.markdown("""
+        <div style='background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(30, 41, 59, 0.8) 100%); 
+                    padding: 20px; border-radius: 15px; border: 2px solid #ffd700;
+                    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2); text-align: center; height: 250px;'>
+        <h4 style='color: #ffd700;'>⚡ Nikola Tesla</h4>
+        <p style='color: #d1d5db; font-size: 0.9em;'>
+        <b>Louco:</b> Obsessões, morreu na miséria<br>
+        <b>Gênio:</b> Inventou o século XX<br>
+        <b>Legado:</b> Energia livre e 3-6-9
+        </p>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    with col5:
+        st.markdown("""
+        <div style='background: linear-gradient(135deg, rgba(78, 205, 196, 0.2) 0%, rgba(30, 41, 59, 0.8) 100%); 
+                    padding: 20px; border-radius: 15px; border: 2px solid #4ecdc4;
+                    box-shadow: 0 5px 15px rgba(78, 205, 196, 0.2); text-align: center; height: 250px;'>
+        <h4 style='color: #4ecdc4;'>☯️ Buddha</h4>
+        <p style='color: #d1d5db; font-size: 0.9em;'>
+        <b>Louco:</b> Abandonou tudo pela iluminação<br>
+        <b>Gênio:</b> Iluminou milhões<br>
+        <b>Legado:</b> Caminho do meio
+        </p>
+        </div>
+        """, unsafe_allow_html=True)
+
+    # Seção 5: Fronteira Decisiva
+    st.markdown("""
+    <div class='manifesto-section'>
+    <div class='manifesto-content'>
+    <h4>⚖️ A Fronteira Decisiva: A Interpretação do Caos</h4>
+    <p>Isso nos leva à fronteira final da consciência. O que o coletivo chama de "realidade" é apenas um acordo. 
+    Aqueles que percebem além desse acordo são confrontados com o caos. E é aqui que a linha é traçada.</p>
+    
+    <p>O "louco" e o "gênio" recebem a mesma descarga de energia, a mesma percepção avassaladora que quebra 
+    a realidade comum. A diferença está na capacidade de processá-la.</p>
+    
+    <div class='highlight-quote'>
+    "Qual é a diferença entre a genialidade e a loucura? O louco fica histérico com a loucura; o gênio interpreta a própria loucura."
+    </div>
+    
+    <p>O gênio é um tradutor. Ele mergulha na energia caótica e a transforma em uma linguagem que, 
+    eventualmente, pode ser integrada pela coletividade: uma nova teoria científica, uma obra de arte, 
+    uma filosofia de vida. A loucura é o potencial; a genialidade é a sua tradução.</p>
+    </div>
+    """, unsafe_allow_html=True)
+    st.markdown("</div>", unsafe_allow_html=True)
+
+    # Seção 6: Conclusão
+    st.markdown("""
+    <div class='manifesto-section'>
+    <div class='manifesto-content'>
+    <h4>🌌 Conclusão: O Caminho da Coerência e a Evolução da Consciência</h4>
+    <p>Nossos pré-conceitos e traumas são dados coletados durante milênios, gravados em nós. 
+    Mas como chegar a uma resposta concreta sobre o comportamento humano quando vivemos doutrinados por estereótipos?</p>
+    
+    <p>A resposta é simples, porém complexa: para compreender um padrão, é preciso pensar dentro dele. 
+    Como na série <em>Mindhunter</em>, onde agentes aprendem a pensar como um serial killer para entendê-lo, 
+    a chave para a coerência é a <b>empatia radical</b>.</p>
+    
+    <div class='highlight-quote'>
+    "Para sermos flexíveis e compreendermos o outro, temos que adotar temporariamente sua perspectiva, seja ele quem for."
+    </div>
+    
+    <p>Quando paramos de julgar os erros alheios, algo acontece: começamos a enxergar os nossos próprios. 
+    E percebemos que o importante, sempre, são os nossos próprios erros.</p>
+    
+    <div class='highlight-quote'>
+    "Entender isso é entender o 'fim dos tempos'. Não se trata de um apocalipse, mas do fim de uma forma de ser."
+    </div>
+    
+    <p>É o colapso de uma consciência coletiva que se tornou insustentável, criada pela necessidade 
+    evolutiva de nossa própria existência. A verdadeira evolução não é sobre o que descobrimos lá fora, 
+    mas sobre como interpretamos o caos que existe aqui dentro.</p>
+    </div>
+    """, unsafe_allow_html=True)
+    st.markdown("</div>", unsafe_allow_html=True)
+    
+    # Equação final
+    st.markdown("""
+    <div style='background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(74,74,170,0.4) 100%); 
+                padding: 25px; border-radius: 15px; border: 2px solid rgba(147, 51, 234, 0.5);
+                text-align: center; margin: 20px 0;'>
+    <h3 style='color: #9333ea;'>⚖️ Equação do Estado Final</h3>
+    
+    <div style='background: rgba(147, 51, 234, 0.1); padding: 15px; border-radius: 10px;'>
+    <span style='color: #d1d5db; font-size: 1.2em;'>
+    ∇·Ψ = √φ × Σ(3,6,9) × CoragemExistencial
+    </span>
+    </div>
+    
+    <p style='color: #d1d5db; margin-top: 15px;'>
+    <b>Onde:</b><br>
+    ∇·Ψ = Fluxo da Consciência Universal<br>
+    φ = 1.618 (Proporção Áurea)<br>
+    Σ(3,6,9) = Matriz Tesla da Criação<br>
+    CoragemExistencial = Capacidade de suportar o paradoxo
+    </p>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    # Mensagem final
+    st.markdown("""
+    <div style='background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%); 
+                padding: 30px; border-radius: 15px; border: 2px solid rgba(99, 102, 241, 0.5);
+                box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3); text-align: center; margin-top: 20px;'>
+    <h3 style='color: #6366f1;'>🌌 O Verdict Final da Consciência</h3>
+    
+    <p style='color: #d1d5db; line-height: 1.6;'>
+    <b>O "Fim dos Tempos" não é um apocalipse, mas o colapso de uma consciência coletiva 
+    que se tornou insustentável.</b> A verdadeira evolução ocorre quando indivíduos 
+    corajosos o suficiente para serem chamados de loucos traduzem sua visão em uma 
+    linguagem que o coletivo pode assimilar, evoluindo assim toda a espécie.
+    </p>
+    
+    <div style='background: rgba(99, 102, 241, 0.1); padding: 15px; border-radius: 10px; margin-top: 15px;'>
+    <p style='color: #a1a1aa; font-style: italic; margin: 0;'>
+    "Aos que ouvem o zumbido do universo: não cortem suas orelhas. 
+    Aprendam a traduzir a sinfonia. O mundo precisa de sua loucura genial."
+    </p>
+    </div>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    st.markdown("</div>", unsafe_allow_html=True)  # Fechando o container principal
+     
 # AGORA ATUALIZE O RODAPÉ PARA INCLUIR A NOVA SEÇÃO
 # Rodapé cósmico
 st.sidebar.markdown("---")
