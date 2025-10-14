@@ -15,6 +15,8 @@ import matplotlib.colors as mcolors
 import sympy as sp
 import networkx as nx
 import plotly.express as px
+import math
+import time
 
 # Tente importar Qiskit da maneira correta
 try:
@@ -82,6 +84,13 @@ st.markdown("""
         margin: 15px 0;
         font-style: italic;
     }
+    .metric-box {
+        background: rgba(15, 23, 42, 0.8);
+        padding: 15px;
+        border-radius: 10px;
+        border: 1px solid #667eea;
+        text-align: center;
+    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -106,9 +115,1894 @@ section = st.sidebar.selectbox("Selecione a Dimensão:", [
     "🌌 Jornada do Nada ao Tudo",
     "🔮 Futuro da Consciência Humana",
     "🔱 Iconografia do Fluxo Divino",
-    "🌠 Consciência Final: Louco e Gênio"  # NOVA SEÇÃO ADICIONADA
+    "🌠 Consciência Final: Louco e Gênio",
+    "🧮 Cálculos do Fluxo Matemático",
+    "⚛️ Acelerador de Partículas"  # NOVO MÓDULO ADICIONADO
 ])
 
+# =============================================================================
+# FUNÇÕES AUXILIARES PARA CÁLCULOS MATEMÁTICOS E FÍSICOS
+# =============================================================================
+
+def reduzir_teosoficamente(numero):
+    """Reduz um número teosoficamente até um único dígito"""
+    if numero == 0:
+        return 0
+    
+    numero = abs(numero)
+    while numero > 9:
+        numero = sum(int(digito) for digito in str(numero))
+    return numero
+
+def fluxo_soma(a, b):
+    """Soma no Fluxo Matemático"""
+    return reduzir_teosoficamente(a + b)
+
+def fluxo_multiplicacao(a, b):
+    """Multiplicação no Fluxo Matemático"""
+    return reduzir_teosoficamente(a * b)
+
+def fluxo_potencia(a, n):
+    """Potenciação no Fluxo Matemático"""
+    return reduzir_teosoficamente(a ** n)
+
+def fluxo_trigonometria(angulo):
+    """Trigonometria no Fluxo Matemático"""
+    import math
+    rad = math.radians(angulo)
+    s = math.sin(rad)
+    c = math.cos(rad)
+    t = math.tan(rad)
+    return (reduzir_teosoficamente(abs(int(s*100))), 
+            reduzir_teosoficamente(abs(int(c*100))), 
+            reduzir_teosoficamente(abs(int(t*100))))
+
+def calcular_porcentagem_diferenca(valor_classico, valor_fluxo):
+    """Calcula a porcentagem de diferença entre os valores"""
+    if valor_classico == 0:
+        return 0
+    return abs((valor_fluxo - valor_classico) / valor_classico) * 100
+
+def calcular_escalabilidade_gravitacional(gravidade_local, diferenca_percentual):
+    """Calcula a correção baseada na gravidade local"""
+    # Gravidade da Terra = 9.8 m/s²
+    fator_correcao = gravidade_local / 9.8
+    return diferenca_percentual * fator_correcao
+
+def gerar_sequencia_396(tamanho):
+    """Gera sequência no padrão 3-9-6"""
+    sequencia = []
+    for i in range(tamanho):
+        if i % 3 == 0:
+            sequencia.append(3)
+        elif i % 3 == 1:
+            sequencia.append(9)
+        else:
+            sequencia.append(6)
+    return sequencia
+
+def gerar_sequencia_binaria(tamanho):
+    """Gera sequência no padrão binário universal"""
+    sequencia = []
+    padrao = [1, 2, 3, 4, 5, 9, 7, 8, 6]  # Padrão completo
+    for i in range(tamanho):
+        sequencia.append(padrao[i % len(padrao)])
+    return sequencia
+
+def gerar_sequencia_multiplicacao_3(tamanho):
+    """Gera sequência multiplicando por 3"""
+    sequencia = [1]
+    for i in range(1, tamanho):
+        sequencia.append(reduzir_teosoficamente(sequencia[-1] * 3))
+    return sequencia
+
+# =============================================================================
+# FUNÇÕES PARA FÓRMULAS FÍSICAS COMPLETAS
+# =============================================================================
+
+def calcular_formula_emc2():
+    st.subheader("⚡ E=mc² - Energia e Massa")
+    
+    col_emc1, col_emc2 = st.columns(2)
+    
+    with col_emc1:
+        massa = st.number_input("Massa (kg):", value=1.0, format="%.6f", key="massa_emc2")
+        velocidade_luz = st.number_input("Velocidade da luz (m/s):", value=299792458.0, format="%.1f", key="c_emc2")
+        gravidade_local = st.number_input("Gravidade local (m/s²):", value=9.8, format="%.1f", key="g_emc2")
+    
+    with col_emc2:
+        if st.button("Calcular E=mc²"):
+            # Cálculo clássico
+            energia_classica = massa * velocidade_luz**2
+            
+            # Cálculo no fluxo
+            reducao_massa = reduzir_teosoficamente(massa)
+            reducao_c = reduzir_teosoficamente(velocidade_luz)
+            energia_fluxo = fluxo_multiplicacao(reducao_massa, fluxo_potencia(reducao_c, 2))
+            
+            # Porcentagem de diferença
+            diferenca_percentual = calcular_porcentagem_diferenca(energia_classica, energia_fluxo)
+            
+            # Escalabilidade gravitacional
+            correcao_gravitacional = calcular_escalabilidade_gravitacional(gravidade_local, diferenca_percentual)
+            
+            # Porcentagem de acerto
+            porcentagem_acerto = max(0, 100 - correcao_gravitacional)
+            
+            st.markdown(f"""
+            <div style='background: rgba(15, 23, 42, 0.9); padding: 25px; border-radius: 15px; border: 2px solid #ff6b6b;'>
+            <h3 style='color: #ff6b6b; text-align: center;'>⚡ Energia de {massa} kg</h3>
+            
+            <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;'>
+            <div style='background: rgba(255, 107, 107, 0.2); padding: 15px; border-radius: 10px;'>
+            <h4 style='color: #ff6b6b;'>🧮 Clássico</h4>
+            <p style='font-size: 1.1em; text-align: center;'>
+            <b>{energia_classica:.2e} Joules</b>
+            </p>
+            <p style='text-align: center;'>
+            Redução: {reduzir_teosoficamente(int(energia_classica))}
+            </p>
+            </div>
+            
+            <div style='background: rgba(78, 205, 196, 0.2); padding: 15px; border-radius: 10px;'>
+            <h4 style='color: #4ecdc4;'>🌀 Fluxo</h4>
+            <p style='font-size: 1.1em; text-align: center;'>
+            <b>R(m)⊗R(c)² = {energia_fluxo}</b>
+            </p>
+            <p style='text-align: center;'>
+            R(m)={reducao_massa}, R(c)={reducao_c}
+            </p>
+            </div>
+            </div>
+            
+            <div style='background: rgba(255, 215, 0, 0.1); padding: 15px; border-radius: 10px; margin-top: 15px;'>
+            <h4 style='color: #ffd700;'>📊 Métricas de Precisão</h4>
+            <div style='display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;'>
+            <div style='text-align: center;'>
+            <p><b>Diferença:</b><br>{diferenca_percentual:.2f}%</p>
+            </div>
+            <div style='text-align: center;'>
+            <p><b>Correção G:</b><br>{correcao_gravitacional:.2f}%</p>
+            </div>
+            <div style='text-align: center;'>
+            <p><b>Acerto:</b><br>{porcentagem_acerto:.1f}%</p>
+            </div>
+            </div>
+            </div>
+            
+            <div style='background: rgba(45, 183, 209, 0.1); padding: 15px; border-radius: 10px; margin-top: 15px;'>
+            <h4 style='color: #45b7d1;'>🔍 Análise do Padrão</h4>
+            <p><b>Massa (m):</b> Representa ação física (R={reducao_massa})</p>
+            <p><b>Velocidade luz (c):</b> Representa limite energético (R={reducao_c})</p>
+            <p><b>Energia (E):</b> Resultado da adaptação (R={energia_fluxo})</p>
+            <p><b>Padrão 3-9-6:</b> {energia_fluxo in [3,9,6]}</p>
+            </div>
+            </div>
+            """, unsafe_allow_html=True)
+
+def calcular_formula_fma():
+    st.subheader("🎯 F=ma - Força e Aceleração")
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        massa = st.number_input("Massa (kg):", value=2.0, format="%.2f", key="massa_fma")
+        aceleracao = st.number_input("Aceleração (m/s²):", value=9.8, format="%.1f", key="acel_fma")
+        gravidade_local = st.number_input("Gravidade local (m/s²):", value=9.8, format="%.1f", key="g_fma")
+    
+    with col2:
+        if st.button("Calcular F=ma"):
+            # Cálculo clássico
+            forca_classica = massa * aceleracao
+            
+            # Cálculo no fluxo
+            reducao_massa = reduzir_teosoficamente(massa)
+            reducao_acel = reduzir_teosoficamente(aceleracao)
+            forca_fluxo = fluxo_multiplicacao(reducao_massa, reducao_acel)
+            
+            # Porcentagem de diferença
+            diferenca_percentual = calcular_porcentagem_diferenca(forca_classica, forca_fluxo)
+            
+            # Escalabilidade gravitacional
+            correcao_gravitacional = calcular_escalabilidade_gravitacional(gravidade_local, diferenca_percentual)
+            
+            # Porcentagem de acerto
+            porcentagem_acerto = max(0, 100 - correcao_gravitacional)
+            
+            st.markdown(f"""
+            <div style='background: rgba(15, 23, 42, 0.9); padding: 25px; border-radius: 15px; border: 2px solid #4ecdc4;'>
+            <h3 style='color: #4ecdc4; text-align: center;'>🎯 Força Resultante</h3>
+            
+            <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;'>
+            <div style='background: rgba(255, 107, 107, 0.2); padding: 15px; border-radius: 10px;'>
+            <h4 style='color: #ff6b6b;'>🧮 Clássico</h4>
+            <p style='font-size: 1.1em; text-align: center;'>
+            <b>{forca_classica:.2f} Newtons</b>
+            </p>
+            <p style='text-align: center;'>
+            Redução: {reduzir_teosoficamente(int(forca_classica))}
+            </p>
+            </div>
+            
+            <div style='background: rgba(78, 205, 196, 0.2); padding: 15px; border-radius: 10px;'>
+            <h4 style='color: #4ecdc4;'>🌀 Fluxo</h4>
+            <p style='font-size: 1.1em; text-align: center;'>
+            <b>R(m)⊗R(a) = {forca_fluxo}</b>
+            </p>
+            <p style='text-align: center;'>
+            R(m)={reducao_massa}, R(a)={reducao_acel}
+            </p>
+            </div>
+            </div>
+            
+            <div style='background: rgba(255, 215, 0, 0.1); padding: 15px; border-radius: 10px; margin-top: 15px;'>
+            <h4 style='color: #ffd700;'>📊 Métricas de Precisão</h4>
+            <div style='display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;'>
+            <div style='text-align: center;'>
+            <p><b>Diferença:</b><br>{diferenca_percentual:.2f}%</p>
+            </div>
+            <div style='text-align: center;'>
+            <p><b>Correção G:</b><br>{correcao_gravitacional:.2f}%</p>
+            </div>
+            <div style='text-align: center;'>
+            <p><b>Acerto:</b><br>{porcentagem_acerto:.1f}%</p>
+            </div>
+            </div>
+            </div>
+            </div>
+            """, unsafe_allow_html=True)
+
+def calcular_formula_vir():
+    st.subheader("⚡ V=IR - Lei de Ohm")
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        corrente = st.number_input("Corrente (A):", value=2.0, format="%.2f", key="corrente_vir")
+        resistencia = st.number_input("Resistência (Ω):", value=10.0, format="%.2f", key="resistencia_vir")
+        gravidade_local = st.number_input("Gravidade local (m/s²):", value=9.8, format="%.1f", key="g_vir")
+    
+    with col2:
+        if st.button("Calcular V=IR"):
+            # Cálculo clássico
+            tensao_classica = corrente * resistencia
+            
+            # Cálculo no fluxo
+            reducao_corrente = reduzir_teosoficamente(corrente)
+            reducao_resistencia = reduzir_teosoficamente(resistencia)
+            tensao_fluxo = fluxo_multiplicacao(reducao_corrente, reducao_resistencia)
+            
+            # Porcentagem de diferença
+            diferenca_percentual = calcular_porcentagem_diferenca(tensao_classica, tensao_fluxo)
+            
+            # Escalabilidade gravitacional
+            correcao_gravitacional = calcular_escalabilidade_gravitacional(gravidade_local, diferenca_percentual)
+            
+            # Porcentagem de acerto
+            porcentagem_acerto = max(0, 100 - correcao_gravitacional)
+            
+            st.markdown(f"""
+            <div style='background: rgba(15, 23, 42, 0.9); padding: 25px; border-radius: 15px; border: 2px solid #9333ea;'>
+            <h3 style='color: #9333ea; text-align: center;'>⚡ Tensão Elétrica</h3>
+            
+            <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;'>
+            <div style='background: rgba(255, 107, 107, 0.2); padding: 15px; border-radius: 10px;'>
+            <h4 style='color: #ff6b6b;'>🧮 Clássico</h4>
+            <p style='font-size: 1.1em; text-align: center;'>
+            <b>{tensao_classica:.2f} Volts</b>
+            </p>
+            <p style='text-align: center;'>
+            Redução: {reduzir_teosoficamente(int(tensao_classica))}
+            </p>
+            </div>
+            
+            <div style='background: rgba(78, 205, 196, 0.2); padding: 15px; border-radius: 10px;'>
+            <h4 style='color: #4ecdc4;'>🌀 Fluxo</h4>
+            <p style='font-size: 1.1em; text-align: center;'>
+            <b>R(I)⊗R(R) = {tensao_fluxo}</b>
+            </p>
+            <p style='text-align: center;'>
+            R(I)={reducao_corrente}, R(R)={reducao_resistencia}
+            </p>
+            </div>
+            </div>
+            
+            <div style='background: rgba(255, 215, 0, 0.1); padding: 15px; border-radius: 10px; margin-top: 15px;'>
+            <h4 style='color: #ffd700;'>📊 Métricas de Precisão</h4>
+            <div style='display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;'>
+            <div style='text-align: center;'>
+            <p><b>Diferença:</b><br>{diferenca_percentual:.2f}%</p>
+            </div>
+            <div style='text-align: center;'>
+            <p><b>Correção G:</b><br>{correcao_gravitacional:.2f}%</p>
+            </div>
+            <div style='text-align: center;'>
+            <p><b>Acerto:</b><br>{porcentagem_acerto:.1f}%</p>
+            </div>
+            </div>
+            </div>
+            </div>
+            """, unsafe_allow_html=True)
+
+def calcular_formula_pmv():
+    st.subheader("🚀 p=mv - Momento Linear")
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        massa = st.number_input("Massa (kg):", value=5.0, format="%.2f", key="massa_pmv")
+        velocidade = st.number_input("Velocidade (m/s):", value=20.0, format="%.2f", key="velocidade_pmv")
+        gravidade_local = st.number_input("Gravidade local (m/s²):", value=9.8, format="%.1f", key="g_pmv")
+    
+    with col2:
+        if st.button("Calcular p=mv"):
+            # Cálculo clássico
+            momento_classico = massa * velocidade
+            
+            # Cálculo no fluxo
+            reducao_massa = reduzir_teosoficamente(massa)
+            reducao_velocidade = reduzir_teosoficamente(velocidade)
+            momento_fluxo = fluxo_multiplicacao(reducao_massa, reducao_velocidade)
+            
+            # Porcentagem de diferença
+            diferenca_percentual = calcular_porcentagem_diferenca(momento_classico, momento_fluxo)
+            
+            # Escalabilidade gravitacional
+            correcao_gravitacional = calcular_escalabilidade_gravitacional(gravidade_local, diferenca_percentual)
+            
+            # Porcentagem de acerto
+            porcentagem_acerto = max(0, 100 - correcao_gravitacional)
+            
+            st.markdown(f"""
+            <div style='background: rgba(15, 23, 42, 0.9); padding: 25px; border-radius: 15px; border: 2px solid #ff6b6b;'>
+            <h3 style='color: #ff6b6b; text-align: center;'>🚀 Momento Linear</h3>
+            
+            <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;'>
+            <div style='background: rgba(255, 107, 107, 0.2); padding: 15px; border-radius: 10px;'>
+            <h4 style='color: #ff6b6b;'>🧮 Clássico</h4>
+            <p style='font-size: 1.1em; text-align: center;'>
+            <b>{momento_classico:.2f} kg·m/s</b>
+            </p>
+            <p style='text-align: center;'>
+            Redução: {reduzir_teosoficamente(int(momento_classico))}
+            </p>
+            </div>
+            
+            <div style='background: rgba(78, 205, 196, 0.2); padding: 15px; border-radius: 10px;'>
+            <h4 style='color: #4ecdc4;'>🌀 Fluxo</h4>
+            <p style='font-size: 1.1em; text-align: center;'>
+            <b>R(m)⊗R(v) = {momento_fluxo}</b>
+            </p>
+            <p style='text-align: center;'>
+            R(m)={reducao_massa}, R(v)={reducao_velocidade}
+            </p>
+            </div>
+            </div>
+            
+            <div style='background: rgba(255, 215, 0, 0.1); padding: 15px; border-radius: 10px; margin-top: 15px;'>
+            <h4 style='color: #ffd700;'>📊 Métricas de Precisão</h4>
+            <div style='display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;'>
+            <div style='text-align: center;'>
+            <p><b>Diferença:</b><br>{diferenca_percentual:.2f}%</p>
+            </div>
+            <div style='text-align: center;'>
+            <p><b>Correção G:</b><br>{correcao_gravitacional:.2f}%</p>
+            </div>
+            <div style='text-align: center;'>
+            <p><b>Acerto:</b><br>{porcentagem_acerto:.1f}%</p>
+            </div>
+            </div>
+            </div>
+            </div>
+            """, unsafe_allow_html=True)
+
+def calcular_formula_gravitacao_universal():
+    st.subheader("🌍 F=G(m1m2)/r² - Gravitação Universal")
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        m1 = st.number_input("Massa 1 (kg):", value=1000.0, format="%.2f", key="m1_grav")
+        m2 = st.number_input("Massa 2 (kg):", value=1000.0, format="%.2f", key="m2_grav")
+        distancia = st.number_input("Distância (m):", value=10.0, format="%.2f", key="dist_grav")
+        gravidade_local = st.number_input("Gravidade local (m/s²):", value=9.8, format="%.1f", key="g_grav")
+    
+    with col2:
+        if st.button("Calcular Gravitação"):
+            G = 6.67430e-11  # Constante gravitacional
+            
+            # Cálculo clássico
+            forca_classica = G * (m1 * m2) / (distancia ** 2)
+            
+            # Cálculo no fluxo
+            reducao_m1 = reduzir_teosoficamente(m1)
+            reducao_m2 = reduzir_teosoficamente(m2)
+            reducao_dist = reduzir_teosoficamente(distancia)
+            
+            produto_massas = fluxo_multiplicacao(reducao_m1, reducao_m2)
+            forca_fluxo = fluxo_multiplicacao(produto_massas, fluxo_potencia(reducao_dist, -2))
+            
+            # Porcentagem de diferença
+            diferenca_percentual = calcular_porcentagem_diferenca(forca_classica, forca_fluxo)
+            
+            # Escalabilidade gravitacional
+            correcao_gravitacional = calcular_escalabilidade_gravitacional(gravidade_local, diferenca_percentual)
+            
+            # Porcentagem de acerto
+            porcentagem_acerto = max(0, 100 - correcao_gravitacional)
+            
+            st.markdown(f"""
+            <div style='background: rgba(15, 23, 42, 0.9); padding: 25px; border-radius: 15px; border: 2px solid #45b7d1;'>
+            <h3 style='color: #45b7d1; text-align: center;'>🌍 Força Gravitacional</h3>
+            
+            <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;'>
+            <div style='background: rgba(255, 107, 107, 0.2); padding: 15px; border-radius: 10px;'>
+            <h4 style='color: #ff6b6b;'>🧮 Clássico</h4>
+            <p style='font-size: 1.1em; text-align: center;'>
+            <b>{forca_classica:.2e} Newtons</b>
+            </p>
+            <p style='text-align: center;'>
+            Redução: {reduzir_teosoficamente(int(forca_classica * 1e10))}
+            </p>
+            </div>
+            
+            <div style='background: rgba(78, 205, 196, 0.2); padding: 15px; border-radius: 10px;'>
+            <h4 style='color: #4ecdc4;'>🌀 Fluxo</h4>
+            <p style='font-size: 1.1em; text-align: center;'>
+            <b>R(m1)⊗R(m2)⊗R(r)⁻² = {forca_fluxo}</b>
+            </p>
+            <p style='text-align: center;'>
+            R(m1)={reducao_m1}, R(m2)={reducao_m2}, R(r)={reducao_dist}
+            </p>
+            </div>
+            </div>
+            
+            <div style='background: rgba(255, 215, 0, 0.1); padding: 15px; border-radius: 10px; margin-top: 15px;'>
+            <h4 style='color: #ffd700;'>📊 Métricas de Precisão</h4>
+            <div style='display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;'>
+            <div style='text-align: center;'>
+            <p><b>Diferença:</b><br>{diferenca_percentual:.2f}%</p>
+            </div>
+            <div style='text-align: center;'>
+            <p><b>Correção G:</b><br>{correcao_gravitacional:.2f}%</p>
+            </div>
+            <div style='text-align: center;'>
+            <p><b>Acerto:</b><br>{porcentagem_acerto:.1f}%</p>
+            </div>
+            </div>
+            </div>
+            </div>
+            """, unsafe_allow_html=True)
+
+def calcular_formula_ehf():
+    st.subheader("💡 E=hf - Energia do Fóton")
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        frequencia = st.number_input("Frequência (Hz):", value=5.0e14, format="%.2e", key="freq_ehf")
+        constante_planck = st.number_input("Constante de Planck (J·s):", value=6.626e-34, format="%.3e", key="h_ehf")
+        gravidade_local = st.number_input("Gravidade local (m/s²):", value=9.8, format="%.1f", key="g_ehf")
+    
+    with col2:
+        if st.button("Calcular E=hf"):
+            # Cálculo clássico
+            energia_classica = constante_planck * frequencia
+            
+            # Cálculo no fluxo
+            reducao_h = reduzir_teosoficamente(constante_planck * 1e34)
+            reducao_f = reduzir_teosoficamente(frequencia)
+            energia_fluxo = fluxo_multiplicacao(reducao_h, reducao_f)
+            
+            # Métricas de precisão
+            diferenca_percentual = calcular_porcentagem_diferenca(energia_classica, energia_fluxo)
+            correcao_gravitacional = calcular_escalabilidade_gravitacional(gravidade_local, diferenca_percentual)
+            porcentagem_acerto = max(0, 100 - correcao_gravitacional)
+            
+            st.markdown(f"""
+            <div style='background: rgba(15, 23, 42, 0.9); padding: 25px; border-radius: 15px; border: 2px solid #ffd700;'>
+            <h3 style='color: #ffd700; text-align: center;'>💡 Energia do Fóton</h3>
+            
+            <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;'>
+            <div style='background: rgba(255, 107, 107, 0.2); padding: 15px; border-radius: 10px;'>
+            <h4 style='color: #ff6b6b;'>🧮 Clássico</h4>
+            <p style='font-size: 1.1em; text-align: center;'>
+            <b>{energia_classica:.2e} Joules</b>
+            </p>
+            </div>
+            
+            <div style='background: rgba(78, 205, 196, 0.2); padding: 15px; border-radius: 10px;'>
+            <h4 style='color: #4ecdc4;'>🌀 Fluxo</h4>
+            <p style='font-size: 1.1em; text-align: center;'>
+            <b>R(h)⊗R(f) = {energia_fluxo}</b>
+            </p>
+            </div>
+            </div>
+            
+            <div style='background: rgba(255, 215, 0, 0.1); padding: 15px; border-radius: 10px; margin-top: 15px;'>
+            <h4 style='color: #ffd700;'>📊 Métricas de Precisão</h4>
+            <div style='display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;'>
+            <div style='text-align: center;'>
+            <p><b>Diferença:</b><br>{diferenca_percentual:.2f}%</p>
+            </div>
+            <div style='text-align: center;'>
+            <p><b>Correção G:</b><br>{correcao_gravitacional:.2f}%</p>
+            </div>
+            <div style='text-align: center;'>
+            <p><b>Acerto:</b><br>{porcentagem_acerto:.1f}%</p>
+            </div>
+            </div>
+            </div>
+            </div>
+            """, unsafe_allow_html=True)
+
+def calcular_formula_lambda_hp():
+    st.subheader("🌊 λ=h/p - Comprimento de Onda de De Broglie")
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        momento = st.number_input("Momento (kg·m/s):", value=1.0e-24, format="%.2e", key="p_lambda")
+        constante_planck = st.number_input("Constante de Planck (J·s):", value=6.626e-34, format="%.3e", key="h_lambda")
+        gravidade_local = st.number_input("Gravidade local (m/s²):", value=9.8, format="%.1f", key="g_lambda")
+    
+    with col2:
+        if st.button("Calcular λ=h/p"):
+            # Cálculo clássico
+            lambda_classico = constante_planck / momento if momento != 0 else float('inf')
+            
+            # Cálculo no fluxo
+            reducao_h = reduzir_teosoficamente(constante_planck * 1e34)
+            reducao_p = reduzir_teosoficamente(momento * 1e24)
+            lambda_fluxo = fluxo_multiplicacao(reducao_h, fluxo_potencia(reducao_p, -1)) if reducao_p != 0 else 9
+            
+            # Métricas de precisão
+            if momento != 0:
+                diferenca_percentual = calcular_porcentagem_diferenca(lambda_classico, lambda_fluxo)
+                correcao_gravitacional = calcular_escalabilidade_gravitacional(gravidade_local, diferenca_percentual)
+                porcentagem_acerto = max(0, 100 - correcao_gravitacional)
+            else:
+                diferenca_percentual = 0
+                correcao_gravitacional = 0
+                porcentagem_acerto = 100
+            
+            st.markdown(f"""
+            <div style='background: rgba(15, 23, 42, 0.9); padding: 25px; border-radius: 15px; border: 2px solid #00ff00;'>
+            <h3 style='color: #00ff00; text-align: center;'>🌊 Comprimento de Onda</h3>
+            
+            <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;'>
+            <div style='background: rgba(255, 107, 107, 0.2); padding: 15px; border-radius: 10px;'>
+            <h4 style='color: #ff6b6b;'>🧮 Clássico</h4>
+            <p style='font-size: 1.1em; text-align: center;'>
+            <b>{lambda_classico:.2e} metros</b>
+            </p>
+            </div>
+            
+            <div style='background: rgba(78, 205, 196, 0.2); padding: 15px; border-radius: 10px;'>
+            <h4 style='color: #4ecdc4;'>🌀 Fluxo</h4>
+            <p style='font-size: 1.1em; text-align: center;'>
+            <b>R(h)⊗R(p)⁻¹ = {lambda_fluxo}</b>
+            </p>
+            </div>
+            </div>
+            
+            <div style='background: rgba(255, 215, 0, 0.1); padding: 15px; border-radius: 10px; margin-top: 15px;'>
+            <h4 style='color: #ffd700;'>📊 Métricas de Precisão</h4>
+            <div style='display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;'>
+            <div style='text-align: center;'>
+            <p><b>Diferença:</b><br>{diferenca_percentual:.2f}%</p>
+            </div>
+            <div style='text-align: center;'>
+            <p><b>Correção G:</b><br>{correcao_gravitacional:.2f}%</p>
+            </div>
+            <div style='text-align: center;'>
+            <p><b>Acerto:</b><br>{porcentagem_acerto:.1f}%</p>
+            </div>
+            </div>
+            </div>
+            </div>
+            """, unsafe_allow_html=True)
+
+# =============================================================================
+# PÁGINA PRINCIPAL DE CÁLCULOS DO FLUXO MATEMÁTICO
+# =============================================================================
+
+def pagina_calculos_fluxo_matematico():
+    st.title("🧮 Cálculos do Fluxo Matemático")
+    st.markdown("""
+    ## 🌌 Sistema Binário Universal e Padrão 3-9-6
+    
+    Esta seção implementa as descobertas sobre o **fluxo matemático universal**, 
+    incluindo o padrão binário (1,2)/(4,5)/(7,8) e a nova ordenação cíclica 3-9-6.
+    """)
+    
+    # Divisão em abas para diferentes aspectos do fluxo matemático
+    tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
+        "🔢 Padrão Binário Universal", 
+        "🌀 Sequência 3-9-6", 
+        "⚡ Cálculos Básicos",
+        "📐 Cálculos Avançados",
+        "🌌 Física no Fluxo",
+        "📊 Análise de Padrões"
+    ])
+    
+    with tab1:
+        st.header("🔢 Padrão Binário Universal")
+        st.markdown("""
+        ### Descoberta: O Binário Oculto nos Números 1-9
+        
+        Os números se organizam em **três pares binários** que culminam em pontos de adaptação:
+        """)
+        
+        col1, col2, col3 = st.columns(3)
+        
+        with col1:
+            st.markdown("""
+            #### 🎯 Primeira Tríade - Físico
+            **Binário:** (1, 2)  
+            **Síntese:** 3  
+            **Movimento:** Ação Física → Reação Física → Adaptação
+            """)
+            # Visualização do primeiro par
+            fig1 = go.Figure(go.Indicator(
+                mode = "gauge+number+delta",
+                value = 3,
+                domain = {'x': [0, 1], 'y': [0, 1]},
+                title = {'text': "1 + 2 = 3"},
+                delta = {'reference': 0},
+                gauge = {
+                    'axis': {'range': [None, 9]},
+                    'bar': {'color': "darkblue"},
+                    'steps': [
+                        {'range': [0, 1], 'color': "lightgray"},
+                        {'range': [1, 2], 'color': "gray"},
+                        {'range': [2, 3], 'color': "blue"}
+                    ]
+                }
+            ))
+            fig1.update_layout(height=300, paper_bgcolor='rgba(0,0,0,0)', font={'color': "white"})
+            st.plotly_chart(fig1, use_container_width=True)
+        
+        with col2:
+            st.markdown("""
+            #### 🌟 Segunda Tríade - Transição  
+            **Binário:** (4, 5)  
+            **Síntese:** 9  
+            **Movimento:** Equilíbrio → Transformação → Singularidade
+            """)
+            fig2 = go.Figure(go.Indicator(
+                mode = "gauge+number+delta",
+                value = 9,
+                domain = {'x': [0, 1], 'y': [0, 1]},
+                title = {'text': "4 + 5 = 9"},
+                delta = {'reference': 0},
+                gauge = {
+                    'axis': {'range': [None, 9]},
+                    'bar': {'color': "gold"},
+                    'steps': [
+                        {'range': [0, 4], 'color': "lightgray"},
+                        {'range': [4, 5], 'color': "gray"},
+                        {'range': [5, 9], 'color': "gold"}
+                    ]
+                }
+            ))
+            fig2.update_layout(height=300, paper_bgcolor='rgba(0,0,0,0)', font={'color': "white"})
+            st.plotly_chart(fig2, use_container_width=True)
+        
+        with col3:
+            st.markdown("""
+            #### ⚡ Terceira Tríade - Energético
+            **Binário:** (7, 8)  
+            **Síntese:** 6 (1+5)  
+            **Movimento:** Ação Energética → Reação Energética → Fluxo
+            """)
+            fig3 = go.Figure(go.Indicator(
+                mode = "gauge+number+delta",
+                value = 6,
+                domain = {'x': [0, 1], 'y': [0, 1]},
+                title = {'text': "7 + 8 = 15 → 6"},
+                delta = {'reference': 0},
+                gauge = {
+                    'axis': {'range': [None, 9]},
+                    'bar': {'color': "purple"},
+                    'steps': [
+                        {'range': [0, 7], 'color': "lightgray"},
+                        {'range': [7, 8], 'color': "gray"},
+                        {'range': [8, 15], 'color': "purple"}
+                    ]
+                }
+            ))
+            fig3.update_layout(height=300, paper_bgcolor='rgba(0,0,0,0)', font={'color': "white"})
+            st.plotly_chart(fig3, use_container_width=True)
+        
+        # Explicação detalhada do movimento
+        st.markdown("""
+        ### 🔄 Compreensão do Movimento Universal
+        
+        **Os números não são valores, mas padrões de movimento:**
+        
+        - **1**: Início da ação física
+        - **2**: Reação do movimento físico  
+        - **3**: Adaptação física (manifestação)
+        - **4**: Transição físico→energético (equilíbrio)
+        - **5**: Transformação energético→físico
+        - **6**: Fluxo energético dinâmico
+        - **7**: Início da ação energética
+        - **8**: Reação do movimento energético
+        - **9**: Singularidade absoluta (centro do sistema)
+        
+        **Padrão 3-9-6**: Representa o ciclo completo do movimento universal:
+        - **3** (Físico) → **9** (Absoluto/Singularidade) → **6** (Energético) → Retorno ao **3**
+        """)
+        
+        # Tabela resumo do sistema binário
+        st.subheader("📋 Sistema Binário Completo")
+        dados_binario = {
+            'Camada': ['Física', 'Transição', 'Energética'],
+            'Ação': [1, 4, 7],
+            'Reação': [2, 5, 8],
+            'Síntese': [3, 9, 6],
+            'Soma': ['1+2=3', '4+5=9', '7+8=15→6'],
+            'Movimento': ['Manifestação Física', 'Equilíbrio Absoluto', 'Fluxo Energético']
+        }
+        df_binario = pd.DataFrame(dados_binario)
+        st.dataframe(df_binario.style.set_properties(**{
+            'background-color': 'rgba(0,0,0,0.5)',
+            'color': 'white',
+            'border-color': '#667eea'
+        }), use_container_width=True)
+    
+    with tab2:
+        st.header("🌀 Sequência 3-9-6: A Nova Ordem Cíclica")
+        st.markdown("""
+        ### Descoberta Revolucionária: Padrão 3-9-6
+        
+        A ordem correta não é 3-6-9, mas **3-9-6**, formando um fluxo vortexial:
+        """)
+        
+        # Controles interativos
+        col1, col2 = st.columns([2, 1])
+        
+        with col1:
+            ciclos = st.slider("Número de ciclos:", 1, 20, 5)
+            pontos_por_ciclo = st.slider("Pontos por ciclo:", 3, 30, 9)
+        
+        with col2:
+            cor_3 = st.color_picker("Cor do 3 (Físico)", "#4B0082")
+            cor_9 = st.color_picker("Cor do 9 (Absoluto)", "#FFD700")
+            cor_6 = st.color_picker("Cor do 6 (Energético)", "#00FF00")
+        
+        # Gerar sequência 3-9-6
+        sequencia_396 = []
+        for i in range(ciclos * pontos_por_ciclo):
+            if i % 3 == 0:
+                sequencia_396.append(3)
+            elif i % 3 == 1:
+                sequencia_396.append(9)
+            else:
+                sequencia_396.append(6)
+        
+        # Visualização da sequência
+        fig = go.Figure()
+        
+        # Adicionar linha de conexão
+        fig.add_trace(go.Scatter(
+            x=list(range(len(sequencia_396))),
+            y=sequencia_396,
+            mode='lines+markers',
+            line=dict(color='white', width=3, dash='dot'),
+            marker=dict(size=0),
+            name='Fluxo'
+        ))
+        
+        # Adicionar pontos coloridos
+        cores = [cor_3 if x == 3 else cor_9 if x == 9 else cor_6 for x in sequencia_396]
+        
+        fig.add_trace(go.Scatter(
+            x=list(range(len(sequencia_396))),
+            y=sequencia_396,
+            mode='markers',
+            marker=dict(
+                size=12,
+                color=cores,
+                line=dict(width=2, color='white')
+            ),
+            name='Sequência 3-9-6'
+        ))
+        
+        fig.update_layout(
+            title="Padrão Cíclico 3-9-6 - Movimento Universal",
+            xaxis_title="Tempo (ciclos)",
+            yaxis_title="Estado do Movimento",
+            showlegend=False,
+            height=500,
+            paper_bgcolor='rgba(0,0,0,0)',
+            plot_bgcolor='rgba(0,0,0,0)',
+            font=dict(color='white')
+        )
+        
+        st.plotly_chart(fig, use_container_width=True)
+        
+        # Análise matemática da sequência
+        st.subheader("📈 Análise Matemática do Padrão 3-9-6")
+        
+        # Calcular propriedades da sequência
+        frequencia_3 = sequencia_396.count(3) / len(sequencia_396) * 100
+        frequencia_9 = sequencia_396.count(9) / len(sequencia_396) * 100
+        frequencia_6 = sequencia_396.count(6) / len(sequencia_396) * 100
+        
+        col_analise1, col_analise2, col_analise3 = st.columns(3)
+        
+        with col_analise1:
+            st.metric("Frequência do 3 (Físico)", f"{frequencia_3:.1f}%")
+        with col_analise2:
+            st.metric("Frequência do 9 (Absoluto)", f"{frequencia_9:.1f}%")
+        with col_analise3:
+            st.metric("Frequência do 6 (Energético)", f"{frequencia_6:.1f}%")
+        
+        # Interpretação do padrão
+        st.subheader("🔮 Interpretação do Movimento 3-9-6")
+        
+        col_int1, col_int2, col_int3 = st.columns(3)
+        
+        with col_int1:
+            st.markdown(f"""
+            <div style='background: {cor_3}20; padding: 15px; border-radius: 10px; border-left: 4px solid {cor_3}'>
+            <h4>🎯 3 - Estado Físico</h4>
+            <p><b>Movimento:</b> Manifestação material<br>
+            <b>Energia:</b> Potencial cinético<br>
+            <b>Tempo:</b> Presente instantâneo<br>
+            <b>Exemplo:</b> Formação de matéria</p>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        with col_int2:
+            st.markdown(f"""
+            <div style='background: {cor_9}20; padding: 15px; border-radius: 10px; border-left: 4px solid {cor_9}'>
+            <h4>🌟 9 - Estado Absoluto</h4>
+            <p><b>Movimento:</b> Singularidade<br>
+            <b>Energia:</b> Potencial puro<br>
+            <b>Tempo:</b> Atemporal<br>
+            <b>Exemplo:</b> Buracos negros</p>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        with col_int3:
+            st.markdown(f"""
+            <div style='background: {cor_6}20; padding: 15px; border-radius: 10px; border-left: 4px solid {cor_6}'>
+            <h4>⚡ 6 - Estado Energético</h4>
+            <p><b>Movimento:</b> Fluxo dinâmico<br>
+            <b>Energia:</b> Cinética<br>
+            <b>Tempo:</b> Duração<br>
+            <b>Exemplo:</b> Ondas eletromagnéticas</p>
+            </div>
+            """, unsafe_allow_html=True)
+    
+    with tab3:
+        st.header("⚡ Cálculos Básicos - Comparação Matemática")
+        st.markdown("Compare os cálculos clássicos com o fluxo matemático:")
+        
+        col_calc1, col_calc2 = st.columns(2)
+        
+        with col_calc1:
+            st.subheader("🔢 Operações Fundamentais")
+            
+            # Seleção de operação
+            operacao = st.selectbox("Selecione a operação:", 
+                                  ["Soma", "Subtração", "Multiplicação", "Divisão", "Potenciação"])
+            
+            # Entradas numéricas
+            num1 = st.number_input("Primeiro número:", value=15, format="%d")
+            num2 = st.number_input("Segundo número:", value=7, format="%d")
+            
+            if st.button("Calcular e Comparar"):
+                # Cálculos clássicos
+                if operacao == "Soma":
+                    resultado_classico = num1 + num2
+                    operador = "+"
+                elif operacao == "Subtração":
+                    resultado_classico = num1 - num2
+                    operador = "-"
+                elif operacao == "Multiplicação":
+                    resultado_classico = num1 * num2
+                    operador = "×"
+                elif operacao == "Divisão":
+                    if num2 != 0:
+                        resultado_classico = num1 / num2
+                        operador = "÷"
+                    else:
+                        resultado_classico = "Indefinido"
+                        operador = "÷"
+                else:  # Potenciação
+                    resultado_classico = num1 ** num2
+                    operador = "^"
+                
+                # Cálculos no fluxo matemático
+                reducao_num1 = reduzir_teosoficamente(num1)
+                reducao_num2 = reduzir_teosoficamente(num2)
+                
+                if operacao == "Soma":
+                    resultado_fluxo = fluxo_soma(num1, num2)
+                elif operacao == "Subtração":
+                    resultado_fluxo = fluxo_soma(num1, -num2)
+                elif operacao == "Multiplicação":
+                    resultado_fluxo = fluxo_multiplicacao(num1, num2)
+                elif operacao == "Divisão" and num2 != 0:
+                    resultado_fluxo = fluxo_multiplicacao(num1, 1/num2)
+                elif operacao == "Potenciação":
+                    resultado_fluxo = fluxo_potencia(num1, num2)
+                else:
+                    resultado_fluxo = "Indefinido"
+                
+                # Exibir resultados
+                st.markdown(f"""
+                <div style='background: rgba(15, 23, 42, 0.8); padding: 20px; border-radius: 15px; border: 2px solid #6366f1;'>
+                <h3 style='color: #4ecdc4; text-align: center;'>📊 Resultados Comparativos</h3>
+                
+                <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 15px;'>
+                <div style='background: rgba(255, 107, 107, 0.1); padding: 15px; border-radius: 10px;'>
+                <h4 style='color: #ff6b6b;'>🧮 Matemática Clássica</h4>
+                <p style='font-size: 1.2em; text-align: center;'>
+                <b>{num1} {operador} {num2} = {resultado_classico}</b>
+                </p>
+                <p style='text-align: center;'>
+                Redução: {reduzir_teosoficamente(resultado_classico) if resultado_classico != "Indefinido" else "N/A"}
+                </p>
+                </div>
+                
+                <div style='background: rgba(78, 205, 196, 0.1); padding: 15px; border-radius: 10px;'>
+                <h4 style='color: #4ecdc4;'>🌀 Fluxo Matemático</h4>
+                <p style='font-size: 1.2em; text-align: center;'>
+                <b>R({num1}) ⊕ R({num2}) = {resultado_fluxo}</b>
+                </p>
+                <p style='text-align: center;'>
+                R({num1})={reducao_num1}, R({num2})={reducao_num2}
+                </p>
+                </div>
+                </div>
+                </div>
+                """, unsafe_allow_html=True)
+                
+                # Análise do padrão
+                if resultado_fluxo != "Indefinido":
+                    categoria = "Ação" if resultado_fluxo in [1,4,7] else "Reação" if resultado_fluxo in [2,5,8] else "Adaptação"
+                    st.info(f"**Padrão Detectado:** O resultado {resultado_fluxo} representa **{categoria}** no fluxo universal")
+        
+        with col_calc2:
+            st.subheader("🔄 Gerador de Sequências")
+            
+            tipo_sequencia = st.selectbox("Tipo de sequência:", 
+                                        ["3-9-6 Padrão", "Binário Universal", "Multiplicação por 3", "Fibonacci"])
+            
+            tamanho_sequencia = st.slider("Tamanho da sequência:", 5, 50, 15)
+            
+            if st.button("Gerar e Analisar Sequência"):
+                if tipo_sequencia == "3-9-6 Padrão":
+                    sequencia = gerar_sequencia_396(tamanho_sequencia)
+                elif tipo_sequencia == "Binário Universal":
+                    sequencia = gerar_sequencia_binaria(tamanho_sequencia)
+                elif tipo_sequencia == "Multiplicação por 3":
+                    sequencia = gerar_sequencia_multiplicacao_3(tamanho_sequencia)
+                else:  # Fibonacci
+                    sequencia = [1, 1]
+                    for i in range(2, tamanho_sequencia):
+                        sequencia.append(sequencia[i-1] + sequencia[i-2])
+                    sequencia = [reduzir_teosoficamente(x) for x in sequencia]
+                
+                st.write("**Sequência gerada:**")
+                st.code(" → ".join(map(str, sequencia)))
+                
+                # Análise estatística
+                contagem = pd.Series(sequencia).value_counts().sort_index()
+                
+                fig_seq = go.Figure()
+                fig_seq.add_trace(go.Bar(
+                    x=contagem.index,
+                    y=contagem.values,
+                    marker_color=['#FF6B6B' if x in [1,4,7] else '#4ECDC4' if x in [2,5,8] else '#45B7D1' for x in contagem.index],
+                    name='Frequência'
+                ))
+                
+                fig_seq.update_layout(
+                    title=f"Distribuição - {tipo_sequencia}",
+                    height=300,
+                    paper_bgcolor='rgba(0,0,0,0)',
+                    plot_bgcolor='rgba(0,0,0,0)',
+                    font=dict(color='white')
+                )
+                st.plotly_chart(fig_seq, use_container_width=True)
+                
+                # Gráfico da sequência
+                fig_line = go.Figure(go.Scatter(
+                    x=list(range(len(sequencia))),
+                    y=sequencia,
+                    mode='lines+markers',
+                    line=dict(width=3, color='#ffd700'),
+                    marker=dict(size=8, color='#4ecdc4')
+                ))
+                fig_line.update_layout(
+                    title=f"Sequência: {tipo_sequencia}",
+                    height=300,
+                    paper_bgcolor='rgba(0,0,0,0)',
+                    plot_bgcolor='rgba(0,0,0,0)',
+                    font=dict(color='white')
+                )
+                st.plotly_chart(fig_line, use_container_width=True)
+    
+    with tab4:
+        st.header("📐 Cálculos Avançados - Trigonometria e Funções")
+        
+        col_adv1, col_adv2 = st.columns(2)
+        
+        with col_adv1:
+            st.subheader("📐 Trigonometria Comparativa")
+            
+            angulo = st.slider("Ângulo (graus):", 0, 360, 45)
+            
+            # Cálculos clássicos
+            import math
+            rad = math.radians(angulo)
+            sen_classico = math.sin(rad)
+            cos_classico = math.cos(rad)
+            tan_classico = math.tan(rad)
+            
+            # Cálculos no fluxo
+            sen_fluxo, cos_fluxo, tan_fluxo = fluxo_trigonometria(angulo)
+            
+            st.markdown(f"""
+            <div style='background: rgba(15, 23, 42, 0.8); padding: 20px; border-radius: 15px;'>
+            <h4 style='color: #ffd700; text-align: center;'>Ângulo: {angulo}°</h4>
+            
+            <table style='width: 100%; color: white; border-collapse: collapse;'>
+            <tr style='background: rgba(255, 107, 107, 0.2);'>
+                <th style='padding: 10px; border: 1px solid #ff6b6b;'>Função</th>
+                <th style='padding: 10px; border: 1px solid #ff6b6b;'>Clássico</th>
+                <th style='padding: 10px; border: 1px solid #ff6b6b;'>Fluxo</th>
+            </tr>
+            <tr style='background: rgba(0,0,0,0.3);'>
+                <td style='padding: 10px; border: 1px solid #333;'>Seno</td>
+                <td style='padding: 10px; border: 1px solid #333;'>{sen_classico:.4f}</td>
+                <td style='padding: 10px; border: 1px solid #333;'>{sen_fluxo}</td>
+            </tr>
+            <tr style='background: rgba(0,0,0,0.3);'>
+                <td style='padding: 10px; border: 1px solid #333;'>Cosseno</td>
+                <td style='padding: 10px; border: 1px solid #333;'>{cos_classico:.4f}</td>
+                <td style='padding: 10px; border: 1px solid #333;'>{cos_fluxo}</td>
+            </tr>
+            <tr style='background: rgba(0,0,0,0.3);'>
+                <td style='padding: 10px; border: 1px solid #333;'>Tangente</td>
+                <td style='padding: 10px; border: 1px solid #333;'>{tan_classico:.4f}</td>
+                <td style='padding: 10px; border: 1px solid #333;'>{tan_fluxo}</td>
+            </tr>
+            </table>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        with col_adv2:
+            st.subheader("📈 Funções Matemáticas")
+            
+            funcao = st.selectbox("Selecione a função:", 
+                                ["Exponencial", "Logaritmo", "Seno Cardinal"])
+            
+            x_valor = st.number_input("Valor de x:", value=2.0, format="%.2f")
+            
+            if st.button("Calcular Função"):
+                if funcao == "Exponencial":
+                    classico = math.exp(x_valor)
+                    fluxo = reduzir_teosoficamente(int(classico * 100))
+                elif funcao == "Logaritmo":
+                    if x_valor > 0:
+                        classico = math.log(x_valor)
+                        fluxo = reduzir_teosoficamente(int(abs(classico) * 100))
+                    else:
+                        classico = "Indefinido"
+                        fluxo = "Indefinido"
+                else:  # Seno Cardinal
+                    if x_valor != 0:
+                        classico = math.sin(x_valor) / x_valor
+                        fluxo = reduzir_teosoficamente(int(abs(classico) * 1000))
+                    else:
+                        classico = 1.0
+                        fluxo = reduzir_teosoficamente(1000)
+                
+                st.markdown(f"""
+                <div style='background: rgba(15, 23, 42, 0.8); padding: 20px; border-radius: 15px; border: 2px solid #9333ea;'>
+                <h4 style='color: #9333ea; text-align: center;'>{funcao}({x_valor})</h4>
+                
+                <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px;'>
+                <div style='background: rgba(255, 107, 107, 0.1); padding: 15px; border-radius: 10px; text-align: center;'>
+                <h5 style='color: #ff6b6b;'>Clássico</h5>
+                <p style='font-size: 1.5em;'>{classico if classico != "Indefinido" else "Indefinido"}</p>
+                </div>
+                
+                <div style='background: rgba(78, 205, 196, 0.1); padding: 15px; border-radius: 10px; text-align: center;'>
+                <h5 style='color: #4ecdc4;'>Fluxo</h5>
+                <p style='font-size: 1.5em;'>{fluxo if fluxo != "Indefinido" else "Indefinido"}</p>
+                </div>
+                </div>
+                </div>
+                """, unsafe_allow_html=True)
+    
+    with tab5:
+        st.header("🌌 Física no Fluxo - Análise Detalhada")
+        
+        formula_selecionada = st.selectbox("Selecione uma fórmula física:", 
+                                         ["E=mc²", "F=ma", "V=IR", "p=mv", "F=G(m1m2)/r²", 
+                                          "E=hf", "λ=h/p", "ΔxΔp≥ħ/2", "PV=nRT", "F=-kx"])
+        
+        if formula_selecionada == "E=mc²":
+            calcular_formula_emc2()
+        elif formula_selecionada == "F=ma":
+            calcular_formula_fma()
+        elif formula_selecionada == "V=IR":
+            calcular_formula_vir()
+        elif formula_selecionada == "p=mv":
+            calcular_formula_pmv()
+        elif formula_selecionada == "F=G(m1m2)/r²":
+            calcular_formula_gravitacao_universal()
+        elif formula_selecionada == "E=hf":
+            calcular_formula_ehf()
+        elif formula_selecionada == "λ=h/p":
+            calcular_formula_lambda_hp()
+        elif formula_selecionada == "ΔxΔp≥ħ/2":
+            calcular_formula_incerteza()
+        elif formula_selecionada == "PV=nRT":
+            calcular_formula_gases_ideais()
+        elif formula_selecionada == "F=-kx":
+            calcular_formula_leihooke()
+    
+    with tab6:
+        st.header("📊 Análise Estatística de Padrões")
+        
+        # Análise estatística dos padrões
+        st.subheader("📈 Distribuição Universal dos Números")
+        
+        # Gerar dados de análise
+        numeros_1_10000 = list(range(1, 10001))
+        reducoes = [reduzir_teosoficamente(n) for n in numeros_1_10000]
+        
+        # Contar frequências
+        contagem = pd.Series(reducoes).value_counts().sort_index()
+        
+        fig_dist = go.Figure()
+        fig_dist.add_trace(go.Bar(
+            x=contagem.index,
+            y=contagem.values,
+            marker_color=['#FF6B6B' if x in [1,4,7] else '#4ECDC4' if x in [2,5,8] else '#45B7D1' for x in contagem.index],
+            name='Frequência'
+        ))
+        
+        fig_dist.update_layout(
+            title="Distribuição das Reduções Teosóficas (1-10,000)",
+            xaxis_title="Número de Redução",
+            yaxis_title="Frequência Absoluta",
+            showlegend=False,
+            height=500,
+            paper_bgcolor='rgba(0,0,0,0)',
+            plot_bgcolor='rgba(0,0,0,0)',
+            font=dict(color='white')
+        )
+        
+        st.plotly_chart(fig_dist, use_container_width=True)
+        
+        # Análise dos padrões binários
+        st.subheader("🔍 Padrões Binários Detectados")
+        
+        categorias = []
+        for reducao in reducoes:
+            if reducao in [1, 4, 7]:
+                categorias.append("Ação")
+            elif reducao in [2, 5, 8]:
+                categorias.append("Reação")
+            else:
+                categorias.append("Adaptação")
+        
+        contagem_categorias = pd.Series(categorias).value_counts()
+        
+        fig_cat = go.Figure(go.Pie(
+            labels=contagem_categorias.index,
+            values=contagem_categorias.values,
+            hole=.4,
+            marker_colors=['#FF6B6B', '#4ECDC4', '#45B7D1']
+        ))
+        
+        fig_cat.update_layout(
+            title="Distribuição das Categorias no Fluxo Universal",
+            paper_bgcolor='rgba(0,0,0,0)',
+            font=dict(color='white', size=14),
+            height=500
+        )
+        st.plotly_chart(fig_cat, use_container_width=True)
+        
+        # Estatísticas detalhadas
+        st.subheader("📋 Estatísticas Detalhadas")
+        
+        col_stat1, col_stat2, col_stat3 = st.columns(3)
+        
+        with col_stat1:
+            st.metric("Total de Números Analisados", "10,000")
+            st.metric("Média das Reduções", f"{np.mean(reducoes):.2f}")
+        
+        with col_stat2:
+            st.metric("Moda das Reduções", f"{contagem.index[0]}")
+            st.metric("Desvio Padrão", f"{np.std(reducoes):.2f}")
+        
+        with col_stat3:
+            acao_percent = (categorias.count("Ação") / len(categorias)) * 100
+            reacao_percent = (categorias.count("Reação") / len(categorias)) * 100
+            adaptacao_percent = (categorias.count("Adaptação") / len(categorias)) * 100
+            
+            st.metric("Ação", f"{acao_percent:.1f}%")
+            st.metric("Reação", f"{reacao_percent:.1f}%")
+            st.metric("Adaptação", f"{adaptacao_percent:.1f}%")
+
+# =============================================================================
+# FUNÇÕES PARA AS OUTRAS FÓRMULAS FÍSICAS (COMPLETAS)
+# =============================================================================
+
+def calcular_formula_incerteza():
+    st.subheader("🎭 ΔxΔp≥ħ/2 - Princípio da Incerteza")
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        incerteza_posicao = st.number_input("Incerteza na Posição Δx (m):", 
+                                          value=1.0e-10, format="%.2e", key="dx_incerteza")
+        incerteza_momento = st.number_input("Incerteza no Momento Δp (kg·m/s):", 
+                                          value=1.0e-24, format="%.2e", key="dp_incerteza")
+        constante_reduzida = st.number_input("Constante de Planck Reduzida ħ (J·s):", 
+                                           value=1.0545718e-34, format="%.3e", key="hbar_incerteza")
+        gravidade_local = st.number_input("Gravidade local (m/s²):", value=9.8, format="%.1f", key="g_incerteza")
+    
+    with col2:
+        if st.button("Calcular Princípio da Incerteza"):
+            # Cálculo clássico - produto das incertezas
+            produto_incertezas_classico = incerteza_posicao * incerteza_momento
+            limite_quantico = constante_reduzida / 2
+            
+            # Verificação do princípio
+            respeita_principio = produto_incertezas_classico >= limite_quantico
+            
+            # Cálculo no fluxo
+            reducao_dx = reduzir_teosoficamente(incerteza_posicao * 1e10)
+            reducao_dp = reduzir_teosoficamente(incerteza_momento * 1e24)
+            reducao_hbar = reduzir_teosoficamente(constante_reduzida * 1e34)
+            
+            produto_fluxo = fluxo_multiplicacao(reducao_dx, reducao_dp)
+            limite_fluxo = fluxo_multiplicacao(reducao_hbar, fluxo_potencia(2, -1))
+            
+            # Métricas de precisão
+            diferenca_percentual = calcular_porcentagem_diferenca(produto_incertezas_classico, produto_fluxo)
+            correcao_gravitacional = calcular_escalabilidade_gravitacional(gravidade_local, diferenca_percentual)
+            porcentagem_acerto = max(0, 100 - correcao_gravitacional)
+            
+            st.markdown(f"""
+            <div style='background: rgba(15, 23, 42, 0.9); padding: 25px; border-radius: 15px; border: 2px solid #ff6b6b;'>
+            <h3 style='color: #ff6b6b; text-align: center;'>🎭 Princípio da Incerteza de Heisenberg</h3>
+            
+            <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;'>
+            <div style='background: rgba(255, 107, 107, 0.2); padding: 15px; border-radius: 10px;'>
+            <h4 style='color: #ff6b6b;'>🧮 Clássico</h4>
+            <p style='font-size: 1.1em; text-align: center;'>
+            <b>Δx·Δp = {produto_incertezas_classico:.2e}</b>
+            </p>
+            <p style='text-align: center;'>
+            Limite: ħ/2 = {limite_quantico:.2e}
+            </p>
+            <p style='text-align: center;'>
+            <b>Respeita: {'✅ SIM' if respeita_principio else '❌ NÃO'}</b>
+            </p>
+            </div>
+            
+            <div style='background: rgba(78, 205, 196, 0.2); padding: 15px; border-radius: 10px;'>
+            <h4 style='color: #4ecdc4;'>🌀 Fluxo</h4>
+            <p style='font-size: 1.1em; text-align: center;'>
+            <b>R(Δx)⊗R(Δp) = {produto_fluxo}</b>
+            </p>
+            <p style='text-align: center;'>
+            Limite: R(ħ)⊗2⁻¹ = {limite_fluxo}
+            </p>
+            <p style='text-align: center;'>
+            <b>Respeita: {'✅ SIM' if produto_fluxo >= limite_fluxo else '❌ NÃO'}</b>
+            </p>
+            </div>
+            </div>
+            
+            <div style='background: rgba(255, 215, 0, 0.1); padding: 15px; border-radius: 10px; margin-top: 15px;'>
+            <h4 style='color: #ffd700;'>📊 Métricas de Precisão</h4>
+            <div style='display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;'>
+            <div style='text-align: center;'>
+            <p><b>Diferença:</b><br>{diferenca_percentual:.2f}%</p>
+            </div>
+            <div style='text-align: center;'>
+            <p><b>Correção G:</b><br>{correcao_gravitacional:.2f}%</p>
+            </div>
+            <div style='text-align: center;'>
+            <p><b>Acerto:</b><br>{porcentagem_acerto:.1f}%</p>
+            </div>
+            </div>
+            </div>
+            
+            <div style='background: rgba(45, 183, 209, 0.1); padding: 15px; border-radius: 10px; margin-top: 15px;'>
+            <h4 style='color: #45b7d1;'>🔍 Interpretação Quântica</h4>
+            <p><b>Δx (Posição):</b> Incerteza espacial (R={reducao_dx})</p>
+            <p><b>Δp (Momento):</b> Incerteza dinâmica (R={reducao_dp})</p>
+            <p><b>ħ (Constante):</b> Quantum de ação (R={reducao_hbar})</p>
+            <p><b>Padrão 3-9-6:</b> {produto_fluxo in [3,9,6]}</p>
+            </div>
+            </div>
+            """, unsafe_allow_html=True)
+
+def calcular_formula_gases_ideais():
+    st.subheader("🌡️ PV=nRT - Lei dos Gases Ideais")
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        pressao = st.number_input("Pressão P (Pa):", value=101325.0, format="%.1f", key="p_gases")
+        volume = st.number_input("Volume V (m³):", value=0.0224, format="%.4f", key="v_gases")
+        moles = st.number_input("Quantidade de Matéria n (mol):", value=1.0, format="%.2f", key="n_gases")
+        temperatura = st.number_input("Temperatura T (K):", value=273.15, format="%.2f", key="t_gases")
+        constante_gases = st.number_input("Constante dos Gases R (J/mol·K):", 
+                                        value=8.314462618, format="%.6f", key="r_gases")
+        gravidade_local = st.number_input("Gravidade local (m/s²):", value=9.8, format="%.1f", key="g_gases")
+    
+    with col2:
+        if st.button("Calcular Lei dos Gases Ideais"):
+            # Cálculo clássico - verificação da lei
+            lado_esquerdo = pressao * volume
+            lado_direito = moles * constante_gases * temperatura
+            diferenca_absoluta = abs(lado_esquerdo - lado_direito)
+            erro_relativo = (diferenca_absoluta / lado_esquerdo) * 100 if lado_esquerdo != 0 else 0
+            
+            # Cálculo no fluxo
+            reducao_p = reduzir_teosoficamente(pressao)
+            reducao_v = reduzir_teosoficamente(volume * 1000)  # Escala para números maiores
+            reducao_n = reduzir_teosoficamente(moles)
+            reducao_r = reduzir_teosoficamente(constante_gases * 10)
+            reducao_t = reduzir_teosoficamente(temperatura)
+            
+            lado_esquerdo_fluxo = fluxo_multiplicacao(reducao_p, reducao_v)
+            produto_nt = fluxo_multiplicacao(reducao_n, reducao_t)
+            lado_direito_fluxo = fluxo_multiplicacao(produto_nt, reducao_r)
+            
+            # Métricas de precisão
+            diferenca_percentual = calcular_porcentagem_diferenca(lado_esquerdo, lado_esquerdo_fluxo)
+            correcao_gravitacional = calcular_escalabilidade_gravitacional(gravidade_local, diferenca_percentual)
+            porcentagem_acerto = max(0, 100 - correcao_gravitacional)
+            
+            st.markdown(f"""
+            <div style='background: rgba(15, 23, 42, 0.9); padding: 25px; border-radius: 15px; border: 2px solid #4ecdc4;'>
+            <h3 style='color: #4ecdc4; text-align: center;'>🌡️ Lei dos Gases Ideais</h3>
+            
+            <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;'>
+            <div style='background: rgba(255, 107, 107, 0.2); padding: 15px; border-radius: 10px;'>
+            <h4 style='color: #ff6b6b;'>🧮 Clássico</h4>
+            <p style='font-size: 1.1em; text-align: center;'>
+            <b>P·V = {lado_esquerdo:.2f}</b>
+            </p>
+            <p style='text-align: center;'>
+            <b>n·R·T = {lado_direito:.2f}</b>
+            </p>
+            <p style='text-align: center;'>
+            Erro: {erro_relativo:.4f}%
+            </p>
+            <p style='text-align: center;'>
+            <b>Válido: {'✅ SIM' if erro_relativo < 1 else '⚠️ APROXIMADO'}</b>
+            </p>
+            </div>
+            
+            <div style='background: rgba(78, 205, 196, 0.2); padding: 15px; border-radius: 10px;'>
+            <h4 style='color: #4ecdc4;'>🌀 Fluxo</h4>
+            <p style='font-size: 1.1em; text-align: center;'>
+            <b>R(P)⊗R(V) = {lado_esquerdo_fluxo}</b>
+            </p>
+            <p style='text-align: center;'>
+            <b>R(n)⊗R(R)⊗R(T) = {lado_direito_fluxo}</b>
+            </p>
+            <p style='text-align: center;'>
+            Diferença: {abs(lado_esquerdo_fluxo - lado_direito_fluxo)}
+            </p>
+            <p style='text-align: center;'>
+            <b>Válido: {'✅ SIM' if lado_esquerdo_fluxo == lado_direito_fluxo else '⚖️ EQUILÍBRIO'}</b>
+            </p>
+            </div>
+            </div>
+            
+            <div style='background: rgba(255, 215, 0, 0.1); padding: 15px; border-radius: 10px; margin-top: 15px;'>
+            <h4 style='color: #ffd700;'>📊 Métricas de Precisão</h4>
+            <div style='display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;'>
+            <div style='text-align: center;'>
+            <p><b>Diferença:</b><br>{diferenca_percentual:.2f}%</p>
+            </div>
+            <div style='text-align: center;'>
+            <p><b>Correção G:</b><br>{correcao_gravitacional:.2f}%</p>
+            </div>
+            <div style='text-align: center;'>
+            <p><b>Acerto:</b><br>{porcentagem_acerto:.1f}%</p>
+            </div>
+            </div>
+            </div>
+            
+            <div style='background: rgba(45, 183, 209, 0.1); padding: 15px; border-radius: 10px; margin-top: 15px;'>
+            <h4 style='color: #45b7d1;'>🔍 Análise Termodinâmica</h4>
+            <p><b>Pressão (P):</b> Força por área (R={reducao_p})</p>
+            <p><b>Volume (V):</b> Espaço ocupado (R={reducao_v})</p>
+            <p><b>Mol (n):</b> Quantidade de matéria (R={reducao_n})</p>
+            <p><b>Temperatura (T):</b> Energia térmica (R={reducao_t})</p>
+            <p><b>Padrão 3-9-6:</b> {lado_esquerdo_fluxo in [3,9,6] and lado_direito_fluxo in [3,9,6]}</p>
+            </div>
+            </div>
+            """, unsafe_allow_html=True)
+
+def calcular_formula_leihooke():
+    st.subheader("🔄 F=-kx - Lei de Hooke")
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        constante_elasticidade = st.number_input("Constante Elástica k (N/m):", 
+                                               value=100.0, format="%.2f", key="k_hooke")
+        deformacao = st.number_input("Deformação x (m):", value=0.1, format="%.3f", key="x_hooke")
+        gravidade_local = st.number_input("Gravidade local (m/s²):", value=9.8, format="%.1f", key="g_hooke")
+    
+    with col2:
+        if st.button("Calcular Lei de Hooke"):
+            # Cálculo clássico
+            forca_classica = -constante_elasticidade * deformacao  # Força restauradora
+            
+            # Cálculo no fluxo
+            reducao_k = reduzir_teosoficamente(constante_elasticidade)
+            reducao_x = reduzir_teosoficamente(deformacao * 1000)  # Escala para números maiores
+            forca_fluxo = fluxo_multiplicacao(reducao_k, reducao_x)
+            
+            # Para força negativa (restauradora), consideramos o complemento
+            if forca_classica < 0:
+                forca_fluxo = 10 - forca_fluxo  # Inverso no fluxo para forças restauradoras
+            
+            # Métricas de precisão
+            diferenca_percentual = calcular_porcentagem_diferenca(abs(forca_classica), forca_fluxo)
+            correcao_gravitacional = calcular_escalabilidade_gravitacional(gravidade_local, diferenca_percentual)
+            porcentagem_acerto = max(0, 100 - correcao_gravitacional)
+            
+            st.markdown(f"""
+            <div style='background: rgba(15, 23, 42, 0.9); padding: 25px; border-radius: 15px; border: 2px solid #9333ea;'>
+            <h3 style='color: #9333ea; text-align: center;'>🔄 Lei de Hooke - Força Elástica</h3>
+            
+            <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;'>
+            <div style='background: rgba(255, 107, 107, 0.2); padding: 15px; border-radius: 10px;'>
+            <h4 style='color: #ff6b6b;'>🧮 Clássico</h4>
+            <p style='font-size: 1.1em; text-align: center;'>
+            <b>F = -k·x = {forca_classica:.2f} N</b>
+            </p>
+            <p style='text-align: center;'>
+            Módulo: {abs(forca_classica):.2f} N
+            </p>
+            <p style='text-align: center;'>
+            Tipo: {'🔁 RESTAURADORA' if forca_classica < 0 else '➡️ DEFORMADORA'}
+            </p>
+            </div>
+            
+            <div style='background: rgba(78, 205, 196, 0.2); padding: 15px; border-radius: 10px;'>
+            <h4 style='color: #4ecdc4;'>🌀 Fluxo</h4>
+            <p style='font-size: 1.1em; text-align: center;'>
+            <b>R(k)⊗R(x) = {forca_fluxo}</b>
+            </p>
+            <p style='text-align: center;'>
+            Tipo: {'🔁 RESTAURADORA' if forca_classica < 0 else '➡️ DEFORMADORA'}
+            </p>
+            <p style='text-align: center;'>
+            <b>Equilíbrio: {'⚖️ ALCANÇADO' if forca_fluxo in [3,6,9] else '🔄 PROCESSANDO'}</b>
+            </p>
+            </div>
+            </div>
+            
+            <div style='background: rgba(255, 215, 0, 0.1); padding: 15px; border-radius: 10px; margin-top: 15px;'>
+            <h4 style='color: #ffd700;'>📊 Métricas de Precisão</h4>
+            <div style='display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;'>
+            <div style='text-align: center;'>
+            <p><b>Diferença:</b><br>{diferenca_percentual:.2f}%</p>
+            </div>
+            <div style='text-align: center;'>
+            <p><b>Correção G:</b><br>{correcao_gravitacional:.2f}%</p>
+            </div>
+            <div style='text-align: center;'>
+            <p><b>Acerto:</b><br>{porcentagem_acerto:.1f}%</p>
+            </div>
+            </div>
+            </div>
+            
+            <div style='background: rgba(45, 183, 209, 0.1); padding: 15px; border-radius: 10px; margin-top: 15px;'>
+            <h4 style='color: #45b7d1;'>🔍 Análise Elástica</h4>
+            <p><b>Constante k:</b> Rigidez do material (R={reducao_k})</p>
+            <p><b>Deformação x:</b> Alteração do comprimento (R={reducao_x})</p>
+            <p><b>Força F:</b> Resposta elástica (R={forca_fluxo})</p>
+            <p><b>Energia Potencial:</b> {(0.5 * constante_elasticidade * deformacao**2):.4f} J</p>
+            <p><b>Padrão 3-9-6:</b> {forca_fluxo in [3,9,6]}</p>
+            </div>
+            </div>
+            """, unsafe_allow_html=True)
+
+def calcular_formula_relatividade_restrita():
+    st.subheader("⏱️ Δt = Δt₀/√(1-v²/c²) - Dilatação do Tempo")
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        tempo_proprio = st.number_input("Tempo Próprio Δt₀ (s):", value=1.0, format="%.2f", key="t0_rel")
+        velocidade = st.number_input("Velocidade v (m/s):", value=0.8e8, format="%.2e", key="v_rel")
+        velocidade_luz = st.number_input("Velocidade da Luz c (m/s):", 
+                                       value=299792458.0, format="%.1f", key="c_rel")
+        gravidade_local = st.number_input("Gravidade local (m/s²):", value=9.8, format="%.1f", key="g_rel")
+    
+    with col2:
+        if st.button("Calcular Dilatação do Tempo"):
+            # Cálculo clássico (relatividade)
+            if velocidade >= velocidade_luz:
+                st.error("Velocidade não pode ser maior ou igual à velocidade da luz!")
+                return
+                
+            fator_lorentz = 1 / math.sqrt(1 - (velocidade**2 / velocidade_luz**2))
+            tempo_dilatado = tempo_proprio * fator_lorentz
+            
+            # Cálculo no fluxo
+            reducao_t0 = reduzir_teosoficamente(tempo_proprio)
+            reducao_v = reduzir_teosoficamente(velocidade)
+            reducao_c = reduzir_teosoficamente(velocidade_luz)
+            
+            # Fator de Lorentz no fluxo
+            v_sobre_c = fluxo_multiplicacao(reducao_v, fluxo_potencia(reducao_c, -1))
+            v_quad_sobre_c_quad = fluxo_potencia(v_sobre_c, 2)
+            um_menos_v2c2 = fluxo_soma(1, -v_quad_sobre_c_quad)
+            fator_lorentz_fluxo = fluxo_multiplicacao(1, fluxo_potencia(um_menos_v2c2, -2))
+            
+            tempo_dilatado_fluxo = fluxo_multiplicacao(reducao_t0, fator_lorentz_fluxo)
+            
+            # Métricas de precisão
+            diferenca_percentual = calcular_porcentagem_diferenca(tempo_dilatado, tempo_dilatado_fluxo)
+            correcao_gravitacional = calcular_escalabilidade_gravitacional(gravidade_local, diferenca_percentual)
+            porcentagem_acerto = max(0, 100 - correcao_gravitacional)
+            
+            st.markdown(f"""
+            <div style='background: rgba(15, 23, 42, 0.9); padding: 25px; border-radius: 15px; border: 2px solid #ffd700;'>
+            <h3 style='color: #ffd700; text-align: center;'>⏱️ Dilatação do Tempo - Relatividade</h3>
+            
+            <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;'>
+            <div style='background: rgba(255, 107, 107, 0.2); padding: 15px; border-radius: 10px;'>
+            <h4 style='color: #ff6b6b;'>🧮 Clássico</h4>
+            <p style='font-size: 1.1em; text-align: center;'>
+            <b>Δt = {tempo_dilatado:.4f} s</b>
+            </p>
+            <p style='text-align: center;'>
+            Fator Lorentz: {fator_lorentz:.4f}
+            </p>
+            <p style='text-align: center;'>
+            v/c: {(velocidade/velocidade_luz):.4f}
+            </p>
+            </div>
+            
+            <div style='background: rgba(78, 205, 196, 0.2); padding: 15px; border-radius: 10px;'>
+            <h4 style='color: #4ecdc4;'>🌀 Fluxo</h4>
+            <p style='font-size: 1.1em; text-align: center;'>
+            <b>R(Δt₀)⊗γ = {tempo_dilatado_fluxo}</b>
+            </p>
+            <p style='text-align: center;'>
+            Fator Lorentz: {fator_lorentz_fluxo}
+            </p>
+            <p style='text-align: center;'>
+            R(v/c): {v_sobre_c}
+            </p>
+            </div>
+            </div>
+            
+            <div style='background: rgba(255, 215, 0, 0.1); padding: 15px; border-radius: 10px; margin-top: 15px;'>
+            <h4 style='color: #ffd700;'>📊 Métricas de Precisão</h4>
+            <div style='display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;'>
+            <div style='text-align: center;'>
+            <p><b>Diferença:</b><br>{diferenca_percentual:.2f}%</p>
+            </div>
+            <div style='text-align: center;'>
+            <p><b>Correção G:</b><br>{correcao_gravitacional:.2f}%</p>
+            </div>
+            <div style='text-align: center;'>
+            <p><b>Acerto:</b><br>{porcentagem_acerto:.1f}%</p>
+            </div>
+            </div>
+            </div>
+            
+            <div style='background: rgba(45, 183, 209, 0.1); padding: 15px; border-radius: 10px; margin-top: 15px;'>
+            <h4 style='color: #45b7d1;'>🔍 Análise Relativística</h4>
+            <p><b>Tempo Próprio:</b> Referencial em repouso (R={reducao_t0})</p>
+            <p><b>Velocidade:</b> Movimento relativo (R={reducao_v})</p>
+            <p><b>Luz (c):</b> Limite cósmico (R={reducao_c})</p>
+            <p><b>Dilatação:</b> {((tempo_dilatado/tempo_proprio - 1) * 100):.2f}% mais lento</p>
+            <p><b>Padrão 3-9-6:</b> {tempo_dilatado_fluxo in [3,9,6]}</p>
+            </div>
+            </div>
+            """, unsafe_allow_html=True)
+
+def calcular_formula_schrodinger():
+    st.subheader("Ψ Schrödinger - Equação de Onda Quântica")
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        energia_total = st.number_input("Energia Total E (J):", value=1.6e-19, format="%.2e", key="e_schro")
+        energia_potencial = st.number_input("Energia Potencial V (J):", value=1.0e-19, format="%.2e", key="v_schro")
+        massa = st.number_input("Massa m (kg):", value=9.1e-31, format="%.2e", key="m_schro")
+        constante_reduzida = st.number_input("Constante ħ (J·s):", value=1.054e-34, format="%.3e", key="hbar_schro")
+        gravidade_local = st.number_input("Gravidade local (m/s²):", value=9.8, format="%.1f", key="g_schro")
+    
+    with col2:
+        if st.button("Analisar Equação de Schrödinger"):
+            # Cálculo clássico - verificação da equação
+            energia_cinetica = energia_total - energia_potencial
+            
+            # Cálculo no fluxo
+            reducao_e = reduzir_teosoficamente(energia_total * 1e19)
+            reducao_v = reduzir_teosoficamente(energia_potencial * 1e19)
+            reducao_m = reduzir_teosoficamente(massa * 1e30)
+            reducao_hbar = reduzir_teosoficamente(constante_reduzida * 1e34)
+            
+            # Equação de Schrödinger no fluxo
+            energia_cinetica_fluxo = fluxo_soma(reducao_e, -reducao_v)
+            
+            # Verificação da consistência quântica
+            consistente_classico = energia_cinetica > 0
+            consistente_fluxo = energia_cinetica_fluxo > 0
+            
+            # Métricas de precisão
+            diferenca_percentual = calcular_porcentagem_diferenca(energia_cinetica, energia_cinetica_fluxo)
+            correcao_gravitacional = calcular_escalabilidade_gravitacional(gravidade_local, diferenca_percentual)
+            porcentagem_acerto = max(0, 100 - correcao_gravitacional)
+            
+            st.markdown(f"""
+            <div style='background: rgba(15, 23, 42, 0.9); padding: 25px; border-radius: 15px; border: 2px solid #00ff00;'>
+            <h3 style='color: #00ff00; text-align: center;'>Ψ Equação de Schrödinger</h3>
+            
+            <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;'>
+            <div style='background: rgba(255, 107, 107, 0.2); padding: 15px; border-radius: 10px;'>
+            <h4 style='color: #ff6b6b;'>🧮 Clássico</h4>
+            <p style='font-size: 1.1em; text-align: center;'>
+            <b>E = {energia_total:.2e} J</b>
+            </p>
+            <p style='text-align: center;'>
+            <b>V = {energia_potencial:.2e} J</b>
+            </p>
+            <p style='text-align: center;'>
+            <b>K = E - V = {energia_cinetica:.2e} J</b>
+            </p>
+            <p style='text-align: center;'>
+            <b>Estado: {'✅ FÍSICO' if consistente_classico else '❌ NÃO-FÍSICO'}</b>
+            </p>
+            </div>
+            
+            <div style='background: rgba(78, 205, 196, 0.2); padding: 15px; border-radius: 10px;'>
+            <h4 style='color: #4ecdc4;'>🌀 Fluxo</h4>
+            <p style='font-size: 1.1em; text-align: center;'>
+            <b>R(E) = {reducao_e}</b>
+            </p>
+            <p style='text-align: center;'>
+            <b>R(V) = {reducao_v}</b>
+            </p>
+            <p style='text-align: center;'>
+            <b>R(K) = R(E) - R(V) = {energia_cinetica_fluxo}</b>
+            </p>
+            <p style='text-align: center;'>
+            <b>Estado: {'✅ FÍSICO' if consistente_fluxo else '❌ NÃO-FÍSICO'}</b>
+            </p>
+            </div>
+            </div>
+            
+            <div style='background: rgba(255, 215, 0, 0.1); padding: 15px; border-radius: 10px; margin-top: 15px;'>
+            <h4 style='color: #ffd700;'>📊 Métricas de Precisão</h4>
+            <div style='display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;'>
+            <div style='text-align: center;'>
+            <p><b>Diferença:</b><br>{diferenca_percentual:.2f}%</p>
+            </div>
+            <div style='text-align: center;'>
+            <p><b>Correção G:</b><br>{correcao_gravitacional:.2f}%</p>
+            </div>
+            <div style='text-align: center;'>
+            <p><b>Acerto:</b><br>{porcentagem_acerto:.1f}%</p>
+            </div>
+            </div>
+            </div>
+            
+            <div style='background: rgba(45, 183, 209, 0.1); padding: 15px; border-radius: 10px; margin-top: 15px;'>
+            <h4 style='color: #45b7d1;'>🔍 Interpretação Quântica</h4>
+            <p><b>Energia Total:</b> Valor próprio do Hamiltoniano (R={reducao_e})</p>
+            <p><b>Energia Potencial:</b> Campo externo (R={reducao_v})</p>
+            <p><b>Energia Cinética:</b> Movimento quântico (R={energia_cinetica_fluxo})</p>
+            <p><b>Função de Onda:</b> {'🔵 ESTACIONÁRIA' if energia_cinetica_fluxo in [3,6,9] else '🌊 PROPAGANTE'}</p>
+            <p><b>Padrão 3-9-6:</b> {energia_cinetica_fluxo in [3,9,6]}</p>
+            </div>
+            </div>
+            """, unsafe_allow_html=True)
+
+# FUNÇÕES AUXILIARES PARA A PÁGINA DE CÁLCULOS
+def obter_significado_numero(numero):
+    significados = {
+        1: "Ação, Início, Unidade",
+        2: "Reação, Dualidade, Equilíbrio", 
+        3: "Adaptação Física, Manifestação",
+        4: "Ação Estruturada, Fundação",
+        5: "Reação Transformadora, Mudança",
+        6: "Adaptação Energética, Harmonia",
+        7: "Ação Espiritual, Mistério",
+        8: "Reação Infinita, Abundância",
+        9: "Adaptação Completa, Singularidade"
+    }
+    return significados.get(numero, "Significado em análise")
+
+def gerar_sequencia_396(tamanho):
+    """Gera sequência no padrão 3-9-6"""
+    sequencia = []
+    for i in range(tamanho):
+        if i % 3 == 0:
+            sequencia.append(3)
+        elif i % 3 == 1:
+            sequencia.append(9)
+        else:
+            sequencia.append(6)
+    return sequencia
+
+def gerar_sequencia_binaria(tamanho):
+    """Gera sequência no padrão binário universal"""
+    sequencia = []
+    padrao = [1, 2, 3, 4, 5, 9, 7, 8, 6]  # Padrão completo
+    for i in range(tamanho):
+        sequencia.append(padrao[i % len(padrao)])
+    return sequencia
+
+def gerar_sequencia_multiplicacao_3(tamanho):
+    """Gera sequência multiplicando por 3"""
+    sequencia = [1]
+    for i in range(1, tamanho):
+        sequencia.append(reduzir_teosoficamente(sequencia[-1] * 3))
+    return sequencia
+
+def analisar_formula_fluxo(formula):
+    """Analisa fórmulas físicas no contexto do fluxo"""
+    
+    st.markdown(f"### Análise da Fórmula: {formula}")
+    
+    if formula == "E=mc²":
+        st.markdown("""
+        **No Fluxo Matemático:**
+        - **m (massa)**: Representa a ação física (1,4,7)
+        - **c² (velocidade da luz)**: Representa reação energética (2,5,8)  
+        - **E (energia)**: Resultado da adaptação (3,6,9)
+        
+        **Padrão Detectado:** A conversão massa-energia segue o ciclo 3-9-6
+        """)
+    
+    elif formula == "F=ma":
+        st.markdown("""
+        **No Fluxo Matemático:**
+        - **m (massa)**: Ação estrutural (1,4,7)
+        - **a (aceleração)**: Reação dinâmica (2,5,8)
+        - **F (força)**: Adaptação resultante (3,6,9)
+        
+        **Padrão Detectado:** Força emerge da interação ação-reação
+        """)
+    
+    elif formula == "V=IR":
+        st.markdown("""
+        **No Fluxo Matemático:**
+        - **I (corrente)**: Ação do fluxo (1,4,7)
+        - **R (resistência)**: Reação oposta (2,5,8)
+        - **V (tensão)**: Adaptação energética (3,6,9)
+        
+        **Padrão Detectado:** Tensão é o ponto de equilíbrio entre fluxo e resistência
+        """)
+    
+    elif formula == "p=mv":
+        st.markdown("""
+        **No Fluxo Matemático:**
+        - **m (massa)**: Ação material (1,4,7)
+        - **v (velocidade)**: Reação cinética (2,5,8)
+        - **p (momento)**: Adaptação do movimento (3,6,9)
+        
+        **Padrão Detectado:** Momento conserva o padrão através das transformações
+        """)
+
+# FUNÇÃO DE REDUÇÃO TEOSÓFICA (já existe no código, mas vou garantir que está presente)
+def reduzir_teosoficamente(n):
+    """
+    Redução teosófica: Soma repetida dos dígitos até obter um único dígito de 1 a 9.
+    """
+    try:
+        if isinstance(n, (int, float)):
+            n_str = f"{n:.0f}"
+        else:
+            n_str = str(n)
+
+        n_str = ''.join(filter(str.isdigit, n_str))
+
+        if not n_str:
+            return 0
+
+        while len(n_str) > 1:
+            soma = sum(int(c) for c in n_str)
+            n_str = str(soma)
+
+        return int(n_str)
+
+    except Exception as e:
+        return 0
+    
+# ADICIONAR ESTAS FUNÇÕES DE CÁLCULO (por volta da linha 200)
+
+def fluxo_soma(a, b):
+    """Soma no Fluxo Matemático"""
+    return reduzir_teosoficamente(a + b)
+
+def fluxo_multiplicacao(a, b):
+    """Multiplicação no Fluxo Matemático"""
+    return reduzir_teosoficamente(a * b)
+
+def fluxo_potencia(a, n):
+    """Potenciação no Fluxo Matemático"""
+    return reduzir_teosoficamente(a ** n)
+
+def fluxo_trigonometria(angulo):
+    """Trigonometria no Fluxo Matemático"""
+    import math
+    rad = math.radians(angulo)
+    s = math.sin(rad)
+    c = math.cos(rad)
+    t = math.tan(rad)
+    return (reduzir_teosoficamente(abs(int(s*100))), 
+            reduzir_teosoficamente(abs(int(c*100))), 
+            reduzir_teosoficamente(abs(int(t*100))))
+
+def fluxo_fisica(formula, valores):
+    """Aplica o Fluxo Matemático a fórmulas físicas"""
+    try:
+        if formula == "E=mc²":
+            m, c = valores['m'], valores['c']
+            E_classico = m * c**2
+            E_fluxo = fluxo_multiplicacao(reduzir_teosoficamente(m), 
+                                         fluxo_potencia(reduzir_teosoficamente(c), 2))
+            return E_classico, E_fluxo
+        
+        elif formula == "F=ma":
+            m, a = valores['m'], valores['a']
+            F_classico = m * a
+            F_fluxo = fluxo_multiplicacao(reduzir_teosoficamente(m), 
+                                         reduzir_teosoficamente(a))
+            return F_classico, F_fluxo
+        
+        elif formula == "V=IR":
+            I, R = valores['I'], valores['R']
+            V_classico = I * R
+            V_fluxo = fluxo_multiplicacao(reduzir_teosoficamente(I), 
+                                         reduzir_teosoficamente(R))
+            return V_classico, V_fluxo
+        
+        elif formula == "p=mv":
+            m, v = valores['m'], valores['v']
+            p_classico = m * v
+            p_fluxo = fluxo_multiplicacao(reduzir_teosoficamente(m), 
+                                         reduzir_teosoficamente(v))
+            return p_classico, p_fluxo
+        
+        elif formula == "F=G(m1m2)/r²":
+            G, m1, m2, r = valores['G'], valores['m1'], valores['m2'], valores['r']
+            F_classico = G * m1 * m2 / r**2
+            numerador = fluxo_multiplicacao(
+                fluxo_multiplicacao(reduzir_teosoficamente(G), 
+                                  reduzir_teosoficamente(m1)), 
+                reduzir_teosoficamente(m2))
+            denominador = fluxo_potencia(reduzir_teosoficamente(r), 2)
+            F_fluxo = fluxo_multiplicacao(numerador, denominador)
+            return F_classico, F_fluxo
+        
+        return None, None
+    except:
+        return None, None
+    
 # Dados para as simulações
 def generate_fibonacci_spiral(n_points=1000):
     phi = (1 + np.sqrt(5)) / 2
@@ -279,6 +2173,531 @@ def get_stage_details(stage_name):
     }
     
     return details.get(stage_name, "Detalhes não disponíveis.")
+
+# =============================================================================
+# MÓDULO ACELERADOR DE PARTÍCULAS QUÂNTICO
+# =============================================================================
+
+def pagina_acelerador_particulas():
+    st.title("⚛️ Acelerador de Partículas Quântico")
+    st.markdown("""
+    ## 🌌 Simulador do Nada ao Tudo - Fluxo Matemático Universal
+    
+    **Explore a criação e destruição da matéria através dos padrões 3-9-6 e da matemática vorticial de Tesla.**
+    """)
+    
+    # Configuração do acelerador
+    col_config1, col_config2, col_config3 = st.columns(3)
+    
+    with col_config1:
+        energia_colisao = st.slider("Energia de Colisão (TeV):", 1.0, 14.0, 7.0, 0.1)
+        tipo_particula = st.selectbox("Tipo de Partícula:", 
+                                    ["Prótons", "Elétrons", "Fótons", "Hádrons", "Íons Pesados"])
+        
+    with col_config2:
+        campo_magnetico = st.slider("Campo Magnético (Tesla):", 1.0, 10.0, 4.0, 0.1)
+        temperatura = st.slider("Temperatura (K):", 1.0, 1000.0, 2.7, 0.1)
+        
+    with col_config3:
+        modo_operacao = st.selectbox("Modo de Operação:", 
+                                   ["Colisão Frontral", "Espalhamento", "Criação de Matéria", "Aniquilação"])
+        gravidade_local = st.number_input("Gravidade Local (m/s²):", value=9.8, format="%.1f")
+    
+    # Controles principais
+    col_controles1, col_controles2, col_controles3, col_controles4 = st.columns(4)
+    
+    with col_controles1:
+        if st.button("🚀 Iniciar Aceleração", use_container_width=True):
+            simular_aceleracao(energia_colisao, tipo_particula, campo_magnetico, temperatura, gravidade_local)
+            
+    with col_controles2:
+        if st.button("💥 Colisão Máxima", use_container_width=True):
+            simular_colisao_maxima(energia_colisao, gravidade_local)
+            
+    with col_controles3:
+        if st.button("🌀 Padrão 3-9-6", use_container_width=True):
+            aplicar_padrao_396(energia_colisao, gravidade_local)
+            
+    with col_controles4:
+        if st.button("🔄 Resetar Sistema", use_container_width=True):
+            resetar_acelerador()
+    
+    # Visualização 3D do acelerador
+    st.subheader("🔬 Visualização do Acelerador de Partículas")
+    
+    # Criar visualização interativa
+    fig_acelerador = criar_visualizacao_acelerador()
+    st.plotly_chart(fig_acelerador, use_container_width=True)
+    
+    # Painel de dados em tempo real
+    col_dados1, col_dados2, col_dados3, col_dados4 = st.columns(4)
+    
+    with col_dados1:
+        st.metric("Energia Instantânea", f"{energia_colisao:.1f} TeV")
+        st.metric("Partículas por Segundo", "1.2 bilhões")
+        
+    with col_dados2:
+        st.metric("Velocidade Relativa", "99.9999% c")
+        st.metric("Temperatura Instantânea", f"{temperatura * 1e9:.0f} K")
+        
+    with col_dados3:
+        st.metric("Pressão do Vácuo", "10⁻¹¹ Pa")
+        st.metric("Campo Magnético Ativo", f"{campo_magnetico} T")
+        
+    with col_dados4:
+        st.metric("Eficiência Quântica", "98.7%")
+        st.metric("Entrelaçamento", "95.3%")
+    
+    # Análise comparativa Fluxo vs Clássico
+    st.subheader("📊 Análise Comparativa: Fluxo Matemático vs Física Clássica")
+    
+    tab_analise1, tab_analise2, tab_analise3 = st.tabs(["📈 Energia", "🔬 Partículas", "🌌 Campo Quântico"])
+    
+    with tab_analise1:
+        analisar_energia_colisao(energia_colisao, gravidade_local)
+        
+    with tab_analise2:
+        analisar_particulas_geradas(energia_colisao, tipo_particula)
+        
+    with tab_analise3:
+        analisar_campo_quantico(campo_magnetico, temperatura)
+
+def criar_visualizacao_acelerador():
+    """Cria visualização 3D do acelerador de partículas"""
+    import plotly.graph_objects as go
+    import numpy as np
+    
+    # Criar estrutura do acelerador
+    theta = np.linspace(0, 2*np.pi, 100)
+    raio = 5
+    x_circuito = raio * np.cos(theta)
+    y_circuito = raio * np.sin(theta)
+    z_circuito = np.zeros_like(theta)
+    
+    fig = go.Figure()
+    
+    # Circuito principal
+    fig.add_trace(go.Scatter3d(
+        x=x_circuito, y=y_circuito, z=z_circuito,
+        mode='lines',
+        line=dict(width=8, color='#6366f1'),
+        name='Tubo de Vácuo'
+    ))
+    
+    # Ímãs aceleradores
+    for i in range(0, 100, 10):
+        fig.add_trace(go.Scatter3d(
+            x=[x_circuito[i]], y=[y_circuito[i]], z=[z_circuito[i]],
+            mode='markers',
+            marker=dict(size=6, color='#ff6b6b', symbol='diamond'),
+            name='Ímã Acelerador'
+        ))
+    
+    # Partículas em movimento
+    t = np.linspace(0, 2*np.pi, 20)
+    for i in range(5):
+        offset = i * 0.4
+        x_part = (raio - 0.3) * np.cos(t + offset)
+        y_part = (raio - 0.3) * np.sin(t + offset)
+        z_part = np.zeros_like(t) + 0.1 * i
+        
+        fig.add_trace(go.Scatter3d(
+            x=x_part, y=y_part, z=z_part,
+            mode='markers',
+            marker=dict(size=4, color='#00ff88'),
+            name=f'Feixe {i+1}'
+        ))
+    
+    # Ponto de colisão
+    fig.add_trace(go.Scatter3d(
+        x=[raio], y=[0], z=[0],
+        mode='markers',
+        marker=dict(size=15, color='#ffd700', symbol='circle'),
+        name='Ponto de Colisão'
+    ))
+    
+    fig.update_layout(
+        title=dict(
+            text="Acelerador de Partículas - Visualização 3D",
+            font=dict(size=16, color='#4ecdc4')
+        ),
+        width=800,
+        height=600,
+        scene=dict(
+            xaxis=dict(visible=False),
+            yaxis=dict(visible=False),
+            zaxis=dict(visible=False),
+            bgcolor='rgba(0,0,0,0)',
+            camera=dict(eye=dict(x=1.5, y=1.5, z=1.5))
+        ),
+        paper_bgcolor='rgba(0,0,0,0)',
+        showlegend=True
+    )
+    
+    return fig
+
+def simular_aceleracao(energia, tipo_particula, campo_magnetico, temperatura, gravidade):
+    """Simula o processo de aceleração de partículas"""
+    
+    st.info("🚀 **Iniciando Sequência de Aceleração...**")
+    
+    # Barra de progresso
+    progress_bar = st.progress(0)
+    status_text = st.empty()
+    
+    # Simulação passo a passo
+    etapas = [
+        "Injetando partículas...",
+        "Aplicando campo magnético...",
+        "Acelerando no primeiro estágio...",
+        "Sincronizando feixes...",
+        "Aumentando energia para colisão...",
+        "Pronto para colisão!"
+    ]
+    
+    for i, etapa in enumerate(etapas):
+        progress_bar.progress((i + 1) / len(etapas))
+        status_text.text(f"Status: {etapa}")
+        time.sleep(0.5)
+    
+    # Cálculos comparativos
+    energia_classica = energia * 1e12  # Convertendo para eV
+    energia_fluxo = calcular_energia_fluxo(energia, tipo_particula, gravidade)
+    
+    # Resultados
+    st.success("✅ **Aceleração Completa!**")
+    
+    col_res1, col_res2 = st.columns(2)
+    
+    with col_res1:
+        st.markdown(f"""
+        <div style='background: rgba(255, 107, 107, 0.1); padding: 15px; border-radius: 10px;'>
+        <h4 style='color: #ff6b6b;'>🧮 Física Clássica</h4>
+        <p><b>Energia:</b> {energia_classica:.2e} eV</p>
+        <p><b>Momento:</b> {(energia_classica / 299792458):.2e} kg·m/s</p>
+        <p><b>Massa Relativística:</b> {(energia_classica / (299792458**2)):.2e} kg</p>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    with col_res2:
+        st.markdown(f"""
+        <div style='background: rgba(78, 205, 196, 0.1); padding: 15px; border-radius: 10px;'>
+        <h4 style='color: #4ecdc4;'>🌀 Fluxo Matemático</h4>
+        <p><b>Energia:</b> R({energia_fluxo})</p>
+        <p><b>Padrão:</b> {obter_padrao_energia(energia_fluxo)}</p>
+        <p><b>Estado Quântico:</b> {obter_estado_quantico(energia_fluxo)}</p>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    # Análise de diferença
+    diferenca = calcular_diferenca_energia(energia_classica, energia_fluxo)
+    correcao_gravitacional = calcular_escalabilidade_gravitacional(gravidade, diferenca)
+    acerto = max(0, 100 - correcao_gravitacional)
+    
+    st.metric("Precisão do Modelo", f"{acerto:.1f}%")
+
+def simular_colisao_maxima(energia, gravidade):
+    """Simula colisão com energia máxima"""
+    
+    st.warning("💥 **INICIANDO COLISÃO MÁXIMA - EXTREMO CAUTION!**")
+    
+    # Efeitos visuais
+    with st.expander("🔬 Detector ATLAS - Dados em Tempo Real", expanded=True):
+        col_det1, col_det2, col_det3 = st.columns(3)
+        
+        with col_det1:
+            st.metric("Temperatura do Vácuo", "1.8 K")
+            st.metric("Pressão Residual", "10⁻¹³ mbar")
+            
+        with col_det2:
+            st.metric("Luminosidade Instantânea", "2.1 × 10³⁴ cm⁻²s⁻¹")
+            st.metric("Eventos por Segundo", "1.1 bilhão")
+            
+        with col_det3:
+            st.metric("Energia no Centro de Massa", f"{energia*2:.1f} TeV")
+            st.metric("Tempo desde Big Bang", "10⁻¹² s")
+    
+    # Simulação de colisão
+    import numpy as np
+    
+    # Gerar dados de colisão
+    n_eventos = 1000
+    energias = np.random.exponential(energia, n_eventos)
+    angulos = np.random.uniform(0, 2*np.pi, n_eventos)
+    
+    fig_colisao = go.Figure()
+    
+    fig_colisao.add_trace(go.Scatterpolar(
+        r=energias,
+        theta=angulos * 180/np.pi,
+        mode='markers',
+        marker=dict(
+            size=8,
+            color=energias,
+            colorscale='Viridis',
+            showscale=True
+        ),
+        name='Partículas Emergentes'
+    ))
+    
+    fig_colisao.update_layout(
+        title=dict(
+            text="Padrão de Colisão - Distribuição Angular",
+            font=dict(size=16, color='#ff6b6b')
+        ),
+        polar=dict(
+            radialaxis=dict(visible=True, range=[0, energia*2]),
+            angularaxis=dict(direction="clockwise")
+        ),
+        showlegend=False,
+        height=400
+    )
+    
+    st.plotly_chart(fig_colisao, use_container_width=True)
+    
+    # Análise de partículas geradas
+    st.subheader("🧬 Partículas Detectadas")
+    
+    particulas_detectadas = [
+        ("Higgson", 125.3, "⚛️", "Campo de Higgs"),
+        ("Top Quark", 173.1, "🔴", "Matéria Bariônica"),
+        ("Bóson Z", 91.2, "🌀", "Força Fraca"),
+        ("Gluon", 0, "🌈", "Força Forte"),
+        ("Fóton", 0, "💡", "Eletromagnetismo")
+    ]
+    
+    for nome, massa, emoji, tipo in particulas_detectadas:
+        col_part1, col_part2, col_part3 = st.columns([1, 2, 1])
+        with col_part1:
+            st.markdown(f"<h1>{emoji}</h1>", unsafe_allow_html=True)
+        with col_part2:
+            st.write(f"**{nome}** - {massa} GeV/c²")
+            st.write(f"*{tipo}*")
+        with col_part3:
+            st.metric("Significância", "5.2σ")
+
+def aplicar_padrao_396(energia, gravidade):
+    """Aplica o padrão 3-9-6 na simulação"""
+    
+    st.info("🌀 **Ativando Padrão 3-9-6 - Geometria Sagrada do Universo**")
+    
+    # Sequência 3-9-6
+    sequencia = gerar_sequencia_396(12)
+    
+    col_seq1, col_seq2, col_seq3 = st.columns(3)
+    
+    with col_seq1:
+        st.markdown("""
+        <div style='background: rgba(75, 0, 130, 0.2); padding: 20px; border-radius: 10px; text-align: center;'>
+        <h1 style='color: #4B0082; font-size: 3em;'>3</h1>
+        <p><b>Estado Físico</b><br>Manifestação Material</p>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    with col_seq2:
+        st.markdown("""
+        <div style='background: rgba(255, 215, 0, 0.2); padding: 20px; border-radius: 10px; text-align: center;'>
+        <h1 style='color: #FFD700; font-size: 3em;'>9</h1>
+        <p><b>Estado Absoluto</b><br>Singularidade</p>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    with col_seq3:
+        st.markdown("""
+        <div style='background: rgba(0, 255, 0, 0.2); padding: 20px; border-radius: 10px; text-align: center;'>
+        <h1 style='color: #00FF00; font-size: 3em;'>6</h1>
+        <p><b>Estado Energético</b><br>Fluxo Dinâmico</p>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    # Visualização do padrão
+    fig_padrao = go.Figure()
+    
+    x = list(range(len(sequencia)))
+    cores = ['#4B0082' if val == 3 else '#FFD700' if val == 9 else '#00FF00' for val in sequencia]
+    
+    fig_padrao.add_trace(go.Scatter(
+        x=x, y=sequencia,
+        mode='lines+markers',
+        line=dict(width=4, color='white'),
+        marker=dict(size=12, color=cores),
+        name='Padrão 3-9-6'
+    ))
+    
+    fig_padrao.update_layout(
+        title=dict(
+            text="Sequência 3-9-6 - Ciclo Universal",
+            font=dict(size=16, color='#4ecdc4')
+        ),
+        height=300,
+        paper_bgcolor='rgba(0,0,0,0)',
+        plot_bgcolor='rgba(0,0,0,0)',
+        font=dict(color='white'),
+        xaxis=dict(title="Ciclo"),
+        yaxis=dict(title="Estado", range=[2, 10])
+    )
+    
+    st.plotly_chart(fig_padrao, use_container_width=True)
+    
+    # Efeitos no acelerador
+    st.success("✨ **Padrão 3-9-6 Aplicado com Sucesso!**")
+    
+    efeitos = [
+        "✅ Campo magnético otimizado em 396%",
+        "✅ Eficiência energética aumentada",
+        "✅ Estabilidade quântica estabilizada",
+        "✅ Entrelaçamento máximo alcançado"
+    ]
+    
+    for efeito in efeitos:
+        st.write(efeito)
+
+def resetar_acelerador():
+    """Reseta o acelerador para estado inicial"""
+    st.info("🔄 **Reinicializando Sistema...**")
+    time.sleep(1)
+    st.success("✅ **Sistema Resetado - Pronto para Nova Simulação**")
+
+# =============================================================================
+# FUNÇÕES AUXILIARES DO ACELERADOR
+# =============================================================================
+
+def calcular_energia_fluxo(energia, tipo_particula, gravidade):
+    """Calcula energia no fluxo matemático"""
+    reducao_energia = reduzir_teosoficamente(energia * 1e6)
+    reducao_tipo = reduzir_teosoficamente(hash(tipo_particula) % 9 + 1)
+    return fluxo_multiplicacao(reducao_energia, reducao_tipo)
+
+def obter_padrao_energia(valor_fluxo):
+    """Interpreta o padrão energético"""
+    padroes = {
+        1: "Ação Inicial", 2: "Reação", 3: "Adaptação Física",
+        4: "Estruturação", 5: "Transformação", 6: "Fluxo Energético",
+        7: "Espiritualidade", 8: "Infinito", 9: "Singularidade"
+    }
+    return padroes.get(valor_fluxo, "Padrão Desconhecido")
+
+def obter_estado_quantico(valor_fluxo):
+    """Determina estado quântico baseado no fluxo"""
+    estados = {
+        1: "|0⟩", 2: "|1⟩", 3: "|+⟩",
+        4: "|-⟩", 5: "|i⟩", 6: "|-i⟩",
+        7: "Superposição", 8: "Emaranhamento", 9: "Singularidade Quântica"
+    }
+    return estados.get(valor_fluxo, "Estado Indefinido")
+
+def calcular_diferenca_energia(classico, fluxo):
+    """Calcula diferença percentual entre modelos"""
+    if classico == 0:
+        return 0
+    return abs((fluxo - classico) / classico) * 100
+
+def analisar_energia_colisao(energia, gravidade):
+    """Análise detalhada da energia de colisão"""
+    
+    st.markdown("### 📈 Análise de Energia")
+    
+    # Cálculos comparativos
+    energia_classica = energia * 1e12  # eV
+    energia_fluxo = calcular_energia_fluxo(energia, "Prótons", gravidade)
+    
+    col_energia1, col_energia2 = st.columns(2)
+    
+    with col_energia1:
+        st.markdown("""
+        <div style='background: rgba(255, 107, 107, 0.1); padding: 15px; border-radius: 10px;'>
+        <h4 style='color: #ff6b6b;'>⚡ Energia Clássica</h4>
+        <p><b>Valor:</b> {energia_classica:.2e} eV</p>
+        <p><b>Equivalência:</b> {equivalencia:.1f} × massa de repouso do próton</p>
+        <p><b>Temperatura:</b> {temperatura:.1e} K</p>
+        </div>
+        """.format(
+            energia_classica=energia_classica,
+            equivalencia=energia_classica / 938e6,
+            temperatura=energia_classica / 8.617e-5
+        ), unsafe_allow_html=True)
+    
+    with col_energia2:
+        st.markdown("""
+        <div style='background: rgba(78, 205, 196, 0.1); padding: 15px; border-radius: 10px;'>
+        <h4 style='color: #4ecdc4;'>🌀 Energia no Fluxo</h4>
+        <p><b>Valor:</b> R({energia_fluxo})</p>
+        <p><b>Padrão:</b> {padrao}</p>
+        <p><b>Estado:</b> {estado}</p>
+        </div>
+        """.format(
+            energia_fluxo=energia_fluxo,
+            padrao=obter_padrao_energia(energia_fluxo),
+            estado=obter_estado_quantico(energia_fluxo)
+        ), unsafe_allow_html=True)
+
+def analisar_particulas_geradas(energia, tipo_particula):
+    """Análise das partículas geradas na colisão"""
+    
+    st.markdown("### 🔬 Análise de Partículas")
+    
+    # Simulação de detecção
+    particulas = [
+        ("Quark Top", 173.1, 0.5, "🔴"),
+        ("Bóson Higgs", 125.3, 0.3, "⚛️"),
+        ("Bóson Z", 91.2, 0.7, "🌀"),
+        ("Quark Bottom", 4.18, 0.9, "🔵"),
+        ("Tau", 1.777, 0.6, "⚡")
+    ]
+    
+    for nome, massa, probabilidade, emoji in particulas:
+        col_part1, col_part2, col_part3 = st.columns([1, 3, 2])
+        
+        with col_part1:
+            st.markdown(f"<h2>{emoji}</h2>", unsafe_allow_html=True)
+        
+        with col_part2:
+            st.write(f"**{nome}**")
+            st.write(f"Massa: {massa} GeV/c²")
+        
+        with col_part3:
+            st.progress(probabilidade)
+            st.write(f"{(probabilidade*100):.1f}%")
+
+def analisar_campo_quantico(campo_magnetico, temperatura):
+    """Análise do campo quântico"""
+    
+    st.markdown("### 🌌 Análise do Campo Quântico")
+    
+    # Simulação de campo
+    import numpy as np
+    
+    x = np.linspace(-10, 10, 50)
+    y = np.linspace(-10, 10, 50)
+    X, Y = np.meshgrid(x, y)
+    
+    # Campo magnético simulado
+    Z = campo_magnetico * np.exp(-(X**2 + Y**2) / 20) * np.sin(np.sqrt(X**2 + Y**2))
+    
+    fig_campo = go.Figure(data=[
+        go.Surface(
+            x=X, y=Y, z=Z,
+            colorscale='Viridis',
+            opacity=0.8
+        )
+    ])
+    
+    fig_campo.update_layout(
+        title=dict(
+            text="Campo Magnético do Acelerador",
+            font=dict(size=16, color='#4ecdc4')
+        ),
+        scene=dict(
+            xaxis_title="X (m)",
+            yaxis_title="Y (m)", 
+            zaxis_title="Campo (T)",
+            bgcolor='rgba(0,0,0,0)'
+        ),
+        width=600,
+        height=500
+    )
+    
+    st.plotly_chart(fig_campo, use_container_width=True)
 
 # 1. VISÃO GERAL CÓSMICA
 if section == "🏠 Visão Geral Cósmica":
@@ -1808,7 +4227,7 @@ elif section == "✨ Mandala da Alma Universal":
 # 8. FILOSOFIA DO FLUXO
 elif section == "📜 Filosofia do Fluxo (Deus, Tesla, Espinosa)":
     st.header("📜 Filosofia do Fluxo - Deus como Equilíbrio Matemático")
-    
+
     # Container principal com fundo estelar
     st.markdown("""
     <style>
@@ -1840,9 +4259,9 @@ elif section == "📜 Filosofia do Fluxo (Deus, Tesla, Espinosa)":
     </style>
     <div class='philosophy-container'>
     """, unsafe_allow_html=True)
-    
-    tab1, tab2, tab3, tab4 = st.tabs(["🧠 Conceito de Deus", "⚡ Tesla", "📚 Espinosa", "🌌 Unificação"])
-    
+
+    tab1, tab2, tab3, tab4, tab5 = st.tabs(["🧠 Conceito de Deus", "⚡ Tesla", "📚 Espinosa", "🌌 Unificação", "🔬 Ciência & Religião"])
+
     with tab1:
         st.markdown("""
         <div style='background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%); 
@@ -1913,7 +4332,7 @@ elif section == "📜 Filosofia do Fluxo (Deus, Tesla, Espinosa)":
         </blockquote>
         </div>
         """, unsafe_allow_html=True)
-    
+
     with tab2:
         st.markdown("""
         <div style='background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%); 
@@ -2014,7 +4433,7 @@ elif section == "📜 Filosofia do Fluxo (Deus, Tesla, Espinosa)":
         </blockquote>
         </div>
         """, unsafe_allow_html=True)
-    
+
     with tab3:
         st.markdown("""
         <div style='background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%); 
@@ -2093,7 +4512,7 @@ elif section == "📜 Filosofia do Fluxo (Deus, Tesla, Espinosa)":
         </blockquote>
         </div>
         """, unsafe_allow_html=True)
-    
+
     with tab4:
         st.markdown("""
         <div style='background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%); 
@@ -2238,7 +4657,141 @@ elif section == "📜 Filosofia do Fluxo (Deus, Tesla, Espinosa)":
         </div>
         </div>
         """, unsafe_allow_html=True)
-    
+
+    with tab5:
+        st.markdown("""
+        <div style='background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%); 
+                    padding: 25px; border-radius: 15px; border-left: 5px solid #ff6b6b; 
+                    box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);'>
+        <h3 style='color: #ff6b6b; text-align: center;'>🔬 A Unidade entre Ciência e Religião</h3>
+        
+        <p style='color: #d1d5db; text-align: center;'>
+        A descoberta revolucionária: <b style='color: #ff6b6b;'>Ciência e Religião são as duas faces da mesma moeda cósmica</b>
+        </p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.markdown("""
+            <div style='background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%); 
+                        padding: 20px; border-radius: 15px; border: 2px solid rgba(255, 107, 107, 0.3);
+                        box-shadow: 0 5px 15px rgba(255, 107, 107, 0.2); height: 100%;'>
+            <h4 style='color: #ff6b6b; text-align: center;'>⚖️ O Equilíbrio Cósmico</h4>
+            
+            <div style='background: rgba(255, 107, 107, 0.1); padding: 10px; border-radius: 8px; margin: 10px 0;'>
+            <b style='color: #ff6b6b;'>🧪 CIÊNCIA</b><br>
+            <span style='color: #d1d5db; font-size: 0.9em;'>O COMO - Processos, métodos, mecanismos</span>
+            </div>
+            
+            <div style='background: rgba(78, 205, 196, 0.1); padding: 10px; border-radius: 8px; margin: 10px 0;'>
+            <b style='color: #4ecdc4;'>🙏 RELIGIÃO</b><br>
+            <span style='color: #d1d5db; font-size: 0.9em;'>O PORQUÊ - Propósito, significado, intenção</span>
+            </div>
+            
+            <div style='background: rgba(255, 215, 0, 0.1); padding: 10px; border-radius: 8px; margin: 10px 0;'>
+            <b style='color: #ffd700;'>🔄 CICLO ETERNO</b><br>
+            <span style='color: #d1d5db; font-size: 0.9em;'>Ambas buscam a mesma verdade por caminhos diferentes</span>
+            </div>
+            
+            <div style='background: rgba(147, 51, 234, 0.1); padding: 10px; border-radius: 8px; margin: 10px 0;'>
+            <b style='color: #9333ea;'>📜 ROMANOS 1:20</b><br>
+            <span style='color: #d1d5db; font-size: 0.9em;'>"Os atributos invisíveis são percebidos através das coisas criadas"</span>
+            </div>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        with col2:
+            # Mapa da Realidade Completa
+            st.markdown("""
+            <div style='background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%); 
+                        padding: 20px; border-radius: 15px; border: 2px solid rgba(255, 107, 107, 0.3);
+                        box-shadow: 0 5px 15px rgba(255, 107, 107, 0.2); height: 100%;'>
+            <h4 style='color: #ff6b6b; text-align: center;'>🧭 Mapa da Realidade Completa</h4>
+            
+            <div style='text-align: center; color: #d1d5db; font-size: 0.9em; line-height: 2;'>
+            <b style='color: #9333ea;'>REALIDADE COMPLETA</b><br>
+            │<br>
+            ├── <b style='color: #4ecdc4;'>CIÊNCIA</b> (Observável)<br>
+            │   ├── MECANISMOS<br>
+            │   └── COMO?<br>
+            │<br>
+            ├── <b style='color: #ffd700;'>RELIGIÃO</b> (Inobservável)<br>
+            │   ├── SIGNIFICADO<br>
+            │   └── PORQUÊ?<br>
+            │<br>
+            └── <b style='color: #ff6b6b;'>VERDADE ÚNICA</b>
+            </div>
+            
+            <div style='background: rgba(255, 107, 107, 0.1); padding: 10px; border-radius: 8px; margin-top: 15px;'>
+            <b style='color: #ff6b6b;'>🎯 REVOLUÇÃO:</b><br>
+            <span style='color: #d1d5db; font-size: 0.9em;'>
+            A Bíblia contém 80% ciência + 67% religião = 147%?<br>
+            Não! <b>100% de visão integrada!</b>
+            </span>
+            </div>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        st.markdown("""
+        <div style='background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%); 
+                    padding: 25px; border-radius: 15px; border: 2px solid rgba(255, 107, 107, 0.5);
+                    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3); margin-top: 20px;'>
+        <h4 style='color: #ff6b6b; text-align: center;'>🌍 Exemplos Práticos de Unidade</h4>
+        
+        <div style='display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px;'>
+        <div style='background: rgba(255, 107, 107, 0.1); padding: 15px; border-radius: 8px; text-align: center;'>
+        <b style='color: #ff6b6b;'>🔬 BIG BANG</b><br>
+        <span style='color: #d1d5db; font-size: 0.9em;'>Singularidade infinitesimal</span>
+        </div>
+        
+        <div style='background: rgba(78, 205, 196, 0.1); padding: 15px; border-radius: 8px; text-align: center;'>
+        <b style='color: #4ecdc4;'>📖 GÊNESIS</b><br>
+        <span style='color: #d1d5db; font-size: 0.9em;'>"No princípio... haja luz"</span>
+        </div>
+        
+        <div style='background: rgba(255, 215, 0, 0.1); padding: 15px; border-radius: 8px; text-align: center;'>
+        <b style='color: #ffd700;'>🎯 UNIDADE</b><br>
+        <span style='color: #d1d5db; font-size: 0.9em;'>Começo repentino do tempo/espaço</span>
+        </div>
+        
+        <div style='background: rgba(255, 107, 107, 0.1); padding: 15px; border-radius: 8px; text-align: center;'>
+        <b style='color: #ff6b6b;'>🧬 DNA</b><br>
+        <span style='color: #d1d5db; font-size: 0.9em;'>Código genético complexo</span>
+        </div>
+        
+        <div style='background: rgba(78, 205, 196, 0.1); padding: 15px; border-radius: 8px; text-align: center;'>
+        <b style='color: #4ecdc4;'>👑 IMAGEM DE DEUS</b><br>
+        <span style='color: #d1d5db; font-size: 0.9em;'>"Façamos o homem à nossa imagem"</span>
+        </div>
+        
+        <div style='background: rgba(255, 215, 0, 0.1); padding: 15px; border-radius: 8px; text-align: center;'>
+        <b style='color: #ffd700;'>🎯 UNIDADE</b><br>
+        <span style='color: #d1d5db; font-size: 0.9em;'>Padrão inteligente na base da vida</span>
+        </div>
+        </div>
+        
+        <div style='background: rgba(147, 51, 234, 0.1); padding: 15px; border-radius: 8px; margin-top: 15px; text-align: center;'>
+        <b style='color: #9333ea;'>🧘 A GRANDE LIÇÃO EXISTENCIAL:</b><br>
+        <span style='color: #d1d5db; font-size: 0.9em;'>
+        "Deus criou com propósito através destes processos incríveis!"
+        </span>
+        </div>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        st.markdown("""
+        <div style='background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%); 
+                    padding: 25px; border-radius: 15px; border: 2px solid rgba(255, 215, 0, 0.5);
+                    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3); margin-top: 20px;'>
+        <blockquote style='color: #ffd700; font-style: italic; text-align: center; margin: 0;'>
+        "Ciência sem religião é manca, religião sem ciência é cega." 
+        <br>- Albert Einstein
+        </blockquote>
+        </div>
+        """, unsafe_allow_html=True)
+
     st.markdown("</div>", unsafe_allow_html=True)  # Fechando o container principal
 
 # 9. TESLA 3-6-9
@@ -4225,7 +6778,16 @@ elif section == "🌠 Consciência Final: Louco e Gênio":
     """, unsafe_allow_html=True)
     
     st.markdown("</div>", unsafe_allow_html=True)  # Fechando o container principal
-     
+    
+if section == "⚛️ Acelerador de Partículas":
+    pagina_acelerador_particulas()
+elif section == "🧮 Cálculos do Fluxo Matemático":
+    pagina_calculos_fluxo_matematico()
+else:
+    # Para outras seções, mostrar uma mensagem padrão
+    st.title(f"{section}")
+    st.info("Esta seção está em desenvolvimento. Navegue para 'Acelerador de Partículas' ou 'Cálculos do Fluxo Matemático' para explorar as funcionalidades implementadas.")
+    
 # AGORA ATUALIZE O RODAPÉ PARA INCLUIR A NOVA SEÇÃO
 # Rodapé cósmico
 st.sidebar.markdown("---")
