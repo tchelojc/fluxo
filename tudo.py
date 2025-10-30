@@ -104,6 +104,8 @@ st.markdown("""
 st.sidebar.title("⚡ Navegação Cósmica")
 section = st.sidebar.selectbox("Selecione a Dimensão:", [
     "🏠 Visão Geral Cósmica",
+    "🌌 DEUS: JORNADA CÓSMICA",
+    "🎭 MANIFESTO: Crítica Social",
     "🔢 Fluxo Matemático Sagrado", 
     "🌠 Sinal Wow! Decodificação Profunda",
     "🪐 Simulação do Sistema Solar Quântico",
@@ -2699,6 +2701,1002 @@ def analisar_campo_quantico(campo_magnetico, temperatura):
     
     st.plotly_chart(fig_campo, use_container_width=True)
 
+def pagina_deus_caos():
+    st.title("🌌 DEUS: A JORNADA DO CAOS PRIMORDIAL À SINGULARIDADE")
+    st.markdown("""
+    ## ⚡ A REVELAÇÃO FINAL: Do Caos à Singularidade - O Processo Cósmico Desvelado
+    
+    **DESCOBERTA ABSOLUTA:** Após decifrar os padrões matemáticos do universo, compreendemos que 
+    **Deus não é uma entidade, mas o PROCESSO CÓSMICO** que flui do Caos para o Equilíbrio e culmina na Singularidade.
+    """)
+    
+    # Container principal épico
+    st.markdown("""
+    <div style='background: radial-gradient(ellipse at center, #000000 0%, #1a0b2e 50%, #0d0419 100%);
+                padding: 40px; border-radius: 25px; border: 3px solid #6366f1;
+                box-shadow: 0 0 80px rgba(99, 102, 241, 0.4), inset 0 0 60px rgba(255, 255, 255, 0.1);
+                margin: 30px 0; position: relative; overflow: hidden;'>
+    <div style='position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+                background: 
+                    radial-gradient(circle at 20% 20%, rgba(255,107,107,0.15) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 80%, rgba(78,205,196,0.15) 0%, transparent 50%),
+                    radial-gradient(circle at 40% 60%, rgba(147,51,234,0.1) 0%, transparent 50%);
+                z-index: 0;'></div>
+    <div style='position: relative; z-index: 1;'>
+    """, unsafe_allow_html=True)
+
+    # INTRODUÇÃO FILOSÓFICA FUNDAMENTAL
+    st.markdown("""
+    <div style='background: rgba(15, 23, 42, 0.9); padding: 35px; border-radius: 20px; 
+                border-left: 5px solid #4ecdc4; margin: 20px 0;'>
+    <h3 style='color: #4ecdc4; text-align: center;'>💭 O PONTO DE PARTIDA: A RELATIVIDADE DA EXISTÊNCIA</h3>
+    
+    <div style='background: rgba(78, 205, 196, 0.1); padding: 25px; border-radius: 15px; margin: 20px 0;'>
+    <p style='color: #d1d5db; text-align: center; font-style: italic; line-height: 1.7; font-size: 1.1em;'>
+    <b>"Yin yang, certo e errado, bom e ruim, cima e baixo, direita e esquerda, sorte e azar, amor e ódio - 
+    todas essas colocações são relativas e subjetivas à consciência que julga e observa."</b>
+    </p>
+    </div>
+    
+    <p style='color: #d1d5db; text-align: justify; line-height: 1.7; margin-bottom: 20px;'>
+    Esta percepção fundamental destrói a ilusão da objetividade. <b>Não existe "lado certo" em uma guerra</b> - 
+    ambos os lados estão protegendo suas famílias, suas verdades, suas existências. No cosmos, não existem 
+    pontos cardeais absolutos - a bússola não tem para onde apontar quando compreendemos que toda direção 
+    é relativa ao observador.
+    </p>
+    
+    <div style='background: rgba(255, 107, 107, 0.1); padding: 20px; border-radius: 12px; margin-top: 20px;'>
+    <p style='color: #ff6b6b; text-align: center; font-size: 1.05em;'>
+    <b>🎭 O Paradoxo da Existência:</b> "Quem vive 'melhor' está fazendo outro viver pior. Tudo no universo 
+    é uma troca - se um existe, o outro coexiste. Não quero ser o que eu sou, mas aceito quem eu sou."
+    </p>
+    </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # MAPA DA JORNADA CÓSMICA
+    st.markdown("""
+    <div style='background: rgba(15, 23, 42, 0.95); padding: 35px; border-radius: 20px; 
+                border: 2px solid #ffd700; margin: 25px 0;'>
+    <h2 style='color: #ffd700; text-align: center; margin-bottom: 30px;'>🗺️ O MAPA DA JORNADA CÓSMICA</h2>
+    
+    <div style='display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 25px; text-align: center;'>
+    <div style='background: linear-gradient(135deg, rgba(255, 107, 107, 0.2) 0%, rgba(30, 41, 59, 0.9) 100%); 
+                padding: 25px; border-radius: 15px; border: 2px solid #ff6b6b;'>
+    <h3 style='color: #ff6b6b;'>🌪️ FASE 1: CAOS PRIMORDIAL</h3>
+    <div style='font-size: 3em; margin: 15px 0;'>⚡</div>
+    <p style='color: #d1d5db; font-size: 0.95em; line-height: 1.6;'>
+    <b>O Vácuo Quântico</b><br>
+    Potencial puro infinito<br>
+    Possibilidades não-manifestas<br>
+    Energia criativa primordial
+    </p>
+    </div>
+    
+    <div style='background: linear-gradient(135deg, rgba(78, 205, 196, 0.2) 0%, rgba(30, 41, 59, 0.9) 100%); 
+                padding: 25px; border-radius: 15px; border: 2px solid #4ecdc4;'>
+    <h3 style='color: #4ecdc4;'>⚖️ FASE 2: EQUILÍBRIO DINÂMICO</h3>
+    <div style='font-size: 3em; margin: 15px 0;'>🔄</div>
+    <p style='color: #d1d5db; font-size: 0.95em; line-height: 1.6;'>
+    <b>DEUS EM AÇÃO</b><br>
+    Ponto de harmonia cósmica<br>
+    Dança entre Caos e Ordem<br>
+    Centro em movimento eterno
+    </p>
+    </div>
+    
+    <div style='background: linear-gradient(135deg, rgba(147, 51, 234, 0.2) 0%, rgba(30, 41, 59, 0.9) 100%); 
+                padding: 25px; border-radius: 15px; border: 2px solid #9333ea;'>
+    <h3 style='color: #9333ea;'>🌀 FASE 3: SINGULARIDADE</h3>
+    <div style='font-size: 3em; margin: 15px 0;'>🌟</div>
+    <p style='color: #d1d5db; font-size: 0.95em; line-height: 1.6;'>
+    <b>O TODO MANIFESTO</b><br>
+    Unificação completa<br>
+    Consciência cósmica<br>
+    Estado de fluxo absoluto
+    </p>
+    </div>
+    </div>
+    
+    <div style='background: rgba(255, 215, 0, 0.1); padding: 20px; border-radius: 12px; margin-top: 25px;'>
+    <p style='color: #ffd700; text-align: center; font-size: 1.1em; line-height: 1.7;'>
+    <b>🎯 A EQUAÇÃO FUNDAMENTAL:</b><br>
+    <span style='font-size: 1.3em;'>CAOS → [DEUS = EQUILÍBRIO DINÂMICO] → SINGULARIDADE</span><br>
+    <em>Onde Deus não é o destino, mas a JORNADA em si</em>
+    </p>
+    </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # EQUAÇÃO PRINCIPAL REVOLUCIONÁRIA
+    st.markdown("""
+    <div style='background: rgba(0,0,0,0.8); padding: 40px; border-radius: 20px; 
+                border: 3px solid #ffd700; text-align: center; margin: 35px 0;
+                box-shadow: 0 0 40px rgba(255, 215, 0, 0.3);'>
+    <h2 style='color: #ffd700; margin-bottom: 30px;'>🎯 A EQUAÇÃO DA REALIDADE: UNIFICANDO TUDO</h2>
+    
+    <div style='font-size: 3.2em; color: #4ecdc4; font-weight: bold; line-height: 1.3; margin: 25px 0;'>
+    ∇·Ψ = ϕ × Σ(3,9,6) × Coragem<sub>Existencial</sub>
+    </div>
+    
+    <div style='display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-top: 35px; text-align: left;'>
+    <div style='background: rgba(255, 107, 107, 0.1); padding: 20px; border-radius: 12px;'>
+    <h4 style='color: #ff6b6b; text-align: center;'>🌪️ CAOS (ENTRADA)</h4>
+    <p style='color: #d1d5db; font-size: 0.95em;'>
+    <b>Estado Inicial:</b> Potencial infinito<br>
+    <b>Propriedade:</b> Não-localidade<br>
+    <b>Matemática:</b> Probabilidades<br>
+    <b>Consciência:</b> Inconsciente cósmico
+    </p>
+    </div>
+    
+    <div style='background: rgba(78, 205, 196, 0.1); padding: 20px; border-radius: 12px;'>
+    <h4 style='color: #4ecdc4; text-align: center;'>⚖️ DEUS (PROCESSO)</h4>
+    <p style='color: #d1d5db; font-size: 0.95em;'>
+    <b>Função:</b> Transformação<br>
+    <b>Propriedade:</b> Equilíbrio dinâmico<br>
+    <b>Matemática:</b> ϕ (1.618...)<br>
+    <b>Consciência:</b> Auto-organização
+    </p>
+    </div>
+    
+    <div style='background: rgba(147, 51, 234, 0.1); padding: 20px; border-radius: 12px;'>
+    <h4 style='color: #9333ea; text-align: center;'>🌀 SINGULARIDADE (SAÍDA)</h4>
+    <p style='color: #d1d5db; font-size: 0.95em;'>
+    <b>Estado Final:</b> Unificação<br>
+    <b>Propriedade:</b> Não-dualidade<br>
+    <b>Matemática:</b> Infinito atual<br>
+    <b>Consciência:</b> Pura awareness
+    </p>
+    </div>
+    </div>
+    
+    <div style='background: rgba(255, 215, 0, 0.1); padding: 25px; border-radius: 15px; margin-top: 30px;'>
+    <p style='color: #ffd700; font-size: 1.1em; line-height: 1.6;'>
+    <b>📖 INTERPRETAÇÃO:</b> "A manifestação da Realidade (∇·Ψ) é o fluxo da Consciência Universal (Ψ) 
+    regido pela Proporção Harmônica (ϕ) e o Padrão Cíclico (3-9-6), o qual exige a Coragem Existencial 
+    para ser vivida e integrada."
+    </p>
+    </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # EXPLICAÇÃO DETALHADA DA JORNADA
+    st.markdown("""
+    <div style='background: rgba(15, 23, 42, 0.9); padding: 35px; border-radius: 20px; 
+                border-left: 5px solid #6366f1; margin: 30px 0;'>
+    <h2 style='color: #6366f1; text-align: center; margin-bottom: 35px;'>🔍 DESVENDANDO O PROCESSO CÓSMICO</h2>
+    """, unsafe_allow_html=True)
+
+    # FASE 1: CAOS PRIMORDIAL
+    st.markdown("""
+    <div style='background: linear-gradient(135deg, rgba(255, 107, 107, 0.15) 0%, rgba(30, 41, 59, 0.9) 100%); 
+                padding: 30px; border-radius: 15px; margin: 20px 0; border: 1px solid #ff6b6b;'>
+    <h3 style='color: #ff6b6b; text-align: center; margin-bottom: 20px;'>🌪️ FASE 1: O CAOS PRIMORDIAL - O NADA QUE É TUDO</h3>
+    
+    <div style='display: grid; grid-template-columns: 1fr 2fr; gap: 25px;'>
+    <div style='text-align: center;'>
+    <div style='font-size: 4em; margin: 15px 0;'>⚡</div>
+    <p style='color: #ff6b6b; font-weight: bold;'>Estado Fundamental</p>
+    </div>
+    
+    <div>
+    <p style='color: #d1d5db; line-height: 1.7; margin-bottom: 15px;'>
+    <b>O Caos não é desordem - é POTENCIAL PURO.</b> É o campo quântico infinito onde todas as possibilidades 
+    existem simultaneamente, antes do colapso da função de onda. É o vácuo que gera partículas virtuais, 
+    o silêncio que contém todas as músicas.
+    </p>
+    
+    <div style='background: rgba(255, 107, 107, 0.1); padding: 15px; border-radius: 10px;'>
+    <p style='color: #d1d5db; font-style: italic; text-align: center;'>
+    <b>"O Caos é o berço da criação. Tudo que existe emergiu deste oceano de possibilidades infinitas."</b>
+    </p>
+    </div>
+    
+    <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px;'>
+    <div style='background: rgba(255, 107, 107, 0.05); padding: 12px; border-radius: 8px;'>
+    <p style='color: #ff6b6b; font-size: 0.9em; text-align: center;'><b>📊 MATEMÁTICA DO CAOS</b><br>Equações não-lineares<br>Teoria do Caos<br>Atractores estranhos</p>
+    </div>
+    <div style='background: rgba(255, 107, 107, 0.05); padding: 12px; border-radius: 8px;'>
+    <p style='color: #ff6b6b; font-size: 0.9em; text-align: center;'><b>🔬 FÍSICA DO CAOS</b><br>Vácuo quântico<br>Flutuações<br>Superposição</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # FASE 2: EQUILÍBRIO DINÂMICO (DEUS)
+    st.markdown("""
+    <div style='background: linear-gradient(135deg, rgba(78, 205, 196, 0.15) 0%, rgba(30, 41, 59, 0.9) 100%); 
+                padding: 30px; border-radius: 15px; margin: 20px 0; border: 1px solid #4ecdc4;'>
+    <h3 style='color: #4ecdc4; text-align: center; margin-bottom: 20px;'>⚖️ FASE 2: DEUS COMO EQUILÍBRIO DINÂMICO - A DANÇA CÓSMICA</h3>
+    
+    <div style='display: grid; grid-template-columns: 1fr 2fr; gap: 25px;'>
+    <div style='text-align: center;'>
+    <div style='font-size: 4em; margin: 15px 0;'>🔄</div>
+    <p style='color: #4ecdc4; font-weight: bold;'>Processo Ativo</p>
+    </div>
+    
+    <div>
+    <p style='color: #d1d5db; line-height: 1.7; margin-bottom: 15px;'>
+    <b>Deus não é um ser, mas um ESTADO DE RELAÇÃO.</b> É o ponto perfeito onde Caos e Ordem se encontram 
+    em harmonia dinâmica. É a força que mantém galáxias em rotação, corações batendo e mentes criando - 
+    sempre em movimento, nunca estagnado.
+    </p>
+    
+    <div style='background: rgba(78, 205, 196, 0.1); padding: 15px; border-radius: 10px;'>
+    <p style='color: #d1d5db; font-style: italic; text-align: center;'>
+    <b>"Deus é o verbo, não o substantivo. É o processo de equilibrar, não o equilíbrio em si."</b>
+    </p>
+    </div>
+    
+    <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px;'>
+    <div style='background: rgba(78, 205, 196, 0.05); padding: 12px; border-radius: 8px;'>
+    <p style='color: #4ecdc4; font-size: 0.9em; text-align: center;'><b>🧮 MATEMÁTICA DE DEUS</b><br>Proporção Áurea (ϕ)<br>Sequência Fibonacci<br>Padrão 3-9-6</p>
+    </div>
+    <div style='background: rgba(78, 205, 196, 0.05); padding: 12px; border-radius: 8px;'>
+    <p style='color: #4ecdc4; font-size: 0.9em; text-align: center;'><b>🌍 FÍSICA DE DEUS</b><br>Homeostase<br>Sistemas adaptativos<br>Equilíbrio dinâmico</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # FASE 3: SINGULARIDADE
+    st.markdown("""
+    <div style='background: linear-gradient(135deg, rgba(147, 51, 234, 0.15) 0%, rgba(30, 41, 59, 0.9) 100%); 
+                padding: 30px; border-radius: 15px; margin: 20px 0; border: 1px solid #9333ea;'>
+    <h3 style='color: #9333ea; text-align: center; margin-bottom: 20px;'>🌀 FASE 3: A SINGULARIDADE - O TODO CONSCIENTE</h3>
+    
+    <div style='display: grid; grid-template-columns: 1fr 2fr; gap: 25px;'>
+    <div style='text-align: center;'>
+    <div style='font-size: 4em; margin: 15px 0;'>🌟</div>
+    <p style='color: #9333ea; font-weight: bold;'>Estado Unificado</p>
+    </div>
+    
+    <div>
+    <p style='color: #d1d5db; line-height: 1.7; margin-bottom: 15px;'>
+    <b>A Singularidade é onde observador e observado se fundem.</b> É o estado de consciência onde 
+    não há mais separação entre o self e o universo. É o ponto onde a matemática, a física e a 
+    espiritualidade se tornam uma única linguagem universal.
+    </p>
+    
+    <div style='background: rgba(147, 51, 234, 0.1); padding: 15px; border-radius: 10px;'>
+    <p style='color: #d1d5db; font-style: italic; text-align: center;'>
+    <b>"Na Singularidade, você não experimenta Deus - você SE TORNA o processo divino."</b>
+    </p>
+    </div>
+    
+    <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px;'>
+    <div style='background: rgba(147, 51, 234, 0.05); padding: 12px; border-radius: 8px;'>
+    <p style='color: #9333ea; font-size: 0.9em; text-align: center;'><b>⚡ MATEMÁTICA DA SINGULARIDADE</b><br>Teoria das Catástrofes<br>Pontos de inflexão<br>Colapso de dimensões</p>
+    </div>
+    <div style='background: rgba(147, 51, 234, 0.05); padding: 12px; border-radius: 8px;'>
+    <p style='color: #9333ea; font-size: 0.9em; text-align: center;'><b>🔭 FÍSICA DA SINGULARIDADE</b><br>Buracos negros<br>Big Bang<br>Unificação de forças</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("</div>", unsafe_allow_html=True)
+
+    # OS TRÊS PILARES REVOLUCIONÁRIOS - REVISADOS
+    st.markdown("""
+    <div style='background: rgba(15, 23, 42, 0.9); padding: 35px; border-radius: 20px; 
+                margin: 30px 0; border-left: 5px solid #ffd700;'>
+    <h3 style='color: #ffd700; text-align: center; margin-bottom: 30px;'>🎯 OS TRÊS PILARES DA NOVA COMPREENSÃO</h3>
+    """, unsafe_allow_html=True)
+    
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        st.markdown("""
+        <div style='background: linear-gradient(135deg, rgba(255, 107, 107, 0.15) 0%, rgba(30, 41, 59, 0.9) 100%); 
+                    padding: 25px; border-radius: 15px; border: 2px solid #ff6b6b;
+                    height: 450px; text-align: center;'>
+        <div style='background: #ff6b6b; color: white; width: 40px; height: 40px; border-radius: 50%; 
+                    display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;'>
+            🌪️
+        </div>
+        <h4 style='color: #ff6b6b; margin-bottom: 15px;'>1. DEUS = CAOS PRIMORDIAL</h4>
+        
+        <div style='text-align: left;'>
+        <p style='color: #d1d5db; font-size: 0.9em; margin-bottom: 12px;'>
+        <b>🔍 O Erro Milenar:</b> Buscar ordem e controle no divino
+        </p>
+        
+        <p style='color: #d1d5db; font-size: 0.9em; margin-bottom: 12px;'>
+        <b>💡 A Verdade:</b> Deus é a força caótica criativa primordial - 
+        o campo infinito de possibilidades não-manifestas
+        </p>
+        
+        <p style='color: #d1d5db; font-size: 0.9em; margin-bottom: 12px;'>
+        <b>🔬 Evidências:</b> Big Bang (caos criativo), Evolução (adaptação caótica), 
+        Criatividade humana (caos inspirado)
+        </p>
+        
+        <p style='color: #d1d5db; font-size: 0.9em;'>
+        <b>⚡ Implicação:</b> Aceitar o caos é aceitar a natureza divina da existência
+        </p>
+        </div>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    with col2:
+        st.markdown("""
+        <div style='background: linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, rgba(30, 41, 59, 0.9) 100%); 
+                    padding: 25px; border-radius: 15px; border: 2px solid #ffd700;
+                    height: 450px; text-align: center;'>
+        <div style='background: #ffd700; color: black; width: 40px; height: 40px; border-radius: 50%; 
+                    display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;'>
+            ⚖️
+        </div>
+        <h4 style='color: #ffd700; margin-bottom: 15px;'>2. EQUILÍBRIO COMO PORTAL PARA A SINGULARIDADE</h4>
+        
+        <div style='text-align: left;'>
+        <p style='color: #d1d5db; font-size: 0.9em; margin-bottom: 12px;'>
+        <b>🔍 O Erro:</b> Ver equilíbrio como ponto médio entre opostos
+        </p>
+        
+        <p style='color: #d1d5db; font-size: 0.9em; margin-bottom: 12px;'>
+        <b>💡 A Verdade:</b> O Equilíbrio Dinâmico não é um ponto médio; é o <b>Portal de Transformação</b> 
+        onde o Caos é adaptado em Ordem, conduzindo ao estado de Singularidade
+        </p>
+        
+        <p style='color: #d1d5db; font-size: 0.9em; margin-bottom: 12px;'>
+        <b>🔬 Evidências:</b> Buracos negros (singularidades espaço-temporais), 
+        Estados de iluminação (singularidade consciencial), Amor incondicional
+        </p>
+        
+        <p style='color: #d1d5db; font-size: 0.9em;'>
+        <b>⚡ Implicação:</b> Homeostase é morte espiritual - a vida é movimento entre caos e singularidade
+        </p>
+        </div>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    with col3:
+        st.markdown("""
+        <div style='background: linear-gradient(135deg, rgba(78, 205, 196, 0.15) 0%, rgba(30, 41, 59, 0.9) 100%); 
+                    padding: 25px; border-radius: 15px; border: 2px solid #4ecdc4;
+                    height: 450px; text-align: center;'>
+        <div style='background: #4ecdc4; color: white; width: 40px; height: 40px; border-radius: 50%; 
+                    display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;'>
+            🌀
+        </div>
+        <h4 style='color: #4ecdc4; margin-bottom: 15px;'>3. PADRÃO 3-9-6: O VÓRTICE CÓSMICO</h4>
+        
+        <div style='text-align: left;'>
+        <p style='color: #d1d5db; font-size: 0.9em; margin-bottom: 12px;'>
+        <b>🔍 O Erro de Tesla:</b> Sequência 3-6-9 como ordem fundamental
+        </p>
+        
+        <p style='color: #d1d5db; font-size: 0.9em; margin-bottom: 12px;'>
+        <b>💡 A Verdade Corrigida:</b> O ciclo universal é 3-9-6 
+        (Físico → Absoluto → Energético) formando um vórtice contínuo
+        </p>
+        
+        <p style='color: #d1d5db; font-size: 0.9em; margin-bottom: 12px;'>
+        <b>🔬 Justificativa:</b> O 9 atua como espelho do ciclo, revertendo o fluxo e reiniciando o padrão.
+        3 representa a forma, 9 o portal e 6 a energia que sustenta o movimento
+        </p>
+        
+        <p style='color: #d1d5db; font-size: 0.9em;'>
+        <b>⚡ Implicação:</b> Nova matemática vorticial que unifica todos os domínios do conhecimento
+        </p>
+        </div>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    st.markdown("</div>", unsafe_allow_html=True)
+
+    # APLICAÇÃO PRÁTICA: COMO VIVER ESSE PROCESSO
+    st.markdown("""
+    <div style='background: rgba(15, 23, 42, 0.95); padding: 35px; border-radius: 20px; 
+                border-left: 5px solid #ff6b6b; margin: 30px 0;'>
+    <h2 style='color: #ff6b6b; text-align: center; margin-bottom: 30px;'>💫 APLICAÇÃO PRÁTICA: SENDO DEUS NO COTIDIANO</h2>
+    
+    <div style='display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 25px;'>
+    <div style='background: linear-gradient(135deg, rgba(255, 107, 107, 0.1) 0%, rgba(30, 41, 59, 0.9) 100%); 
+                padding: 25px; border-radius: 15px; border: 1px solid #ff6b6b;'>
+    <h4 style='color: #ff6b6b; text-align: center;'>🌪️ ACEITAR O CAOS</h4>
+    <div style='text-align: center; font-size: 2.5em; margin: 15px 0;'>💥</div>
+    <p style='color: #d1d5db; font-size: 0.9em; text-align: center; line-height: 1.6;'>
+    <b>Permita a incerteza</b><br>
+    Abrace o desconhecido<br>
+    Confie no processo<br>
+    Solte o controle
+    </p>
+    <div style='background: rgba(255, 107, 107, 0.1); padding: 10px; border-radius: 8px; margin-top: 15px;'>
+    <p style='color: #ff6b6b; font-size: 0.8em; text-align: center;'><b>PRÁTICA:</b> Meditação do Vácuo - 5min/dia</p>
+    </div>
+    </div>
+    
+    <div style='background: linear-gradient(135deg, rgba(78, 205, 196, 0.1) 0%, rgba(30, 41, 59, 0.9) 100%); 
+                padding: 25px; border-radius: 15px; border: 1px solid #4ecdc4;'>
+    <h4 style='color: #4ecdc4; text-align: center;'>⚖️ EQUILIBRAR DINAMICAMENTE</h4>
+    <div style='text-align: center; font-size: 2.5em; margin: 15px 0;'>🔄</div>
+    <p style='color: #d1d5db; font-size: 0.9em; text-align: center; line-height: 1.6;'>
+    <b>Mantenha-se em movimento</b><br>
+    Adapte-se às mudanças<br>
+    Encontre harmonia na ação<br>
+    Dance com a vida
+    </p>
+    <div style='background: rgba(78, 205, 196, 0.1); padding: 10px; border-radius: 8px; margin-top: 15px;'>
+    <p style='color: #4ecdc4; font-size: 0.8em; text-align: center;'><b>PRÁTICA:</b> Respiração Fibonacci - 10min/dia</p>
+    </div>
+    </div>
+    
+    <div style='background: linear-gradient(135deg, rgba(147, 51, 234, 0.1) 0%, rgba(30, 41, 59, 0.9) 100%); 
+                padding: 25px; border-radius: 15px; border: 1px solid #9333ea;'>
+    <h4 style='color: #9333ea; text-align: center;'>🌀 EXPERIMENTAR A SINGULARIDADE</h4>
+    <div style='text-align: center; font-size: 2.5em; margin: 15px 0;'>🌟</div>
+    <p style='color: #d1d5db; font-size: 0.9em; text-align: center; line-height: 1.6;'>
+    <b>Una-se ao todo</b><br>
+    Dissolva as fronteiras<br>
+    Torne-se o processo<br>
+    Viva como consciência pura
+    </p>
+    <div style='background: rgba(147, 51, 234, 0.1); padding: 10px; border-radius: 8px; margin-top: 15px;'>
+    <p style='color: #9333ea; font-size: 0.8em; text-align: center;'><b>PRÁTICA:</b> Meditação da Unidade - 15min/dia</p>
+    </div>
+    </div>
+    </div>
+
+    <div style='background: rgba(255, 107, 107, 0.1); padding: 25px; border-radius: 15px; margin-top: 30px;'>
+    <p style='color: #d1d5db; text-align: center; font-style: italic; line-height: 1.8;'>
+    <b>"Meu corpo não é feito para aguentar tanta informação, logo o desgaste é maior que a normalidade. 
+    Não é questão de estar cansado ou desequilibrado e sim como quero ser feliz e amar proporcional 
+    a minha própria existência."</b>
+    </p>
+    </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # CALCULADORA DA JORNADA PESSOAL (MELHORADA E UNIFICADA)
+    st.markdown("""
+    <div style='background: rgba(15, 23, 42, 0.95); padding: 35px; border-radius: 20px; 
+                border: 2px solid #9333ea; margin: 30px 0;'>
+    <h2 style='color: #9333ea; text-align: center; margin-bottom: 10px;'>🧭 CALCULADORA DA SUA JORNADA CÓSMICA</h2>
+    <p style='color: #d1d5db; text-align: center; margin-bottom: 30px;'>
+    Descubra em qual fase do processo divino você está e como avançar para a próxima
+    </p>
+    """, unsafe_allow_html=True)
+
+    with st.expander("🎯 **GUIA COMPLETO: ENTENDENDO SUA POSIÇÃO NO FLUXO CÓSMICO**", expanded=True):
+        st.markdown("""
+        ### 🌊 **AS TRÊS FASES DA CONSCIÊNCIA**
+        
+        **🌪️ FASE CAÓTICA (1-3)**
+        - Sensação de desordem e confusão
+        - Dificuldade em encontrar padrões
+        - Energia criativa bloqueada
+        - Medo do desconhecido
+        
+        **⚖️ FASE DO EQUILÍBRIO (4-7)**  
+        - Harmonia entre opostos
+        - Adaptação fluida às mudanças
+        - Criatividade em fluxo
+        - Confiança no processo
+        
+        **🌀 FASE DA SINGULARIDADE (8-10)**
+        - Unificação de paradoxos
+        - Consciência expandida
+        - Criatividade ilimitada
+        - União com o todo
+        """)
+
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.subheader("📊 SEU ESTADO ATUAL")
+        
+        nivel_caos = st.slider(
+            "**🌪️ Nível de Caos Interno** - Quanto potencial criativo você sente?", 
+            1, 10, 7,
+            help="Sua capacidade de abraçar o desconhecido e o novo"
+        )
+        
+        nivel_equilibrio = st.slider(
+            "**⚖️ Nível de Equilíbrio Dinâmico** - Sua habilidade de fluir com as mudanças?", 
+            1, 10, 6,
+            help="Sua capacidade de manter harmonia em movimento"
+        )
+        
+        nivel_singularidade = st.slider(
+            "**🌀 Nível de Conexão Cósmica** - Quanto você se sente unificado com o todo?", 
+            1, 10, 5,
+            help="Sua experiência de não-separação"
+        )
+        
+    with col2:
+        st.subheader("🎭 FATORES DE EXPANSÃO")
+        
+        coragem_existencial = st.slider(
+            "**💪 Coragem Existencial** - Capacidade de enfrentar paradoxos", 
+            1, 10, 7,
+            help="Sua coragem para questionar a realidade"
+        )
+        
+        consciencia_padroes = st.slider(
+            "**🔍 Consciência de Padrões** - Percepção dos padrões universais", 
+            1, 10, 8,
+            help="Sua habilidade de ver a matemática da vida"
+        )
+        
+        amor_incondicional = st.slider(
+            "**💝 Amor Incondicional** - Capacidade de amar sem limites", 
+            1, 10, 6,
+            help="Seu nível de conexão amorosa com tudo"
+        )
+    
+    if st.button("🚀 CALCULAR MINHA JORNADA CÓSMICA", use_container_width=True):
+        with st.spinner('🌌 Mapeando seu caminho no fluxo universal...'):
+            import time
+            time.sleep(3)
+            
+            # CÁLCULOS AVANÇADOS UNIFICADOS
+            fase_dominante = max([nivel_caos, nivel_equilibrio, nivel_singularidade])
+            if nivel_caos == fase_dominante:
+                fase_nome = "CAOS CRIATIVO"
+                cor_fase = "#ff6b6b"
+                emoji_fase = "🌪️"
+                proximo_passo = "Equilíbrio Dinâmico"
+                interpretacao_fase = "Você está em expansão criativa. O caos é o início da sabedoria."
+            elif nivel_equilibrio == fase_dominante:
+                fase_nome = "EQUILÍBRIO DINÂMICO" 
+                cor_fase = "#4ecdc4"
+                emoji_fase = "⚖️"
+                proximo_passo = "Singularidade"
+                interpretacao_fase = "Você dança com a vida. A harmonia está no movimento, não na estagnação."
+            else:
+                fase_nome = "SINGULARIDADE EMERGENTE"
+                cor_fase = "#9333ea"
+                emoji_fase = "🌀"
+                proximo_passo = "Unificação Completa"
+                interpretacao_fase = "As fronteiras se dissolvem. Você se torna o fluxo cósmico."
+            
+            # Cálculo do progresso geral
+            progresso_geral = (nivel_caos + nivel_equilibrio + nivel_singularidade + 
+                             coragem_existencial + consciencia_padroes + amor_incondicional) / 60 * 100
+            
+            # Cálculos adicionais da segunda versão
+            quociente_dualidade = nivel_equilibrio / nivel_caos if nivel_caos > 0 else 1
+            proporcao_aurea = 1.618
+            distancia_singularidade = abs(quociente_dualidade - proporcao_aurea)
+            sintonia_cosmica = (coragem_existencial / (1 + distancia_singularidade)) * 10
+            
+            st.markdown(f"""
+            <div style='background: rgba(15, 23, 42, 0.98); padding: 35px; border-radius: 20px; 
+                        border: 3px solid {cor_fase}; margin-top: 30px;'>
+            <h3 style='color: {cor_fase}; text-align: center; margin-bottom: 25px;'>
+            {emoji_fase} VOCÊ ESTÁ NA FASE: {fase_nome} {emoji_fase}
+            </h3>
+            
+            <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-bottom: 30px;'>
+            <div style='background: rgba(255, 107, 107, 0.1); padding: 20px; border-radius: 12px;'>
+            <h4 style='color: #ff6b6b; text-align: center;'>🌪️ ESTADO CAÓTICO</h4>
+            <div style='background: rgba(255, 107, 107, 0.2); height: 20px; border-radius: 10px; margin: 15px 0;'>
+            <div style='background: #ff6b6b; height: 100%; width: {nivel_caos*10}%; border-radius: 10px;'></div>
+            </div>
+            <p style='color: #d1d5db; text-align: center;'>{nivel_caos}/10 - Potencial Criativo</p>
+            </div>
+            
+            <div style='background: rgba(78, 205, 196, 0.1); padding: 20px; border-radius: 12px;'>
+            <h4 style='color: #4ecdc4; text-align: center;'>⚖️ EQUILÍBRIO DINÂMICO</h4>
+            <div style='background: rgba(78, 205, 196, 0.2); height: 20px; border-radius: 10px; margin: 15px 0;'>
+            <div style='background: #4ecdc4; height: 100%; width: {nivel_equilibrio*10}%; border-radius: 10px;'></div>
+            </div>
+            <p style='color: #d1d5db; text-align: center;'>{nivel_equilibrio}/10 - Harmonia em Movimento</p>
+            </div>
+            
+            <div style='background: rgba(147, 51, 234, 0.1); padding: 20px; border-radius: 12px;'>
+            <h4 style='color: #9333ea; text-align: center;'>🌀 SINGULARIDADE</h4>
+            <div style='background: rgba(147, 51, 234, 0.2); height: 20px; border-radius: 10px; margin: 15px 0;'>
+            <div style='background: #9333ea; height: 100%; width: {nivel_singularidade*10}%; border-radius: 10px;'></div>
+            </div>
+            <p style='color: #d1d5db; text-align: center;'>{nivel_singularidade}/10 - Unificação Cósmica</p>
+            </div>
+            
+            <div style='background: rgba(255, 215, 0, 0.1); padding: 20px; border-radius: 12px;'>
+            <h4 style='color: #ffd700; text-align: center;'>🌟 SINTONIA CÓSMICA</h4>
+            <div style='background: rgba(255, 215, 0, 0.2); height: 20px; border-radius: 10px; margin: 15px 0;'>
+            <div style='background: #ffd700; height: 100%; width: {sintonia_cosmica}%; border-radius: 10px;'></div>
+            </div>
+            <p style='color: #d1d5db; text-align: center;'>{sintonia_cosmica:.1f}% - Harmonia com o Todo</p>
+            </div>
+            </div>
+            
+            <div style='background: rgba({cor_fase[1:]}, 0.1); padding: 25px; border-radius: 15px;'>
+            <h4 style='color: {cor_fase}; text-align: center;'>🎯 SEU PRÓXIMO PASSO NA JORNADA DIVINA</h4>
+            
+            <p style='color: #d1d5db; text-align: center; margin-top: 20px; line-height: 1.7; font-size: 1.1em;'>
+            <b>Seu caminho:</b> {fase_nome} → <span style='color: {cor_fase};'>{proximo_passo}</span><br>
+            <b>Progresso atual:</b> {progresso_geral:.1f}% da jornada completa<br>
+            <b>Sintonia cósmica:</b> {sintonia_cosmica:.1f}% de harmonia com o Todo<br>
+            <b>Interpretação:</b> {interpretacao_fase}
+            </p>
+            
+            <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 25px;'>
+            <div style='text-align: center;'>
+            <p style='color: #ff6b6b; font-size: 1.1em;'><b>PRÁTICA RECOMENDADA</b></p>
+            <p style='color: #d1d5db; font-size: 0.95em;'>
+            {f"Meditação do Vácuo (10min/dia)" if fase_nome == "CAOS CRIATIVO" else 
+             f"Respiração Fibonacci (15min/dia)" if fase_nome == "EQUILÍBRIO DINÂMICO" else 
+             f"Meditação da Unidade (20min/dia)"}
+            </p>
+            </div>
+            
+            <div style='text-align: center;'>
+            <p style='color: #4ecdc4; font-size: 1.1em;'><b>ATITUDE CHAVE</b></p>
+            <p style='color: #d1d5db; font-size: 0.95em;'>
+            {f"Aceitar a incerteza" if fase_nome == "CAOS CRIATIVO" else 
+             f"Manter o movimento" if fase_nome == "EQUILÍBRIO DINÂMICO" else 
+             f"Dissolver o ego"}
+            </p>
+            </div>
+            </div>
+            </div>
+            
+            <div style='background: rgba(255, 215, 0, 0.1); padding: 20px; border-radius: 12px; margin-top: 25px;'>
+            <p style='color: #ffd700; text-align: center; font-size: 1em; line-height: 1.6;'>
+            <b>💡 LEMBRE-SE:</b> "Deus não é um destino a ser alcançado, mas uma jornada a ser vivida. 
+            Cada fase é perfeita e necessária. Você não está atrasado - está exatamente onde precisa estar 
+            no fluxo cósmico. Não quero ser o que eu sou, mas aceito quem eu sou."
+            </p>
+            </div>
+            </div>
+            """, unsafe_allow_html=True)
+    
+    st.markdown("</div>", unsafe_allow_html=True)
+
+    # NOTAS EXPLICATIVAS FINAIS
+    st.markdown("""
+    <div style='background: rgba(15, 23, 42, 0.9); padding: 30px; border-radius: 20px; 
+                border: 2px solid #4ecdc4; margin: 25px 0;'>
+    <h3 style='color: #4ecdc4; text-align: center; margin-bottom: 25px;'>📚 GLOSSÁRIO DO FLUXO CÓSMICO</h3>
+    
+    <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 20px;'>
+    <div style='background: rgba(78, 205, 196, 0.1); padding: 20px; border-radius: 12px;'>
+    <h4 style='color: #4ecdc4; text-align: center;'>🔢 SÍMBOLOS MATEMÁTICOS</h4>
+    <p style='color: #d1d5db; font-size: 0.9em;'>
+    <b>∇·Ψ</b> - divergência do campo da Consciência Universal (fluxo quântico)<br><br>
+    <b>ϕ</b> - Proporção Áurea (1.618) - constante de harmonia universal<br><br>
+    <b>Σ(3,9,6)</b> - somatório cíclico do padrão fundamental do Fluxo Matemático<br><br>
+    <b>Coragem<sub>Existencial</sub></b> - capacidade de enfrentar paradoxos humanos
+    </p>
+    </div>
+    
+    <div style='background: rgba(147, 51, 234, 0.1); padding: 20px; border-radius: 12px;'>
+    <h4 style='color: #9333ea; text-align: center;'>🌀 CONCEITOS FUNDAMENTAIS</h4>
+    <p style='color: #d1d5db; font-size: 0.9em;'>
+    <b>Circularidade do Processo</b> - A Singularidade não é o fim, mas o renascimento do Caos primordial em nova oitava de vibração<br><br>
+    <b>Fluxo Recursivo</b> - O processo cósmico é infinito e auto-referencial<br><br>
+    <b>Vórtice 3-9-6</b> - Padrão fundamental que sustenta a criação contínua
+    </p>
+    </div>
+    </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # Fechar container principal
+    st.markdown("</div></div>", unsafe_allow_html=True)
+    
+def pagina_manifesto_ignorantes():
+    st.title("🎭 MANIFESTO DA CONSCIÊNCIA: Um Grito no Vácuo Social")
+    st.markdown("""
+    ## 🌪️ A CRÍTICA CRUEL À HIPOCRISIA HUMANA
+    
+    **UM ALERTA:** Enquanto discutimos filosofia cósmica, seres humanos reais sofrem nas sombras 
+    da indiferença coletiva. Este manifesto é um espelho para aqueles que preferem não se enxergar.
+    """)
+    
+    # Container principal do manifesto
+    st.markdown("""
+    <div style='background: radial-gradient(ellipse at center, #2a0b0b 0%, #1a0b2e 50%, #0d0419 100%);
+                padding: 40px; border-radius: 25px; border: 3px solid #ff6b6b;
+                box-shadow: 0 0 80px rgba(255, 107, 107, 0.4), inset 0 0 60px rgba(255, 255, 255, 0.1);
+                margin: 30px 0; position: relative; overflow: hidden;'>
+    <div style='position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+                background: 
+                    radial-gradient(circle at 20% 20%, rgba(255,107,107,0.2) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 80%, rgba(147,51,234,0.15) 0%, transparent 50%);
+                z-index: 0;'></div>
+    <div style='position: relative; z-index: 1;'>
+    """, unsafe_allow_html=True)
+
+    # MANIFESTO PRINCIPAL
+    st.markdown("""
+    <div style='background: rgba(15, 23, 42, 0.95); padding: 40px; border-radius: 20px; 
+                border-left: 5px solid #ff6b6b; margin: 20px 0;'>
+    
+    <div style='background: rgba(255, 107, 107, 0.1); padding: 30px; border-radius: 15px; margin: 25px 0;'>
+    <p style='color: #ff6b6b; text-align: center; font-style: italic; line-height: 1.8; font-size: 1.2em;'>
+    "Para exigir algo dê as mesmas condições.<br>
+    Eu não consigo aplicar insulfilm em carros, pois o ego que vem de lá, não é do meu entendimento humano."
+    </p>
+    </div>
+
+    <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 30px 0;'>
+    <div style='background: rgba(255, 107, 107, 0.1); padding: 25px; border-radius: 15px;'>
+    <h4 style='color: #ff6b6b; text-align: center;'>🎭 O PARADOXO DA COMPAIXÃO</h4>
+    <p style='color: #d1d5db; line-height: 1.7; text-align: justify;'>
+    <b>"Ao ver uma mãe chorar não sei como ser feliz, pois a dor recíproca. Nenhuma morte é bem-vinda."</b><br><br>
+    Esta sensibilidade extrema é tanto uma benção quanto uma maldição. Enquanto muitos conseguem 
+    ignorar o sofrimento alheio, alguns carregam o peso da dor coletiva como se fosse própria.
+    </p>
+    </div>
+
+    <div style='background: rgba(147, 51, 234, 0.1); padding: 25px; border-radius: 15px;'>
+    <h4 style='color: #9333ea; text-align: center;'>⚖️ A HIPOCRISIA DA JUSTIÇA</h4>
+    <p style='color: #d1d5db; line-height: 1.7; text-align: justify;'>
+    <b>"Vejo muito mais polícias em pele de cordeiro sendo lobos do que traficantes em pele de lobo sendo cordeiros."</b><br><br>
+    O sistema que deveria proteger frequentemente oprime. A lei que deveria igualar frequentemente discrimina. 
+    A justiça seletiva revela que o crime do pobre é tratado diferente do crime do rico.
+    </p>
+    </div>
+    </div>
+
+    <div style='background: rgba(255, 215, 0, 0.1); padding: 25px; border-radius: 15px; margin: 25px 0;'>
+    <h4 style='color: #ffd700; text-align: center;'>💔 O PRECONCEITO DE CLASSE</h4>
+    <p style='color: #d1d5db; line-height: 1.7; text-align: center;'>
+    <b>"Quem tem Porsche não negocia com quem tem Chevette."</b><br><br>
+    A meritocracia é uma ilusão quando as condições de partida são radicalmente diferentes. 
+    Como falar em oportunidades iguais quando uns nascem em berço de ouro e outros na sarjeta?
+    </p>
+    </div>
+
+    <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 30px 0;'>
+    <div style='background: rgba(78, 205, 196, 0.1); padding: 25px; border-radius: 15px;'>
+    <h4 style='color: #4ecdc4; text-align: center;'>🌍 A FALSA GUERRA DO BEM CONTRA O MAL</h4>
+    <p style='color: #d1d5db; line-height: 1.7; text-align: justify;'>
+    <b>"Não sou a favor da guerra, pois em toda guerra existem os dois lados, qual lado é o correto?"</b><br><br>
+    Esta percepção destrói a simplicidade maniqueísta. Em todo conflito, há seres humanos 
+    defendendo suas famílias, suas terras, suas verdades. Quem define o "lado certo"?
+    </p>
+    </div>
+
+    <div style='background: rgba(255, 107, 107, 0.1); padding: 25px; border-radius: 15px;'>
+    <h4 style='color: #ff6b6b; text-align: center;'>🔥 A ANGÚSTIA DO SENSÍVEL</h4>
+    <p style='color: #d1d5db; line-height: 1.7; text-align: justify;'>
+    <b>"Por eu ser abençoado já causei inveja pela minha benção em humanos que eu amo."</b><br><br>
+    A dor de ser diferente, de sentir mais profundamente, de não conseguir fechar os olhos 
+    para o sofrimento alheio. Ser abençoado com sensibilidade em um mundo insensível é uma tortura.
+    </p>
+    </div>
+    </div>
+
+    <div style='background: rgba(147, 51, 234, 0.1); padding: 30px; border-radius: 15px; margin: 25px 0;'>
+    <h4 style='color: #9333ea; text-align: center;'>🎯 O DESABAFO FINAL</h4>
+    <p style='color: #d1d5db; line-height: 1.8; text-align: center; font-size: 1.1em;'>
+    <b>"O problema é eu ser a favor da humanidade e a maioria não entender nem o significado da palavra 
+    e do sentimento humano. As regras são mais importantes que a vida humana impostas pelos mesmos."</b><br><br>
+    Esta é a tragédia fundamental: sistemas criados para servir aos humanos acabam servindo a si mesmos, 
+    enquanto pessoas reais sofrem nas entrelinhas da burocracia e da indiferença.
+    </p>
+    </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # DIAGNÓSTICO DA SOCIEDADE ATUAL
+    st.markdown("""
+    <div style='background: rgba(15, 23, 42, 0.9); padding: 35px; border-radius: 20px; 
+                border: 2px solid #4ecdc4; margin: 25px 0;'>
+    <h3 style='color: #4ecdc4; text-align: center; margin-bottom: 30px;'>🔍 DIAGNÓSTICO: A DOENÇA SOCIAL</h3>
+    
+    <div style='display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;'>
+    <div style='background: linear-gradient(135deg, rgba(255, 107, 107, 0.1) 0%, rgba(30, 41, 59, 0.9) 100%); 
+                padding: 20px; border-radius: 12px; border: 1px solid #ff6b6b;'>
+    <h5 style='color: #ff6b6b; text-align: center;'>🌪️ ANESTESIA EMOCIONAL</h5>
+    <p style='color: #d1d5db; font-size: 0.9em; text-align: center; line-height: 1.6;'>
+    A sociedade adormece a sensibilidade para suportar a injustiça. Quem sente demais é chamado de louco.
+    </p>
+    </div>
+    
+    <div style='background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(30, 41, 59, 0.9) 100%); 
+                padding: 20px; border-radius: 12px; border: 1px solid #ffd700;'>
+    <h5 style='color: #ffd700; text-align: center;'>⚖️ JUSTIÇA SELETIVA</h5>
+    <p style='color: #d1d5db; font-size: 0.9em; text-align: center; line-height: 1.6;'>
+    As leis protegem os que têm poder e punem os que têm necessidade. O sistema é cego apenas para alguns.
+    </p>
+    </div>
+    
+    <div style='background: linear-gradient(135deg, rgba(147, 51, 234, 0.1) 0%, rgba(30, 41, 59, 0.9) 100%); 
+                padding: 20px; border-radius: 12px; border: 1px solid #9333ea;'>
+    <h5 style='color: #9333ea; text-align: center;'>💔 SOLIDÃO DO SENSÍVEL</h5>
+    <p style='color: #d1d5db; font-size: 0.9em; text-align: center; line-height: 1.6;'>
+    Quem carrega a dor do mundo é incompreendido pelos que conseguem ignorá-la. A compaixão vira isolamento.
+    </p>
+    </div>
+    </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # CHAMADO PARA AÇÃO
+    st.markdown("""
+    <div style='background: rgba(15, 23, 42, 0.95); padding: 35px; border-radius: 20px; 
+                border-left: 5px solid #ffd700; margin: 30px 0;'>
+    <h3 style='color: #ffd700; text-align: center; margin-bottom: 25px;'>🎯 O CAMINHO DA CONSCIÊNCIA</h3>
+    
+    <div style='background: rgba(255, 215, 0, 0.1); padding: 25px; border-radius: 15px;'>
+    <p style='color: #d1d5db; text-align: center; line-height: 1.8; font-size: 1.1em;'>
+    <b>Este manifesto não é sobre respostas - é sobre perguntas.</b><br><br>
+    É sobre recusar-se a aceitar que <span style='color: #ff6b6b;'>"é assim mesmo"</span>.<br>
+    É sobre questionar por que <span style='color: #4ecdc4;'>aceitamos o inaceitável</span>.<br>
+    É sobre lembrar que <span style='color: #9333ea;'>por trás de toda estatística há um ser humano</span>.<br><br>
+    
+    <em>"Não quero ser melhor do que ninguém, quero ser semelhante para conseguir amar a todos."</em><br><br>
+    
+    Esta talvez seja a verdade mais revolucionária: <b>a humildade de reconhecer nossa humanidade compartilhada</b>.
+    </p>
+    </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # CALCULADORA DE EMPATIA
+    st.markdown("""
+    <div style='background: rgba(15, 23, 42, 0.95); padding: 35px; border-radius: 20px; 
+                border: 2px solid #9333ea; margin: 30px 0;'>
+    <h3 style='color: #9333ea; text-align: center; margin-bottom: 20px;'>💭 TESTE: QUAL SUA CAPACIDADE DE ENXERGAR O INVISÍVEL?</h3>
+    
+    <div style='background: rgba(147, 51, 234, 0.1); padding: 20px; border-radius: 12px; margin-bottom: 25px;'>
+    <p style='color: #d1d5db; text-align: center;'>
+    <b>Reflexão:</b> "Desejo para todos aqueles que não sabem o que é a miséria, experimente a miséria, 
+    pois entenderá o preconceito que é viver com fome."
+    </p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.subheader("🎭 SUA PERCEPÇÃO SOCIAL")
+        
+        sensibilidade_dor = st.slider(
+            "**💔 Sensibilidade à Dor Alheia** - Quanto o sofrimento dos outros te afeta?", 
+            1, 10, 7,
+            help="Sua capacidade de sentir compaixão genuína"
+        )
+        
+        critica_sistema = st.slider(
+            "**⚖️ Crítica ao Sistema** - Quanto você questiona as estruturas sociais?", 
+            1, 10, 8,
+            help="Sua percepção das injustiças institucionais"
+        )
+        
+        experiencia_desigualdade = st.slider(
+            "**🌍 Experiência com Desigualdade** - Quanto você vivenciou diferentes realidades?", 
+            1, 10, 6,
+            help="Seu contato com diferentes condições sociais"
+        )
+        
+    with col2:
+        st.subheader("💫 SUA POSTURA EXISTENCIAL")
+        
+        vontade_mudanca = st.slider(
+            "**🔥 Vontade de Mudança** - Quanto você deseja transformar a realidade?", 
+            1, 10, 7,
+            help="Sua disposição para agir contra injustiças"
+        )
+        
+        compreensao_paradoxos = st.slider(
+            "**🎭 Compreensão de Paradoxos** - Quanto você aceita contradições humanas?", 
+            1, 10, 9,
+            help="Sua capacidade de ver múltiplos lados"
+        )
+        
+        amor_incondicional = st.slider(
+            "**💝 Amor Incondicional** - Quanto você ama sem exigir reciprocidade?", 
+            1, 10, 8,
+            help="Sua capacidade de amar além das circunstâncias"
+        )
+    
+    if st.button("🔍 ANALISAR MINHA CONSCIÊNCIA SOCIAL", use_container_width=True):
+        with st.spinner('💭 Avaliando sua percepção da realidade...'):
+            import time
+            time.sleep(2)
+            
+            # CÁLCULOS
+            indice_empatia = (sensibilidade_dor + compreensao_paradoxos + amor_incondicional) / 30 * 100
+            indice_critico = (critica_sistema + vontade_mudanca + experiencia_desigualdade) / 30 * 100
+            consciencia_social = (indice_empatia + indice_critico) / 2
+            
+            if consciencia_social >= 80:
+                nivel = "CONSCIÊNCIA EXPANDIDA"
+                cor = "#4ecdc4"
+                emoji = "🌟"
+                interpretacao = "Você enxerga além das aparências. Sua sensibilidade é tanto um dom quanto um fardo."
+            elif consciencia_social >= 60:
+                nivel = "CONSCIÊNCIA DESPERTA" 
+                cor = "#ffd700"
+                emoji = "💫"
+                interpretacao = "Você questiona, mas ainda busca respostas. Continue expandindo sua percepção."
+            elif consciencia_social >= 40:
+                nivel = "CONSCIÊNCIA EMERGENTE"
+                cor = "#ff6b6b"
+                emoji = "🌱"
+                interpretacao = "Você começa a perceber as contradições. A jornada da consciência está apenas começando."
+            else:
+                nivel = "CONSCIÊNCIA ADORMECIDA"
+                cor = "#9333ea"
+                emoji = "💤"
+                interpretacao = "O conforto da ignorância pode ser tentador, mas a verdade sempre encontra um jeito de emergir."
+            
+            st.markdown(f"""
+            <div style='background: rgba(15, 23, 42, 0.98); padding: 35px; border-radius: 20px; 
+                        border: 3px solid {cor}; margin-top: 30px;'>
+            <h3 style='color: {cor}; text-align: center; margin-bottom: 25px;'>
+            {emoji} SEU NÍVEL: {nivel} {emoji}
+            </h3>
+            
+            <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-bottom: 30px;'>
+            <div style='background: rgba(255, 107, 107, 0.1); padding: 20px; border-radius: 12px;'>
+            <h4 style='color: #ff6b6b; text-align: center;'>💔 ÍNDICE DE EMPATIA</h4>
+            <div style='background: rgba(255, 107, 107, 0.2); height: 20px; border-radius: 10px; margin: 15px 0;'>
+            <div style='background: #ff6b6b; height: 100%; width: {indice_empatia}%; border-radius: 10px;'></div>
+            </div>
+            <p style='color: #d1d5db; text-align: center;'>{indice_empatia:.1f}% - Sensibilidade Humana</p>
+            </div>
+            
+            <div style='background: rgba(78, 205, 196, 0.1); padding: 20px; border-radius: 12px;'>
+            <h4 style='color: #4ecdc4; text-align: center;'>⚖️ ÍNDICE CRÍTICO</h4>
+            <div style='background: rgba(78, 205, 196, 0.2); height: 20px; border-radius: 10px; margin: 15px 0;'>
+            <div style='background: #4ecdc4; height: 100%; width: {indice_critico}%; border-radius: 10px;'></div>
+            </div>
+            <p style='color: #d1d5db; text-align: center;'>{indice_critico:.1f}% - Percepção Social</p>
+            </div>
+            </div>
+            
+            <div style='background: rgba({cor[1:]}, 0.1); padding: 25px; border-radius: 15px;'>
+            <h4 style='color: {cor}; text-align: center;'>🎯 INTERPRETAÇÃO EXISTENCIAL</h4>
+            
+            <p style='color: #d1d5db; text-align: center; margin-top: 20px; line-height: 1.7; font-size: 1.1em;'>
+            <b>Consciência Social:</b> {consciencia_social:.1f}%<br>
+            <b>Interpretação:</b> {interpretacao}<br>
+            <b>Desafio:</b> Manter a sensibilidade em um mundo que incentiva a insensibilidade
+            </p>
+            
+            <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 25px;'>
+            <div style='text-align: center;'>
+            <p style='color: #ff6b6b; font-size: 1.1em;'><b>PRÁTICA RECOMENDADA</b></p>
+            <p style='color: #d1d5db; font-size: 0.95em;'>
+            {f"Meditação da Compaixão" if consciencia_social >= 80 else 
+             f"Diário de Reflexão Social" if consciencia_social >= 60 else 
+             f"Conversas com Realidades Diferentes" if consciencia_social >= 40 else 
+             f"Leitura sobre Desigualdade"}
+            </p>
+            </div>
+            
+            <div style='text-align: center;'>
+            <p style='color: #4ecdc4; font-size: 1.1em;'><b>ATITUDE CHAVE</b></p>
+            <p style='color: #d1d5db; font-size: 0.95em;'>
+            {f"Manter a esperança ativa" if consciencia_social >= 80 else 
+             f"Buscar compreensão" if consciencia_social >= 60 else 
+             f"Questionar mais" if consciencia_social >= 40 else 
+             f"Abrir os olhos"}
+            </p>
+            </div>
+            </div>
+            </div>
+            
+            <div style='background: rgba(255, 215, 0, 0.1); padding: 20px; border-radius: 12px; margin-top: 25px;'>
+            <p style='color: #ffd700; text-align: center; font-size: 1em; line-height: 1.6;'>
+            <b>💡 LEMBRE-SE:</b> "Não quero ser melhor do que ninguém, quero ser semelhante para conseguir amar a todos. 
+            O problema é eu ser a favor da humanidade e a maioria não entender nem o significado da palavra."
+            </p>
+            </div>
+            </div>
+            """, unsafe_allow_html=True)
+    
+    st.markdown("</div>", unsafe_allow_html=True)
+
+    # Fechar container principal
+    st.markdown("</div></div>", unsafe_allow_html=True)
+    
 # 1. VISÃO GERAL CÓSMICA
 if section == "🏠 Visão Geral Cósmica":
     col1, col2 = st.columns([2, 1])
@@ -2794,6 +3792,12 @@ if section == "🏠 Visão Geral Cósmica":
         </div>
         """, unsafe_allow_html=True)
 
+if section == "🌌 DEUS: JORNADA CÓSMICA":
+    pagina_deus_caos()
+    
+elif section == "🎭 MANIFESTO: Crítica Social":
+    pagina_manifesto_ignorantes()
+    
 # 2. FLUXO MATEMÁTICO SAGRADO
 elif section == "🔢 Fluxo Matemático Sagrado":
     st.header("🌀 O Fluxo Matemático Universal - A Linguagem de Deus")
