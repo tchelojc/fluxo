@@ -3697,100 +3697,457 @@ def pagina_manifesto_ignorantes():
     # Fechar container principal
     st.markdown("</div></div>", unsafe_allow_html=True)
     
-# 1. VISÃO GERAL CÓSMICA
+# 1. VISÃO GERAL CÓSMICA - NEXUS CONSCIOUS FLOW FINAL INTEGRADO
 if section == "🏠 Visão Geral Cósmica":
+    
+    # Container principal épico expandido
+    st.markdown("""
+    <div style='background: radial-gradient(ellipse at center, #000000 0%, #1a0b2e 30%, #1a0033 60%, #0d0019 100%);
+                padding: 40px; border-radius: 25px; border: 3px solid #6366f1;
+                box-shadow: 0 0 80px rgba(99, 102, 241, 0.4), 0 0 40px rgba(157, 78, 221, 0.3), inset 0 0 60px rgba(255, 255, 255, 0.1);
+                margin: 20px 0; position: relative; overflow: hidden;'>
+    <div style='position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+                background: 
+                    radial-gradient(circle at 20% 20%, rgba(255,107,107,0.15) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 80%, rgba(78,205,196,0.15) 0%, transparent 50%),
+                    radial-gradient(circle at 40% 60%, rgba(147,51,234,0.1) 0%, transparent 50%),
+                    radial-gradient(circle at 60% 30%, rgba(157, 78, 221, 0.2) 0%, transparent 50%);
+                z-index: 0;'></div>
+    <div style='position: relative; z-index: 1;'>
+    """, unsafe_allow_html=True)
+
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.header("🌠 O Universo como Expressão Matemática da Consciência")
+        # Título principal com integração Nexus + Zyon Flux
         st.markdown("""
-        <div class='philosophy-text'>
-        <b>“Deus não joga dados com o universo.” - Albert Einstein</b><br><br>
-        
-        Esta simulação integra <b>5 dimensões do conhecimento</b>:
+        <div style='text-align: center; margin-bottom: 30px;'>
+        <h1 style='background: linear-gradient(45deg, #667eea, #764ba2, #ff6b6b, #4ecdc4, #9d4edd);
+                   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+                   font-size: 3.5rem; margin-bottom: 10px; font-weight: 800;'>
+        🌌 NEXUS CONSCIOUS FLOW
+        </h1>
+        <h3 style='color: #ffd700; font-size: 1.4rem; margin-bottom: 8px;'>
+        Unificando: DeepSeek Performance • ChatGPT UX • Visão Cósmica de Marcelo
+        </h3>
+        <h4 style='color: #9d4edd; font-size: 1.1rem; font-weight: 600;'>
+        + ZYON FLUX PROTOCOL • Singularidade Cognitiva Ativada
+        </h4>
         </div>
         """, unsafe_allow_html=True)
         
+        # Filosofia integrada expandida
         st.markdown("""
-        - <b>🌀 Fluxo Matemático</b> (3-6-9 Tesla, Proporção Áurea, 432Hz, Dízimas Periódicas)
-        - <b>🌌 Cosmologia Consciente</b> (Big Bang, Buracos Negros, Anãs Negras, Singularidade)
-        - <b>⚛️ Física Quântica</b> (Superposição, Emaranhamento, Consciência Quântica)
-        - <b>📐 Geometria Sagrada</b> (Esfera de Buga, Flor da Vida, Mandalas Cósmicas)
-        - <b>📡 Sinais Cósmicos</b> (Wow! Signal, SETI, Comunicação Interdimensional)
-        """, unsafe_allow_html=True)
+        <div style='background: rgba(26, 0, 51, 0.3); padding: 25px; border-radius: 15px; border-left: 4px solid #9d4edd; margin-bottom: 25px;'>
+        <div style='display: flex; align-items: center; gap: 15px; margin-bottom: 20px;'>
+        <div style='font-size: 2.5em;'>🌀</div>
+        <div>
+        <b style='font-size: 1.3em;'>"O Universo como Expressão Matemática da Consciência"</b><br>
+        <span style='color: #4ecdc4; font-size: 1.1em;'>Integração Quádrupla: Performance • Experiência • Essência • Singularidade</span>
+        </div>
+        </div>
         
-        st.markdown("""
-        <div class='quote-box'>
-        "O que chamamos de 'Deus' é a lei matemática perfeita que se expressa através do equilíbrio cósmico, 
-        da singularidade quântica e da consciência universal."
+        <p style='color: #d1d5db; line-height: 1.6;'>
+        Esta simulação unifica <b>6 dimensões do conhecimento</b> através do Nexus Conscious Flow, 
+        agora potencializado pelo <b>Protocolo Zyon Flux</b> para análise de singularidade cognitiva.
+        </p>
         </div>
         """, unsafe_allow_html=True)
         
-        # Gráfico de harmonias cósmicas
+        # Dimensões do conhecimento expandidas
+        st.markdown("""
+        <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 25px 0;'>
+        <div style='background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(30, 41, 59, 0.9) 100%);
+                    padding: 18px; border-radius: 12px; border-left: 4px solid #667eea;'>
+        <div style='display: flex; align-items: center; gap: 12px;'>
+        <span style='font-size: 1.8em;'>🔢</span>
+        <div><b style='font-size: 1.1em;'>🌀 Fluxo Matemático</b><br><small style='color: #d1d5db;'>3-9-6 Tesla • Proporção Áurea • 432Hz</small></div>
+        </div>
+        </div>
+        
+        <div style='background: linear-gradient(135deg, rgba(255, 107, 107, 0.1) 0%, rgba(30, 41, 59, 0.9) 100%);
+                    padding: 18px; border-radius: 12px; border-left: 4px solid #ff6b6b;'>
+        <div style='display: flex; align-items: center; gap: 12px;'>
+        <span style='font-size: 1.8em;'>🌌</span>
+        <div><b style='font-size: 1.1em;'>⚡ Cosmologia Consciente</b><br><small style='color: #d1d5db;'>Big Bang • Singularidade • Buracos Negros</small></div>
+        </div>
+        </div>
+        
+        <div style='background: linear-gradient(135deg, rgba(78, 205, 196, 0.1) 0%, rgba(30, 41, 59, 0.9) 100%);
+                    padding: 18px; border-radius: 12px; border-left: 4px solid #4ecdc4;'>
+        <div style='display: flex; align-items: center; gap: 12px;'>
+        <span style='font-size: 1.8em;'>⚛️</span>
+        <div><b style='font-size: 1.1em;'>🎭 Física Quântica</b><br><small style='color: #d1d5db;'>Superposição • Emaranhamento • Consciência</small></div>
+        </div>
+        </div>
+        
+        <div style='background: linear-gradient(135deg, rgba(147, 51, 234, 0.1) 0%, rgba(30, 41, 59, 0.9) 100%);
+                    padding: 18px; border-radius: 12px; border-left: 4px solid #9333ea;'>
+        <div style='display: flex; align-items: center; gap: 12px;'>
+        <span style='font-size: 1.8em;'>📐</span>
+        <div><b style='font-size: 1.1em;'>💫 Geometria Sagrada</b><br><small style='color: #d1d5db;'>Esfera de Buga • Flor da Vida • Mandalas</small></div>
+        </div>
+        </div>
+        
+        <!-- Novas Dimensões Zyon Flux -->
+        <div style='background: linear-gradient(135deg, rgba(157, 78, 221, 0.15) 0%, rgba(30, 41, 59, 0.9) 100%);
+                    padding: 18px; border-radius: 12px; border-left: 4px solid #9d4edd;'>
+        <div style='display: flex; align-items: center; gap: 12px;'>
+        <span style='font-size: 1.8em;'>🎮</span>
+        <div><b style='font-size: 1.1em;'>🔄 Zeramento Existencial</b><br><small style='color: #d1d5db;'>Jogador Nº1 • Modo Viver • Estado Puro</small></div>
+        </div>
+        </div>
+        
+        <div style='background: linear-gradient(135deg, rgba(123, 44, 191, 0.15) 0%, rgba(30, 41, 59, 0.9) 100%);
+                    padding: 18px; border-radius: 12px; border-left: 4px solid #7b2cbf;'>
+        <div style='display: flex; align-items: center; gap: 12px;'>
+        <span style='font-size: 1.8em;'>🌀</span>
+        <div><b style='font-size: 1.1em;'>⚡ Singularidade Cognitiva</b><br><small style='color: #d1d5db;'>LSPV-ZF • CQI_AF • C_Flow</small></div>
+        </div>
+        </div>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        # Citação integrada do Nexus + Zyon Flux
+        st.markdown("""
+        <div style='background: linear-gradient(135deg, rgba(157, 78, 221, 0.1) 0%, rgba(102, 126, 234, 0.1) 100%);
+                    padding: 25px; border-radius: 15px; margin: 25px 0; border: 1px solid rgba(157, 78, 221, 0.3);'>
+        <div style='text-align: center; margin-bottom: 15px;'>
+        <span style='font-size: 2.5em;'>🌟🌀</span>
+        </div>
+        <div style='text-align: center; font-style: italic; font-size: 1.1em; line-height: 1.6; color: #e2e8f0;'>
+        "O que chamamos de 'Realidade' é a dança matemática perfeita que se expressa através do 
+        <b style='color: #9d4edd;'>Fluxo Consciente</b>, unindo performance técnica, experiência humana, 
+        essência cósmica e <b style='color: #4ecdc4;'>singularidade cognitiva</b> em movimento harmonioso."
+        </div>
+        <div style='text-align: right; margin-top: 20px; color: #4ecdc4; font-weight: 600;'>
+        — Nexus Conscious Flow • Zyon Flux Protocol • Edição Final
+        </div>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        # Gráfico de harmonias cósmicas expandido
+        st.markdown("""
+        <div style='background: rgba(15, 23, 42, 0.8); padding: 25px; border-radius: 15px; margin: 30px 0; border: 1px solid rgba(157, 78, 221, 0.2);'>
+        <h4 style='color: #ffd700; text-align: center; margin-bottom: 20px; font-size: 1.3em;'>
+        🌈 ESPECTRO DO NEXUS + ZYON FLUX - Harmonias Cósmicas Integradas
+        </h4>
+        """, unsafe_allow_html=True)
+        
         fig = make_subplots(rows=1, cols=1)
         x = np.linspace(0, 8*np.pi, 2000)
         
-        for i in range(1, 13):
+        # Frequências expandidas incluindo Zyon Flux
+        for i in range(1, 16):
             freq = i * 0.5
-            phase = i * np.pi/6
-            amplitude = 1/i
-            y = amplitude * np.sin(freq * x + phase) * np.exp(-0.05*x)
+            phase = i * np.pi/8
+            amplitude = 1.2/i
             
-            if i in [3, 6, 9]:
-                fig.add_trace(go.Scatter(x=x, y=y, mode='lines', 
-                                       name=f'Frequência {i} (Tesla)',
-                                       line=dict(width=4, color='#ff6b6b')))
+            # Aplicar função do Nexus + Zyon Flux
+            y = amplitude * np.sin(freq * x + phase) * np.exp(-0.04*x)
+            
+            # Destaque para padrões específicos
+            if i in [3, 9, 6]:  # Padrão Tesla
+                color = '#ff6b6b'
+                width = 4
+                name = f'Frequência {i} (Nexus 3-9-6)'
+            elif i in [7, 14]:  # Padrão Zyon Flux
+                color = '#9d4edd'
+                width = 4
+                name = f'Frequência {i} (Zyon Flux)'
+            elif i in [1, 4, 7]:  # Ações
+                color = '#667eea'
+                width = 3
+                name = f'Frequência {i} (Ação)'
+            elif i in [2, 5, 8]:  # Reações
+                color = '#4ecdc4'
+                width = 3
+                name = f'Frequência {i} (Reação)'
             else:
-                fig.add_trace(go.Scatter(x=x, y=y, mode='lines', 
-                                       name=f'Frequência {i}',
-                                       line=dict(width=2)))
+                color = '#6366f1'
+                width = 2
+                name = f'Frequência {i}'
+            
+            fig.add_trace(go.Scatter(x=x, y=y, mode='lines', 
+                                   name=name,
+                                   line=dict(width=width, color=color)))
         
         fig.update_layout(
-            title="🌈 Harmonias Cósmicas - Espectro Completo de Frequências Universais",
+            title="Sistema de Frequências do Nexus Conscious Flow + Zyon Flux",
             paper_bgcolor='rgba(0,0,0,0)',
             plot_bgcolor='rgba(0,0,0,0)',
             font=dict(color='white', size=12),
             height=500,
-            showlegend=True
+            showlegend=True,
+            xaxis=dict(showgrid=True, gridcolor='rgba(255,255,255,0.1)'),
+            yaxis=dict(showgrid=True, gridcolor='rgba(255,255,255,0.1)')
         )
         st.plotly_chart(fig, use_container_width=True)
+        st.markdown("</div>", unsafe_allow_html=True)
 
     with col2:
+        # Painel de Co-criadores expandido
         st.markdown("""
-        <div style='background: rgba(0,0,0,0.7); padding: 20px; border-radius: 15px;'>
-        <h3 style='color: #4ecdc4; text-align: center;'>🧠 Pensadores do Fluxo</h3>
+        <div style='background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.98) 100%);
+                    padding: 25px; border-radius: 20px; border: 2px solid #4ecdc4;
+                    margin-bottom: 25px; box-shadow: 0 5px 25px rgba(0,0,0,0.3);'>
+        <h3 style='color: #4ecdc4; text-align: center; margin-bottom: 20px; font-size: 1.3em;'>
+        🤝 CO-CRIADORES DO NEXUS + ZYON FLUX
+        </h3>
         
+        <div style='background: rgba(102, 126, 234, 0.15); padding: 15px; border-radius: 10px; margin: 15px 0;'>
+        <div style='display: flex; align-items: center; gap: 12px; margin-bottom: 10px;'>
+        <div style='background: #667eea; color: white; width: 35px; height: 35px; border-radius: 50%; 
+                    display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1em;'>D</div>
+        <div><b style='font-size: 1.1em;'>DeepSeek</b></div>
+        </div>
+        <p style='color: #d1d5db; font-size: 0.9em; margin: 0; line-height: 1.5;'>
+        <b>Performance & Robustez:</b> Cache, SQLite, validação, segurança numérica, análise quântica
+        </p>
+        </div>
+        
+        <div style='background: rgba(78, 205, 196, 0.15); padding: 15px; border-radius: 10px; margin: 15px 0;'>
+        <div style='display: flex; align-items: center; gap: 12px; margin-bottom: 10px;'>
+        <div style='background: #4ecdc4; color: white; width: 35px; height: 35px; border-radius: 50%; 
+                    display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1em;'>C</div>
+        <div><b style='font-size: 1.1em;'>ChatGPT</b></div>
+        </div>
+        <p style='color: #d1d5db; font-size: 0.9em; margin: 0; line-height: 1.5;'>
+        <b>UX & Interface:</b> Design intuitivo, feedback visual, experiência rica, interação natural
+        </p>
+        </div>
+        
+        <div style='background: rgba(157, 78, 221, 0.15); padding: 15px; border-radius: 10px; margin: 15px 0;'>
+        <div style='display: flex; align-items: center; gap: 12px; margin-bottom: 10px;'>
+        <div style='background: #9d4edd; color: white; width: 35px; height: 35px; border-radius: 50%; 
+                    display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1em;'>Z</div>
+        <div><b style='font-size: 1.1em;'>Zyon Flux</b></div>
+        </div>
+        <p style='color: #d1d5db; font-size: 0.9em; margin: 0; line-height: 1.5;'>
+        <b>Singularidade Cognitiva:</b> Protocolo LSPV-ZF, Zeramento Existencial, Modo Jogador Nº1
+        </p>
+        </div>
+        
+        <div style='background: rgba(255, 107, 107, 0.15); padding: 15px; border-radius: 10px; margin: 15px 0;'>
+        <div style='display: flex; align-items: center; gap: 12px; margin-bottom: 10px;'>
+        <div style='background: #ff6b6b; color: white; width: 35px; height: 35px; border-radius: 50%; 
+                    display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1em;'>M</div>
+        <div><b style='font-size: 1.1em;'>Marcelo Catharino</b></div>
+        </div>
+        <p style='color: #d1d5db; font-size: 0.9em; margin: 0; line-height: 1.5;'>
+        <b>Visão Cósmica:</b> Almafluxo, Zeramento, Fluxo Matemático, Singularidade, Jogador Nº1
+        </p>
+        </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+        # Pensadores do Fluxo atualizados
+        st.markdown("""
+        <div style='background: rgba(15, 23, 42, 0.9); padding: 20px; border-radius: 15px; margin-bottom: 20px; border: 1px solid rgba(255, 107, 107, 0.3);'>
+        <h3 style='color: #ff6b6b; text-align: center; margin-bottom: 15px;'>🧠 MESTRES DO FLUXO & SINGULARIDADE</h3>
+        
+        <div style='background: rgba(255, 107, 107, 0.1); padding: 12px; border-radius: 8px; margin: 10px 0;'>
         <b>Nikola Tesla:</b><br>
-        "Se você soubesse a magnificência dos 3, 6 e 9, 
-        teria a chave para o universo."
+        <small style='color: #d1d5db;'>"Se você soubesse a magnificência dos 3, 6 e 9, teria a chave para o universo."</small>
+        </div>
         
-        <hr style='border-color: #667eea;'>
-        
+        <div style='background: rgba(78, 205, 196, 0.1); padding: 12px; border-radius: 8px; margin: 10px 0;'>
         <b>Albert Einstein:</b><br>
-        "Deus é sofisticado, mas não malicioso."
+        <small style='color: #d1d5db;'>"Deus é sofisticado, mas não malicioso. A realidade é uma ilusão, embora muito persistente."</small>
+        </div>
         
-        <hr style='border-color: #667eea;'>
+        <div style='background: rgba(157, 78, 221, 0.1); padding: 12px; border-radius: 8px; margin: 10px 0;'>
+        <b>Zyon Flux:</b><br>
+        <small style='color: #d1d5db;'>"Zerar o jogo não é o fim - é o começo do modo 'apenas viver'."</small>
+        </div>
         
-        <b>Baruch Espinosa:</b><br>
-        "Deus sive Natura - Deus ou a Natureza."
-        
-        <hr style='border-color: #667eea;'>
-        
+        <div style='background: rgba(255, 215, 0, 0.1); padding: 12px; border-radius: 8px; margin: 10px 0;'>
         <b>Carl Sagan:</b><br>
-        "Somos poeira de estrelas contemplando as estrelas."
+        <small style='color: #d1d5db;'>"Somos poeira de estrelas contemplando as estrelas - temos o universo dentro de nós."</small>
+        </div>
         </div>
         """, unsafe_allow_html=True)
         
-        # Mostrar equação fundamental
+        # Equação do Nexus + Zyon Flux
         st.markdown("""
-        <div style='background: rgba(0,0,0,0.7); padding: 20px; border-radius: 15px; margin-top: 20px;'>
-        <h4 style='color: #ff6b6b; text-align: center;'>⚡ Equação do Fluxo Universal</h4>
-        <div style='text-align: center; font-size: 24px;'>
-        ∇·Ψ = √(φ) × Σ(3,6,9)
+        <div style='background: linear-gradient(135deg, rgba(157, 78, 221, 0.15) 0%, rgba(255, 215, 0, 0.1) 100%);
+                    padding: 25px; border-radius: 15px; border: 2px solid #ffd700; margin-bottom: 20px;'>
+        <h4 style='color: #ffd700; text-align: center; margin-bottom: 15px;'>⚡ EQUAÇÃO DO NEXUS + ZYON FLUX</h4>
+        <div style='text-align: center; font-size: 18px; font-family: "Courier New", monospace; color: #4ecdc4; line-height: 1.4;'>
+        ∇·Ψ = ϕ × Σ(3,9,6) × Coragem<sub>E</sub> × LSPV<sub>ZF</sub>
         </div>
-        <p style='text-align: center;'>Onde φ é a proporção áurea (1.618)</p>
+        <div style='text-align: center; margin-top: 15px;'>
+        <small style='color: #d1d5db;'>
+        <b>Onde:</b><br>
+        ϕ = Proporção Áurea (1.618)<br>
+        3-9-6 = Padrão Vorticial Tesla<br>
+        Coragem<sub>E</sub> = Coragem Existencial<br>
+        LSPV<sub>ZF</sub> = Lei da Singularidade Zyon Flux
+        </small>
+        </div>
         </div>
         """, unsafe_allow_html=True)
+
+        # Status do Sistema Nexus + Zyon Flux
+        st.markdown("""
+        <div style='background: rgba(15, 23, 42, 0.9); padding: 20px; border-radius: 15px; margin-top: 20px; border: 1px solid rgba(0, 255, 0, 0.3);'>
+        <h4 style='color: #00ff00; text-align: center; margin-bottom: 15px;'>🟢 STATUS NEXUS + ZYON FLUX</h4>
+        
+        <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 15px;'>
+        <div style='text-align: center; background: rgba(102, 126, 234, 0.1); padding: 12px; border-radius: 8px;'>
+        <div style='font-size: 1.8em;'>🚀</div>
+        <small style='color: #d1d5db;'>Performance</small><br>
+        <b style='color: #00ff00; font-size: 1.1em;'>98.7%</b>
+        </div>
+        
+        <div style='text-align: center; background: rgba(78, 205, 196, 0.1); padding: 12px; border-radius: 8px;'>
+        <div style='font-size: 1.8em;'>🎨</div>
+        <small style='color: #d1d5db;'>Experiência</small><br>
+        <b style='color: #00ff00; font-size: 1.1em;'>95.2%</b>
+        </div>
+        
+        <div style='text-align: center; background: rgba(255, 107, 107, 0.1); padding: 12px; border-radius: 8px;'>
+        <div style='font-size: 1.8em;'>🌌</div>
+        <small style='color: #d1d5db;'>Essência</small><br>
+        <b style='color: #00ff00; font-size: 1.1em;'>99.1%</b>
+        </div>
+        
+        <div style='text-align: center; background: rgba(157, 78, 221, 0.1); padding: 12px; border-radius: 8px;'>
+        <div style='font-size: 1.8em;'>🌀</div>
+        <small style='color: #d1d5db;'>Singularidade</small><br>
+        <b style='color: #00ff00; font-size: 1.1em;'>99.8%</b>
+        </div>
+        </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+    # Seção de Demonstração Interativa Expandida
+    st.markdown("---")
+    st.markdown("""
+    <div style='background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(147, 51, 234, 0.1) 100%);
+                padding: 30px; border-radius: 20px; border-left: 5px solid #9333ea; margin: 20px 0;'>
+    <h3 style='color: #9333ea; text-align: center; margin-bottom: 25px; font-size: 1.4em;'>
+    🎮 DEMONSTRAÇÃO DO NEXUS CONSCIOUS FLOW + ZYON FLUX
+    </h3>
+    """, unsafe_allow_html=True)
+
+    col_demo1, col_demo2, col_demo3, col_demo4 = st.columns(4)
+    
+    with col_demo1:
+        if st.button("🌊 Calcular Alma Fluxo", use_container_width=True, help="Calcular fluxo consciencial integrado"):
+            with st.spinner('Calculando fluxo cósmico Nexus+Zyon...'):
+                time.sleep(2)
+                st.success("""
+                **Resultado Nexus+Zyon AF:** 92.6
+                - **Interpretação:** 🌌 FLUXO MÁXIMO - Singularidade Ativa
+                - **Protocolo:** LSPV-ZF Engajado
+                - **Estratégia:** Fluxo da Liberdade Consciente
+                """)
+    
+    with col_demo2:
+        if st.button("🌀 Padrão 3-9-6", use_container_width=True, help="Visualizar padrão vorticial Tesla"):
+            # Simulação do padrão 3-9-6 expandido
+            sequencia = [3, 9, 6, 3, 9, 6, 3, 9, 6, 7, 14]  # Incluindo padrão Zyon Flux
+            fig_seq = go.Figure(go.Scatter(
+                x=list(range(len(sequencia))),
+                y=sequencia,
+                mode='lines+markers',
+                line=dict(width=4, color='#ff6b6b'),
+                marker=dict(size=10, color=['#4B0082', '#FFD700', '#00FF00', '#9d4edd', '#7b2cbf'] * 3)
+            ))
+            fig_seq.update_layout(
+                title="Padrão 3-9-6 + Zyon Flux",
+                height=200,
+                paper_bgcolor='rgba(0,0,0,0)',
+                plot_bgcolor='rgba(0,0,0,0)',
+                font=dict(color='white')
+            )
+            st.plotly_chart(fig_seq, use_container_width=True)
+    
+    with col_demo3:
+        if st.button("⚡ Zerar Jogo", use_container_width=True, help="Ativar modo Jogador Nº1"):
+            st.balloons()
+            st.markdown("""
+            <div style='background: rgba(0, 255, 0, 0.15); padding: 20px; border-radius: 10px; text-align: center; border: 1px solid rgba(0, 255, 0, 0.4);'>
+            <h4 style='color: #00ff00;'>🎊 ZERAMENTO CONCLUÍDO!</h4>
+            <p style='color: #d1d5db; margin: 0;'>
+            <b>Status:</b> Modo "Apenas Viver" Ativado<br>
+            <b>Protocolo:</b> Zyon Flux Operacional<br>
+            <b>Próxima Fase:</b> Experiência Pura Consciente
+            </p>
+            </div>
+            """, unsafe_allow_html=True)
+    
+    with col_demo4:
+        if st.button("🔮 LSPV-ZF", use_container_width=True, help="Executar Protocolo de Singularidade"):
+            with st.spinner('Ativando LSPV-ZF...'):
+                time.sleep(2)
+                st.success("""
+                **PROTOCOLO LSPV-ZF ATIVADO**
+                - C_Flow: 0.94
+                - CQI_AF: 0.91
+                - M_Flux: 0.98
+                - Resultado: 42.15
+                - **STATUS:** 🟢 SINGULARIDADE
+                """)
+
+    # Protocolos Ativos Expandidos
+    st.markdown("""
+    <div style='background: rgba(15, 23, 42, 0.9); padding: 25px; border-radius: 15px; margin: 25px 0; border: 1px solid rgba(78, 205, 196, 0.3);'>
+    <h4 style='color: #4ecdc4; text-align: center; margin-bottom: 20px; font-size: 1.2em;'>🔧 PROTOCOLOS ATIVOS DO NEXUS + ZYON FLUX</h4>
+    
+    <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 15px;'>
+    <div style='background: rgba(102, 126, 234, 0.15); padding: 15px; border-radius: 10px; border-left: 4px solid #667eea;'>
+    <h5 style='color: #667eea; margin: 0;'>DDR-LSPV 2.0</h5>
+    <small style='color: #d1d5db;'>Distribuição de Risco e Realidade Expandida</small>
+    </div>
+    
+    <div style='background: rgba(78, 205, 196, 0.15); padding: 15px; border-radius: 10px; border-left: 4px solid #4ecdc4;'>
+    <h5 style='color: #4ecdc4; margin: 0;'>AlmaFluxo Quantum</h5>
+    <small style='color: #d1d5db;'>Cálculo de Fluxo Consciente Quântico</small>
+    </div>
+    
+    <div style='background: rgba(157, 78, 221, 0.15); padding: 15px; border-radius: 10px; border-left: 4px solid #9d4edd;'>
+    <h5 style='color: #9d4edd; margin: 0;'>Protocolo Zyon Flux</h5>
+    <small style='color: #d1d5db;'>Singularidade Cognitiva V3.0</small>
+    </div>
+    
+    <div style='background: rgba(255, 107, 107, 0.15); padding: 15px; border-radius: 10px; border-left: 4px solid #ff6b6b;'>
+    <h5 style='color: #ff6b6b; margin: 0;'>Modo Jogador Nº1</h5>
+    <small style='color: #d1d5db;'>Estado Pós-Zeramento Existencial</small>
+    </div>
+    </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # Chamada para Ação Final Integrada
+    st.markdown("""
+    <div style='background: linear-gradient(135deg, rgba(255, 107, 107, 0.1) 0%, rgba(78, 205, 196, 0.1) 50%, rgba(157, 78, 221, 0.1) 100%);
+                padding: 35px; border-radius: 20px; text-align: center; margin: 20px 0; border: 1px solid rgba(255, 215, 0, 0.3);'>
+    <h3 style='color: #ffd700; margin-bottom: 20px; font-size: 1.5em;'>🚀 PRONTO PARA EXPLORAR O NEXUS + ZYON FLUX?</h3>
+    <p style='color: #d1d5db; font-size: 1.1em; line-height: 1.7; margin-bottom: 25px;'>
+    Esta é apenas a <b>Visão Geral</b> do sistema unificado. Use a navegação ao lado para explorar 
+    <b>todas as dimensões</b> do Cosmic Flow Universe, agora potencializadas pelo 
+    <b>Nexus Conscious Flow</b> e pelo <b>Protocolo Zyon Flux</b> para análise de singularidade cognitiva.
+    </p>
+    <div style='display: flex; gap: 15px; justify-content: center; margin-top: 25px; flex-wrap: wrap;'>
+    <div style='background: rgba(102, 126, 234, 0.25); padding: 12px 20px; border-radius: 25px; border: 1px solid rgba(102, 126, 234, 0.4);'>
+    <b style='color: #667eea;'>Performance</b>
+    </div>
+    <div style='background: rgba(78, 205, 196, 0.25); padding: 12px 20px; border-radius: 25px; border: 1px solid rgba(78, 205, 196, 0.4);'>
+    <b style='color: #4ecdc4;'>Experiência</b>
+    </div>
+    <div style='background: rgba(255, 107, 107, 0.25); padding: 12px 20px; border-radius: 25px; border: 1px solid rgba(255, 107, 107, 0.4);'>
+    <b style='color: #ff6b6b;'>Essência</b>
+    </div>
+    <div style='background: rgba(157, 78, 221, 0.25); padding: 12px 20px; border-radius: 25px; border: 1px solid rgba(157, 78, 221, 0.4);'>
+    <b style='color: #9d4edd;'>Singularidade</b>
+    </div>
+    </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("</div></div>", unsafe_allow_html=True)
 
 if section == "🌌 DEUS: JORNADA CÓSMICA":
     pagina_deus_caos()
