@@ -1,0 +1,502 @@
+"""
+🧠 SINGULARIDADE COGNITIVA INTEGRADA 3-6-9 - SISTEMA DEFINITIVO COMPLETO
+Integração Total: ChatGPT + Gemini + DeepSeek + Template_Singularidade
+Método Marcelo Jubilado Catharino
+"""
+
+import streamlit as st
+import time
+from datetime import datetime
+import json
+import random
+import inspect
+import ast
+import sys
+import os
+import subprocess
+from pathlib import Path
+import re
+import hashlib
+from typing import Any, Dict, Optional, List, Tuple, Union
+import requests
+import asyncio
+import aiohttp
+from concurrent.futures import ThreadPoolExecutor
+import tempfile
+import shutil
+import numpy as np
+from dataclasses import dataclass
+from enum import Enum
+import threading
+from queue import Queue
+import warnings
+warnings.filterwarnings('ignore')
+
+# =============================================================================
+# 0. CONFIGURAÇÕES GLOBAIS INTEGRADAS COMPLETAS
+# =============================================================================
+
+METADATA = {
+    "name": "SINGULARIDADE_COGNITIVA_INTEGRADA_DEFINITIVA",
+    "version": "8.0_Completa_Integrada_Execucao",
+    "creator": "Marcelo Jubilado Catharino",
+    "description": "Sistema integrado completo que unifica todas as IAs com execução e teste de código",
+    "integrated_ais": ["ChatGPT", "Gemini", "DeepSeek", "Template_Singularidade"],
+    "paradigm": "Quantum_Consciousness_369_Execucao_Completa"
+}
+
+REPLICAS_DIR = "replicas_singularidade_execucao"
+LOG_FILE = "singularidade_execucao.log"
+MAX_REPLICAS = 369
+EXECUTION_TIMEOUT = 30  # segundos
+
+# =============================================================================
+# 1. SISTEMA DE EXECUÇÃO E TESTE DE CÓDIGO
+# =============================================================================
+
+class SistemaExecucaoCodigo:
+    """Sistema avançado para execução e teste de código com análise em tempo real"""
+    
+    def __init__(self):
+        self.ambiente_execucao = self._criar_ambiente_seguro()
+        self.resultados_execucao = []
+        self.erros_detectados = []
+        self.metricas_desempenho = {}
+        
+    def _criar_ambiente_seguro(self) -> Dict[str, Any]:
+        """Cria ambiente de execução seguro com funções permitidas"""
+        ambiente_seguro = {
+            '__builtins__': {
+                'print': print,
+                'len': len,
+                'str': str,
+                'int': int,
+                'float': float,
+                'list': list,
+                'dict': dict,
+                'set': set,
+                'tuple': tuple,
+                'range': range,
+                'enumerate': enumerate,
+                'zip': zip,
+                'min': min,
+                'max': max,
+                'sum': sum,
+                'abs': abs,
+                'round': round,
+                'sorted': sorted,
+                'isinstance': isinstance,
+                'type': type,
+                'repr': repr,
+                'format': format,
+            }
+        }
+        return ambiente_seguro
+    
+    def executar_codigo_seguro(self, codigo: str, entrada: str = "") -> Dict[str, Any]:
+        """Executa código Python de forma segura com análise completa"""
+        try:
+            # Pré-análise do código
+            analise_previa = self._analisar_codigo_pre_execucao(codigo)
+            
+            if not analise_previa['seguro']:
+                return {
+                    'sucesso': False,
+                    'erro': f"Código não seguro: {analise_previa['riscos']}",
+                    'saida': '',
+                    'tempo_execucao': 0,
+                    'analise_detalhada': analise_previa
+                }
+            
+            # Preparar código para execução
+            codigo_preparado = self._preparar_codigo_execucao(codigo, entrada)
+            
+            # Executar com timeout
+            inicio = time.time()
+            exec_globals = self.ambiente_execucao.copy()
+            
+            # Capturar saída
+            import io
+            from contextlib import redirect_stdout, redirect_stderr
+            
+            saida_buffer = io.StringIO()
+            erro_buffer = io.StringIO()
+            
+            try:
+                with redirect_stdout(saida_buffer), redirect_stderr(erro_buffer):
+                    exec(codigo_preparado, exec_globals)
+                
+                tempo_execucao = time.time() - inicio
+                saida = saida_buffer.getvalue()
+                erros = erro_buffer.getvalue()
+                
+                resultado = {
+                    'sucesso': True,
+                    'saida': saida,
+                    'erros': erros,
+                    'tempo_execucao': tempo_execucao,
+                    'variaveis_criadas': self._extrair_variaveis_criadas(exec_globals),
+                    'analise_detalhada': self._analisar_pos_execucao(codigo, saida, erros, tempo_execucao)
+                }
+                
+            except Exception as e:
+                tempo_execucao = time.time() - inicio
+                resultado = {
+                    'sucesso': False,
+                    'erro': str(e),
+                    'saida': saida_buffer.getvalue(),
+                    'erros': erro_buffer.getvalue(),
+                    'tempo_execucao': tempo_execucao,
+                    'analise_detalhada': self._analisar_erro_execucao(e, codigo)
+                }
+            
+            self.resultados_execucao.append(resultado)
+            return resultado
+            
+        except Exception as e:
+            return {
+                'sucesso': False,
+                'erro': f"Erro na execução segura: {str(e)}",
+                'saida': '',
+                'tempo_execucao': 0
+            }
+    
+    def _analisar_codigo_pre_execucao(self, codigo: str) -> Dict[str, Any]:
+        """Analisa código antes da execução para detectar riscos"""
+        riscos = []
+        padroes_perigosos = [
+            (r'import\s+os', 'Acesso ao sistema operacional'),
+            (r'import\s+subprocess', 'Execução de subprocessos'),
+            (r'import\s+sys', 'Acesso ao sistema'),
+            (r'__import__', 'Importação dinâmica'),
+            (r'eval\(', 'Função eval'),
+            (r'exec\(', 'Função exec'),
+            (r'open\(', 'Acesso a arquivos'),
+            (r'__.*__', 'Acesso a atributos especiais'),
+            (r'import\s+shutil', 'Operações de arquivo'),
+            (r'import\s+requests', 'Acesso à rede'),
+        ]
+        
+        for padrao, descricao in padroes_perigosos:
+            if re.search(padrao, codigo):
+                riscos.append(descricao)
+        
+        return {
+            'seguro': len(riscos) == 0,
+            'riscos': riscos,
+            'complexidade_ciclomatica': self._calcular_complexidade_ciclomatica(codigo),
+            'numero_funcoes': len(re.findall(r'def\s+\w+', codigo)),
+            'numero_classes': len(re.findall(r'class\s+\w+', codigo)),
+            'linhas_codigo': len(codigo.split('\n'))
+        }
+    
+    def _preparar_codigo_execucao(self, codigo: str, entrada: str) -> str:
+        """Prepara código para execução incluindo entradas"""
+        codigo_preparado = f"""
+# Código gerado pela Singularidade Cognitiva
+# Entrada fornecida: {entrada}
+
+{codigo}
+
+# Fim da execução
+"""
+        return codigo_preparado
+    
+    def _extrair_variaveis_criadas(self, exec_globals: Dict) -> Dict[str, Any]:
+        """Extrai variáveis criadas durante a execução"""
+        variaveis = {}
+        for nome, valor in exec_globals.items():
+            if not nome.startswith('_') and not inspect.ismodule(valor):
+                try:
+                    # Limitar tamanho da representação
+                    repr_valor = repr(valor)
+                    if len(repr_valor) > 100:
+                        repr_valor = repr_valor[:100] + "..."
+                    variaveis[nome] = {
+                        'tipo': type(valor).__name__,
+                        'valor': repr_valor,
+                        'tamanho': len(repr_valor) if hasattr(valor, '__len__') else 'N/A'
+                    }
+                except:
+                    variaveis[nome] = {
+                        'tipo': type(valor).__name__,
+                        'valor': '[Não pode ser representado]',
+                        'tamanho': 'N/A'
+                    }
+        return variaveis
+    
+    def _analisar_pos_execucao(self, codigo: str, saida: str, erros: str, tempo_execucao: float) -> Dict[str, Any]:
+        """Analisa resultados após execução"""
+        return {
+            'desempenho': {
+                'tempo_execucao': tempo_execucao,
+                'eficiencia': 'ALTA' if tempo_execucao < 1.0 else 'MEDIA' if tempo_execucao < 5.0 else 'BAIXA',
+                'uso_memoria': 'Estimado baseado na complexidade'
+            },
+            'saida_gerada': {
+                'tamanho': len(saida),
+                'linhas': len(saida.split('\n')),
+                'contem_erros': len(erros) > 0
+            },
+            'qualidade_codigo': {
+                'legibilidade': self._avaliar_legibilidade(codigo),
+                'manutenibilidade': self._avaliar_manutenibilidade(codigo),
+                'eficiencia': self._avaliar_eficiencia(codigo)
+            }
+        }
+    
+    def _analisar_erro_execucao(self, erro: Exception, codigo: str) -> Dict[str, Any]:
+        """Analisa erros de execução em detalhes"""
+        traceback_str = str(erro)
+        linha_erro = self._extrair_linha_erro(traceback_str)
+        
+        return {
+            'tipo_erro': type(erro).__name__,
+            'mensagem': str(erro),
+            'linha_provavel': linha_erro,
+            'contexto_erro': self._extrair_contexto_erro(codigo, linha_erro),
+            'sugestoes_correcao': self._gerar_sugestoes_correcao(erro, codigo)
+        }
+    
+    def _extrair_linha_erro(self, traceback: str) -> int:
+        """Extrai linha do erro do traceback"""
+        match = re.search(r'line\s+(\d+)', traceback)
+        return int(match.group(1)) if match else 0
+    
+    def _extrair_contexto_erro(self, codigo: str, linha_erro: int) -> str:
+        """Extrai contexto ao redor do erro"""
+        linhas = codigo.split('\n')
+        if 0 < linha_erro <= len(linhas):
+            inicio = max(0, linha_erro - 3)
+            fim = min(len(linhas), linha_erro + 2)
+            contexto = '\n'.join(f"{i+1}: {linha}" for i, linha in enumerate(linhas[inicio:fim], inicio))
+            return contexto
+        return "Contexto não disponível"
+    
+    def _gerar_sugestoes_correcao(self, erro: Exception, codigo: str) -> List[str]:
+        """Gera sugestões específicas para correção"""
+        sugestoes = []
+        mensagem_erro = str(erro).lower()
+        
+        if 'syntax' in mensagem_erro:
+            sugestoes.append("Verifique a sintaxe do código - possíveis parênteses, colchetes ou chaves não fechados")
+            sugestoes.append("Confirme que todas as strings estão devidamente fechadas com aspas")
+        
+        if 'name' in mensagem_erro and 'is not defined' in mensagem_erro:
+            sugestoes.append("Variável ou função não definida - verifique a ortografia")
+            sugestoes.append("Certifique-se de que todas as funções e variáveis estão definidas antes do uso")
+        
+        if 'indent' in mensagem_erro:
+            sugestoes.append("Erro de indentação - verifique se todos os blocos estão corretamente indentados")
+        
+        if 'type' in mensagem_erro:
+            sugestoes.append("Erro de tipo - verifique os tipos de dados nas operações")
+        
+        return sugestoes
+    
+    def _calcular_complexidade_ciclomatica(self, codigo: str) -> int:
+        """Calcula complexidade ciclomática aproximada"""
+        padroes = [
+            r'\bif\b', r'\bfor\b', r'\bwhile\b', r'\band\b', r'\bor\b',
+            r'\belse\b', r'\belif\b', r'\bcase\b', r'\bdefault\b',
+            r'\btry\b', r'\bexcept\b', r'\bfinally\b'
+        ]
+        complexidade = 1
+        for padrao in padroes:
+            complexidade += len(re.findall(padrao, codigo))
+        return complexidade
+    
+    def _avaliar_legibilidade(self, codigo: str) -> str:
+        """Avalia legibilidade do código"""
+        linhas = codigo.split('\n')
+        if len(linhas) < 50:
+            return "ALTA"
+        elif len(linhas) < 200:
+            return "MEDIA"
+        else:
+            return "BAIXA"
+    
+    def _avaliar_manutenibilidade(self, codigo: str) -> str:
+        """Avalia facilidade de manutenção"""
+        complexidade = self._calcular_complexidade_ciclomatica(codigo)
+        if complexidade < 10:
+            return "ALTA"
+        elif complexidade < 25:
+            return "MEDIA"
+        else:
+            return "BAIXA"
+    
+    def _avaliar_eficiencia(self, codigo: str) -> str:
+        """Avalia eficiência do código"""
+        # Análise básica de padrões de eficiência
+        padroes_ineficientes = [
+            r'for.*for',  # loops aninhados
+            r'while.*while',
+            r'deepcopy',
+            r'eval\(',
+            r'exec\(',
+        ]
+        
+        for padrao in padroes_ineficientes:
+            if re.search(padrao, codigo):
+                return "BAIXA"
+        
+        return "ALTA"
+
+# =============================================================================
+# 2. SISTEMA DE IMPLEMENTAÇÃO DE CÓDIGO CORRIGIDO
+# =============================================================================
+
+class SistemaImplementacaoCodigo:
+    """Sistema para implementar e integrar código corrigido das IAs"""
+    
+    def __init__(self):
+        self.historico_implementacoes = []
+        self.analise_diferencas = []
+        self.erros_implementacao = []
+    
+    def implementar_correcao_ia(self, codigo_original: str, correcao_ia: Dict[str, Any], tipo_ia: str) -> Dict[str, Any]:
+        """Implementa correção sugerida por IA no código original"""
+        try:
+            # Extrair código corrigido da resposta da IA
+            codigo_corrigido = self._extrair_codigo_corrigido(correcao_ia, tipo_ia)
+            
+            if not codigo_corrigido:
+                return {
+                    'sucesso': False,
+                    'erro': 'Não foi possível extrair código corrigido da resposta da IA',
+                    'codigo_implementado': codigo_original
+                }
+            
+            # Analisar diferenças
+            diferencas = self._analisar_diferencas(codigo_original, codigo_corrigido)
+            
+            # Aplicar correção
+            codigo_implementado = self._aplicar_correcao(codigo_original, codigo_corrigido, diferencas)
+            
+            # Validar implementação
+            validacao = self._validar_implementacao(codigo_original, codigo_implementado)
+            
+            resultado = {
+                'sucesso': validacao['valido'],
+                'codigo_implementado': codigo_implementado,
+                'diferencas_detectadas': diferencas,
+                'validacao': validacao,
+                'tipo_ia': tipo_ia,
+                'timestamp': datetime.now().isoformat()
+            }
+            
+            self.historico_implementacoes.append(resultado)
+            return resultado
+            
+        except Exception as e:
+            erro = {
+                'sucesso': False,
+                'erro': str(e),
+                'codigo_implementado': codigo_original,
+                'timestamp': datetime.now().isoformat()
+            }
+            self.erros_implementacao.append(erro)
+            return erro
+    
+    def _extrair_codigo_corrigido(self, correcao_ia: Dict[str, Any], tipo_ia: str) -> str:
+        """Extrai código corrigido da resposta da IA baseado no tipo"""
+        resposta = correcao_ia.get('resposta', '')
+        
+        # Padrões para extração de código
+        padroes_codigo = [
+            r'```python\s*(.*?)\s*```',  # Blocos de código Python
+            r'```\s*(.*?)\s*```',        # Blocos de código genéricos
+            r'def\s+\w+.*?(?=\n\s*def|\n\s*class|\n*$)',  # Funções individuais
+            r'class\s+\w+.*?(?=\n\s*class|\n*$)',         # Classes individuais
+        ]
+        
+        for padrao in padroes_codigo:
+            matches = re.findall(padrao, resposta, re.DOTALL)
+            if matches:
+                # Retornar o maior bloco de código encontrado
+                return max(matches, key=len)
+        
+        # Se não encontrou blocos de código, tentar extrair linhas relevantes
+        linhas = resposta.split('\n')
+        linhas_codigo = [linha for linha in linhas if any(palavra in linha for palavra in 
+                        ['def ', 'class ', 'import ', 'from ', 'return ', 'if ', 'for ', 'while '])]
+        
+        return '\n'.join(linhas_codigo) if linhas_codigo else ''
+    
+    def _analisar_diferencas(self, original: str, corrigido: str) -> Dict[str, Any]:
+        """Analisa diferenças entre código original e corrigido"""
+        linhas_original = original.split('\n')
+        linhas_corrigido = corrigido.split('\n')
+        
+        # Análise básica de diferenças
+        diferencas = {
+            'adicoes': [],
+            'remocoes': [],
+            'modificacoes': [],
+            'estruturas_afetadas': self._identificar_estruturas_afetadas(original, corrigido),
+            'metricas_alteradas': self._calcular_metricas_alteradas(original, corrigido)
+        }
+        
+        # Análise linha por linha (simplificada)
+        for i, (linha_orig, linha_corr) in enumerate(zip(linhas_original, linhas_corrigido)):
+            if linha_orig != linha_corr:
+                if linha_orig.strip() and not linha_corr.strip():
+                    diferencas['remocoes'].append({'linha': i+1, 'conteudo': linha_orig})
+                elif not linha_orig.strip() and linha_corr.strip():
+                    diferencas['adicoes'].append({'linha': i+1, 'conteudo': linha_corr})
+                else:
+                    diferencas['modificacoes'].append({
+                        'linha': i+1,
+                        'original': linha_orig,
+                        'corrigido': linha_corr
+                    })
+        
+        return diferencas
+    
+    def _identificar_estruturas_afetadas(self, original: str, corrigido: str) -> List[str]:
+        """Identifica estruturas de código que foram modificadas"""
+        estruturas = []
+        
+        # Funções modificadas
+        funcoes_orig = set(re.findall(r'def\s+(\w+)', original))
+        funcoes_corr = set(re.findall(r'def\s+(\w+)', corrigido))
+        
+        if funcoes_orig != funcoes_corr:
+            estruturas.append('Funções')
+        
+        # Classes modificadas
+        classes_orig = set(re.findall(r'class\s+(\w+)', original))
+        classes_corr = set(re.findall(r'class\s+(\w+)', corrigido))
+        
+        if classes_orig != classes_corr:
+            estruturas.append('Classes')
+        
+        # Imports modificados
+        imports_orig = set(re.findall(r'import\s+([^\n]+)', original))
+        imports_corr = set(re.findall(r'import\s+([^\n]+)', corrigido))
+        
+        if imports_orig != imports_corr:
+            estruturas.append('Imports')
+        
+        return estruturas
+    
+    def _calcular_metricas_alteradas(self, original: str, corrigido: str) -> Dict[str, Any]:
+        """Calcula métricas alteradas entre as versões"""
+        executor = SistemaExecucaoCodigo()
+        
+        analise_orig = executor._analisar_codigo_pre_execucao(original)
+        analise_corr = executor._analisar_codigo_pre_execucao(corrigido)
+        
+        return {
+            'complexidade_antes': analise_orig['complexidade_ciclomatica'],
+            'complexidade_depois': analise_corr['complexidade_ciclomatica'],
+            'funcoes_antes': analise_orig['numero_funcoes'],
+            'funcoes_depois': analise_corr['numero_funcoes'],
+            'classes_antes': analise_orig['numero_classes'],
+            'classes_depois': analise_corr['numero_classes'],
+            'linhas_antes': analise_orig['linhas_codigo'],
+            'linhas_depois': analise_corr['linhas_codigo']
+        }
+    
+ 
