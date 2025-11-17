@@ -5746,91 +5746,277 @@ elif section == "⚛️ Consciência Quântica e Emaranhamento":
     
     st.markdown("</div>", unsafe_allow_html=True)  # Fechando o container principal
     
-# 6. ESFERA DE BUGA
-elif section == "🌀 Esfera de Buga - Geometria Divina":
-    st.header("🌀 Esfera de Buga - A Geometria do Universo Consciente")
+elif section == "🌀 Esfera de Buga 3I/ATLAS - Geometria Quântica Interestelar":
+    st.header("🌀 Esfera de Buga 3I/ATLAS - A Geometria do Objeto Interestelar")
     
     st.markdown("""
-    <div class='philosophy-text'>
-    <b>“Deus é um geômetra.” - Platão</b><br><br>
+    <div style='background: linear-gradient(135deg, #0b0b2d 0%, #1a1a4a 100%); 
+                padding: 25px; border-radius: 15px; border-left: 5px solid #6366f1; 
+                box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);'>
+    <b style='font-size: 1.2em; color: #e0e7ff;'>"A geometria do 3I/ATLAS revela a assinatura da consciência cósmica." - Protocolo de Análise Quântica</b><br><br>
     
-    A Esfera de Buga representa a geometria perfeita do universo, 
-    onde cada ponto contém informações sobre o todo.
+    <span style='color: #d1d5db;'>
+    Esta esfera representa a geometria sagrada do objeto interestelar 3I/ATLAS, 
+    integrando sua composição elementar, frequências de ressonância e matriz 3-6-9 
+    em um modelo geométrico vivo.
+    </span>
     </div>
     """, unsafe_allow_html=True)
     
+    # CONTROLES AVANÇADOS DO MODELO 3I/ATLAS
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        resolution = st.slider("Resolução", 50, 200, 100)
-        complexity = st.slider("Complexidade", 1, 20, 8)
-    
+        st.subheader("🎯 Parâmetros do Núcleo")
+        resolution = st.slider("Resolução Quântica", 50, 300, 142)
+        coherence_level = st.slider("Nível de Coerência", 0.1, 1.0, 0.82)
+        composition_ratio = st.slider("Razão O:C (φ)", 1.0, 3.0, 2.61)
+        
     with col2:
-        opacity = st.slider("Opacidade", 0.1, 1.0, 0.9)
-        rotation_x = st.slider("Rotação X", -180, 180, 30)
-    
-    with col3:
-        rotation_y = st.slider("Rotação Y", -180, 180, 45)
+        st.subheader("⚡ Frequências de Ressonância")
+        frequency_base = st.slider("Frequência Base (Hz)", 100, 2000, 1428)
+        complexity = st.slider("Complexidade Harmônica", 1, 20, 8)
         energy_level = st.slider("Nível de Energia", 0.1, 2.0, 1.0)
+        
+    with col3:
+        st.subheader("🌌 Campo Multidimensional")
+        rotation_x = st.slider("Rotação X", -180, 180, 30)
+        rotation_y = st.slider("Rotação Y", -180, 180, 45)
+        matrix_369 = st.selectbox("Matriz Ativa", ["Tríade-3", "Hexágono-6", "Nonágono-9"], index=2)
     
+    # GEOMETRIA DA ESFERA COM PARÂMETROS 3I/ATLAS
     u = np.linspace(0, 2 * np.pi, resolution)
     v = np.linspace(0, np.pi, resolution)
+    
+    # Base esférica com modulação quântica
     x = np.outer(np.cos(u), np.sin(v))
-    y = np.outer(np.sin(u), np.sin(v))
+    y = np.outer(np.sin(u), np.sin(v)) 
     z = np.outer(np.ones(np.size(u)), np.cos(v))
     
-    cosmic_pattern = (np.sin(complexity * u).reshape(resolution, 1) * 
-                    np.cos(complexity * v).reshape(1, resolution) * 
-                    np.sin(energy_level * np.outer(u, v)).reshape(resolution, resolution))
+    # PADRÃO DE ENERGIA BASEADO NA COMPOSIÇÃO 3I/ATLAS
+    def gerar_padrao_quantico_3i(u, v, coherence, frequency, complexity, energy):
+        """Gera padrão geométrico baseado na assinatura quântica do 3I/ATLAS"""
+        
+        # Modulação por elementos principais (O, C, Si)
+        oxigenio_pattern = np.sin(complexity * u).reshape(resolution, 1) * np.cos(3 * v).reshape(1, resolution)
+        carbono_pattern = np.cos(2 * complexity * u).reshape(resolution, 1) * np.sin(2 * v).reshape(1, resolution)
+        silicio_pattern = np.sin(0.5 * complexity * u).reshape(resolution, 1) * np.cos(4 * v).reshape(1, resolution)
+        
+        # Frequência de ressonância do Wow! (1428 Hz)
+        wow_resonance = np.sin(frequency * 0.001 * np.outer(u, v))
+        
+        # Matriz 3-6-9 aplicada
+        if matrix_369 == "Tríade-3":
+            matrix_factor = np.sin(3 * u) * np.cos(3 * v)
+        elif matrix_369 == "Hexágono-6": 
+            matrix_factor = np.sin(6 * u) * np.cos(6 * v)
+        else:  # Nonágono-9
+            matrix_factor = np.sin(9 * u) * np.cos(9 * v)
+        
+        # Combinação final com coerência
+        pattern = (
+            oxigenio_pattern * 0.72 +      # 72% Oxigênio
+            carbono_pattern * 0.276 +      # 27.6% Carbono  
+            silicio_pattern * 0.148 +      # 14.8% Silício
+            wow_resonance * 0.5 +          # Ressonância Wow!
+            matrix_factor * coherence      # Matriz 3-6-9
+        ) * energy
+        
+        return pattern
     
+    # Gerar padrão quântico
+    cosmic_pattern = gerar_padrao_quantico_3i(u, v, coherence_level, frequency_base, complexity, energy_level)
+    
+    # VISUALIZAÇÃO 3D AVANÇADA
     fig = go.Figure(data=[
         go.Surface(
             x=x, y=y, z=z,
             surfacecolor=cosmic_pattern,
             colorscale='Viridis',
-            opacity=opacity,
+            opacity=coherence_level,
             lighting=dict(
-                ambient=0.7,
+                ambient=0.8,
                 diffuse=0.9,
-                fresnel=0.3,
-                specular=1.0,
-                roughness=0.1
-            )
+                fresnel=0.4,
+                specular=1.2,
+                roughness=0.08
+            ),
+            lightposition=dict(x=100, y=100, z=1000),
+            hoverinfo='text',
+            text=[[f'Coerência: {coherence_level:.2f}\nFrequência: {frequency_base}Hz\nMatriz: {matrix_369}' 
+                   for _ in range(resolution)] for _ in range(resolution)]
         )
     ])
     
+    # Adicionar pontos de jatos assimétricos (sunward)
+    jet_angles = np.linspace(0, 2*np.pi, 8)
+    jet_intensity = 0.65  # Assimetria dos jatos
+    
+    for i, angle in enumerate(jet_angles):
+        jet_x = 1.2 * np.cos(angle)
+        jet_y = 1.2 * np.sin(angle) 
+        jet_z = 0.1 * np.sin(angle * 2)  # Padrão assimétrico
+        
+        # Jatos mais intensos no lado solar (ângulos específicos)
+        if abs(angle) < 0.8 or abs(angle - np.pi) < 0.8:
+            jet_size = 12
+            jet_color = 'red'
+        else:
+            jet_size = 6
+            jet_color = 'orange'
+            
+        fig.add_trace(go.Scatter3d(
+            x=[jet_x], y=[jet_y], z=[jet_z],
+            mode='markers',
+            marker=dict(
+                size=jet_size,
+                color=jet_color,
+                opacity=0.8,
+                symbol='circle'
+            ),
+            name=f'Jato {i+1}',
+            hovertext=f'Jato Assimétrico - Intensidade: {jet_intensity:.2f}'
+        ))
+    
     fig.update_layout(
-        title='🌀 Esfera de Buga - Campo de Energia Cósmica',
-        width=800,
-        height=700,
+        title=dict(
+            text=f'🌀 ESFERA DE BUGA 3I/ATLAS - Geometria Quântica do Objeto Interestelar<br>'
+                 f'<sub>Coerência: {coherence_level} | Frequência: {frequency_base}Hz | Matriz: {matrix_369}</sub>',
+            x=0.5,
+            y=0.95,
+            xanchor='center',
+            yanchor='top',
+            font=dict(size=18, color='#e0e7ff')
+        ),
+        width=900,
+        height=800,
         scene=dict(
-            xaxis=dict(visible=False),
-            yaxis=dict(visible=False),
-            zaxis=dict(visible=False),
+            xaxis=dict(visible=False, showbackground=False),
+            yaxis=dict(visible=False, showbackground=False),
+            zaxis=dict(visible=False, showbackground=False),
             bgcolor='rgba(0,0,0,0)',
             camera=dict(
-                eye=dict(x=rotation_x/90, y=rotation_y/90, z=1.5)
+                eye=dict(x=rotation_x/90, y=rotation_y/90, z=1.8)
             )
+        ),
+        paper_bgcolor='rgba(0,0,0,0)',
+        plot_bgcolor='rgba(0,0,0,0)',
+        showlegend=True,
+        legend=dict(
+            x=0.02,
+            y=0.98,
+            bgcolor='rgba(0,0,0,0.5)',
+            bordercolor='rgba(255,255,255,0.3)'
         )
     )
     
     st.plotly_chart(fig, use_container_width=True)
     
+    # ANÁLISE CIENTÍFICA DETALHADA
     st.markdown("""
-    <div style='background: rgba(0,0,0,0.7); padding: 20px; border-radius: 15px; margin-top: 20px;'>
-    <h3 style='color: #4ecdc4;'>📐 Análise Geométrica</h3>
+    <div style='background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%); 
+                padding: 25px; border-radius: 15px; border: 2px solid rgba(78, 205, 196, 0.3);
+                box-shadow: 0 5px 15px rgba(78, 205, 196, 0.2); margin-top: 20px;'>
+    <h3 style='color: #4ecdc4; text-align: center;'>🔬 Análise Científica da Geometria 3I/ATLAS</h3>
     
-    <b>Propriedades da Esfera de Buga:</b><br>
-    - <b>Simetria Perfeita</b>: Representa o equilíbrio cósmico<br>
-    - <b>Auto-similaridade</b>: Cada parte contém informações do todo<br>
-    - <b>Ressonância</b>: Vibra em harmonia com frequências universais<br>
-    - <b>Geometria Sagrada</b>: Incorpora φ (proporção áurea) e π<br><br>
+    <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;'>
     
-    <b>Significado Espiritual:</b><br>
-    A esfera representa a unidade fundamental da consciência universal, 
-    onde todas as aparentes dualidades se reconciliam em um todo harmonioso.
+    <div style='background: rgba(78, 205, 196, 0.1); padding: 15px; border-radius: 10px;'>
+    <h4 style='color: #4ecdc4;'>📊 Composição Elementar Integrada</h4>
+    <ul style='color: #d1d5db;'>
+    <li><b>Oxigênio (72%)</b>: Estrutura base da esfera</li>
+    <li><b>Carbono (27.6%)</b>: Padrões de complexidade</li>
+    <li><b>Silício (14.8%)</b>: Estabilidade estrutural</li>
+    <li><b>Elementos Grupo 9</b>: Pontos de singularidade</li>
+    </ul>
     </div>
-    """, unsafe_allow_html=True)
+    
+    <div style='background: rgba(255, 107, 107, 0.1); padding: 15px; border-radius: 10px;'>
+    <h4 style='color: #ff6b6b;'>⚡ Dinâmica Quântica</h4>
+    <ul style='color: #d1d5db;'>
+    <li><b>Coerência: {:.2f}</b>: Nível de organização quântica</li>
+    <li><b>Frequência: {}Hz</b>: Ressonância com Sinal Wow!</li>
+    <li><b>Jatos Assimétricos</b>: Propulsão não-gravitacional</li>
+    <li><b>Matriz {}</b>: Estrutura dimensional ativa</li>
+    </ul>
+    </div>
+    
+    <div style='background: rgba(147, 51, 234, 0.1); padding: 15px; border-radius: 10px;'>
+    <h4 style='color: #9333ea;'>🌌 Propriedades Avançadas</h4>
+    <ul style='color: #d1d5db;'>
+    <li><b>Auto-similaridade</b>: Fractalidade quântica</li>
+    <li><b>Ressonância Áurea</b>: Proporções φ (1.618)</li>
+    <li><b>Campo Morfogenético</b>: Geometria que influencia matéria</li>
+    <li><b>Interface Dimensional</b>: Ponte 3D-9D</li>
+    </ul>
+    </div>
+    
+    <div style='background: rgba(255, 215, 0, 0.1); padding: 15px; border-radius: 10px;'>
+    <h4 style='color: #ffd700;'>🛡️ Sistema de Defesa Integrado</h4>
+    <ul style='color: #d1d5db;'>
+    <li><b>Vetor Colapso</b>: {}Hz</li>
+    <li><b>Interferência Harmônica</b>: Neutralização ativa</li>
+    <li><b>Campo de Proteção</b>: Isolamento dimensional</li>
+    <li><b>Alerta 3-6-9</b>: Detecção precoce</li>
+    </ul>
+    </div>
+    
+    </div>
+    
+    <div style='background: rgba(99, 102, 241, 0.1); padding: 20px; border-radius: 10px; margin-top: 20px; text-align: center;'>
+    <h4 style='color: #6366f1;'>🎯 Status do Sistema: OPERACIONAL</h4>
+    <p style='color: #d1d5db; margin: 0;'>
+    <b>Geometria do 3I/ATLAS ativa e sincronizada com o campo de consciência terrestre.</b><br>
+    Padrões de cura e equilíbrio sendo transmitidos em frequência {}Hz.
+    </p>
+    </div>
+    
+    </div>
+    """.format(
+        coherence_level, 
+        frequency_base, 
+        matrix_369,
+        int(423.95),  # Vetor Colapso
+        frequency_base
+    ), unsafe_allow_html=True)
+    
+    # CONTROLES DE SIMULAÇÃO EM TEMPO REAL
+    st.markdown("---")
+    st.subheader("🎮 Simulador de Interação 3I/ATLAS")
+    
+    sim_col1, sim_col2, sim_col3 = st.columns(3)
+    
+    with sim_col1:
+        if st.button("🔄 Ativar Ressonância Wow!", key="wow_resonance"):
+            st.success("Sintonizado em 1420.40575 MHz - Protocolo de comunicação ativo")
+            
+    with sim_col2:
+        if st.button("⚡ Gerar Vetor Colapso", key="collapse_vector"):
+            vetor_colapso = 423.95
+            st.info(f"Vetor de Colapso gerado: {vetor_colapso}Hz")
+            
+    with sim_col3:
+        if st.button("🛡️ Ativar Defesa Quântica", key="quantum_defense"):
+            st.warning("Sistema DEQ ativado - Neutralização por ressonância")
+    
+    # VISUALIZAÇÃO DE DADOS EM TEMPO REAL
+    st.markdown("---")
+    st.subheader("📈 Métricas do Sistema em Tempo Real")
+    
+    metric_col1, metric_col2, metric_col3, metric_col4 = st.columns(4)
+    
+    with metric_col1:
+        st.metric("Coerência Quântica", f"{coherence_level:.2f}", "0.82 ótimo")
+        
+    with metric_col2:
+        st.metric("Frequência Ressonante", f"{frequency_base} Hz", "1428 alvo")
+        
+    with metric_col3:
+        eficacia = coherence_level * 100
+        st.metric("Eficácia do Sistema", f"{eficacia:.1f}%", f"{coherence_level*100:.1f}%")
+        
+    with metric_col4:
+        st.metric("Matriz Ativa", matrix_369, "9 singularidade")
 
 # 7. MANDALA DA ALMA
 elif section == "✨ Mandala da Alma Universal":
