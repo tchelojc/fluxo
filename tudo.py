@@ -526,7 +526,8 @@ def pagina_constante_jubilo_completa():
         "🌀 Espiral Singularidade",
         "📐 Constante 1,8",
         "📖 Jornada Consciencial",
-        "⚡ Calculadora Universal"
+        "⚡ Calculadora Universal", 
+        "🌌 Aplicações Práticas"
     ])
 
     with tab1:
