@@ -5744,7 +5744,6 @@ Entre {nome} e a IA: Analisar, calcular tempo de respostas, avaliar nível conhe
 if section == "🌌 DEUS: JORNADA CÓSMICA":
     pagina_deus_caos()
     
-# 2. FLUXO MATEMÁTICO SAGRADO
 elif section == "🔢 Fluxo Matemático Sagrado":
     st.header("🌀 O Fluxo Matemático Universal - A Linguagem de Deus")
     
@@ -5787,20 +5786,9 @@ elif section == "🔢 Fluxo Matemático Sagrado":
         <div style='background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%); 
                     padding: 25px; border-radius: 15px; border-left: 5px solid #ff6b6b; 
                     box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);'>
-            
-            <b style='font-size: 1.2em; color: #e0e7ff;'>
-                "A matemática é a linguagem com a qual Deus escreveu o universo." – Galileu Galilei
-            </b>
-            <br><br>
-            
-            <span style='color: #d1d5db;'>
-                Uma jornada quântica através da consciência, da matemática cósmica e da dança entre o observador e a realidade. Acesse o portal no link abaixo:
-            </span>
-            <br><br>
-            
-            <a href="https://tchelojc.github.io/codigo_divino/" target="_blank" style="color: #9370db; text-decoration: none; font-weight: bold;">
-                🌐 O Código Divino
-            </a>
+        <b style='font-size: 1.2em; color: #e0e7ff;'>"A matemática é a linguagem com a qual Deus escreveu o universo." - Galileo Galilei</b><br><br>
+        
+        <span style='color: #d1d5db;'>O Fluxo Matemático revela os padrões fundamentais da criação:</span>
         </div>
         """, unsafe_allow_html=True)
         
@@ -5808,7 +5796,7 @@ elif section == "🔢 Fluxo Matemático Sagrado":
         <div style='background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%); 
                     padding: 20px; border-radius: 15px; border: 2px solid rgba(255, 107, 107, 0.3);
                     box-shadow: 0 5px 15px rgba(255, 107, 107, 0.2); margin: 20px 0;'>
-            <h3 style='color: #ff6b6b; text-align: center;'>🔢 Sequência 3-6-9 de Tesla</h3>
+        <h3 style='color: #ff6b6b; text-align: center;'>🔢 Sequência 3-6-9 de Tesla</h3>
         </div>
         """, unsafe_allow_html=True)
         
@@ -5831,10 +5819,9 @@ elif section == "🔢 Fluxo Matemático Sagrado":
         # Adicionar pontos de ressonância
         resonance_points = []
         for n in [3, 6, 9]:
-            for j in range(5):
-                point = j * (4*np.pi/4)
-                res_y = np.sin(n * point) * np.exp(-0.1 * point) * (1 + 0.5 * np.cos(n * point/2))
-                resonance_points.append((point, res_y))
+            for i in range(5):
+                point = i * (4*np.pi/4)
+                resonance_points.append((point, np.sin(n * point) * np.exp(-0.1 * point) * (1 + 0.5 * np.cos(n * point/2))))
         
         resonance_x = [p[0] for p in resonance_points]
         resonance_y = [p[1] for p in resonance_points]
@@ -5878,24 +5865,24 @@ elif section == "🔢 Fluxo Matemático Sagrado":
         <div style='background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%); 
                     padding: 20px; border-radius: 15px; border: 2px solid rgba(255, 107, 107, 0.3);
                     box-shadow: 0 5px 15px rgba(255, 107, 107, 0.2);'>
-            <h4 style='color: #ff6b6b; text-align: center;'>Análise Matemática</h4>
-            
-            <div style='display: grid; grid-template-columns: 1fr; gap: 10px;'>
-                <div style='background: rgba(255, 107, 107, 0.1); padding: 12px; border-radius: 8px;'>
-                    <b style='color: #ff6b6b;'>3</b><br>
-                    <span style='color: #d1d5db; font-size: 0.9em;'>Representa a tríade cósmica (criação, preservação, transformação)</span>
-                </div>
-                
-                <div style='background: rgba(78, 205, 196, 0.1); padding: 12px; border-radius: 8px;'>
-                    <b style='color: #4ecdc4;'>6</b><br>
-                    <span style='color: #d1d5db; font-size: 0.9em;'>Harmonia e equilíbrio (hexagrama, estrela de David)</span>
-                </div>
-                
-                <div style='background: rgba(69, 183, 209, 0.1); padding: 12px; border-radius: 8px;'>
-                    <b style='color: #45b7d1;'>9</b><br>
-                    <span style='color: #d1d5db; font-size: 0.9em;'>Singularidade e completude (3×3, ciclo máximo)</span>
-                </div>
-            </div>
+        <h4 style='color: #ff6b6b; text-align: center;'>Análise Matemática</h4>
+        
+        <div style='display: grid; grid-template-columns: 1fr; gap: 10px;'>
+        <div style='background: rgba(255, 107, 107, 0.1); padding: 12px; border-radius: 8px;'>
+        <b style='color: #ff6b6b;'>3</b><br>
+        <span style='color: #d1d5db; font-size: 0.9em;'>Representa a tríade cósmica (criação, preservação, transformação)</span>
+        </div>
+        
+        <div style='background: rgba(78, 205, 196, 0.1); padding: 12px; border-radius: 8px;'>
+        <b style='color: #4ecdc4;'>6</b><br>
+        <span style='color: #d1d5db; font-size: 0.9em;'>Harmonia e equilíbrio (hexagrama, estrela de David)</span>
+        </div>
+        
+        <div style='background: rgba(69, 183, 209, 0.1); padding: 12px; border-radius: 8px;'>
+        <b style='color: #45b7d1;'>9</b><br>
+        <span style='color: #d1d5db; font-size: 0.9em;'>Singularidade e completude (3×3, ciclo máximo)</span>
+        </div>
+        </div>
         </div>
         """, unsafe_allow_html=True)
     
@@ -5908,85 +5895,78 @@ elif section == "🔢 Fluxo Matemático Sagrado":
         </div>
         """, unsafe_allow_html=True)
         
-        # Verificar se a função generate_fibonacci_spiral existe
-        try:
-            # Gerar espiral de Fibonacci aprimorada
-            r, theta = generate_fibonacci_spiral(2000)
-            x = r * np.cos(theta)
-            y = r * np.sin(theta)
-            
-            fig = go.Figure()
-            
-            # Adicionar fundo cósmico
-            for i in range(100):
-                star_x = np.random.uniform(min(x)-1, max(x)+1)
-                star_y = np.random.uniform(min(y)-1, max(y)+1)
-                fig.add_trace(go.Scatter(
-                    x=[star_x], y=[star_y],
-                    mode='markers',
-                    marker=dict(size=np.random.uniform(1, 3), color='white', opacity=0.5),
-                    showlegend=False,
-                    hoverinfo='skip'
-                ))
-            
-            # Espiral Áurea com gradiente
-            spiral_colors = [f'rgba{tuple(int(c*255) for c in mcolors.to_rgb(px.colors.sequential.Viridis[i % len(px.colors.sequential.Viridis)])) + (0.8,)}' 
-                            for i in range(len(x))]
-            
-            for i in range(len(x)-1):
-                fig.add_trace(go.Scatter(
-                    x=x[i:i+2], y=y[i:i+2],
-                    mode='lines',
-                    line=dict(width=4, color=spiral_colors[i]),
-                    showlegend=False,
-                    hoverinfo='skip'
-                ))
-            
-            # Pontos de Fibonacci com efeitos especiais
-            fibonacci_points = [1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
-            for i, point in enumerate(fibonacci_points):
-                if point < len(x):
-                    # Círculo de fundo
-                    fig.add_trace(go.Scatter(
-                        x=[x[point]], y=[y[point]],
-                        mode='markers',
-                        marker=dict(size=25, color='rgba(255, 107, 107, 0.3)'),
-                        showlegend=False,
-                        hoverinfo='skip'
-                    ))
-                    
-                    # Ponto principal
-                    fig.add_trace(go.Scatter(
-                        x=[x[point]], y=[y[point]],
-                        mode='markers+text',
-                        marker=dict(size=15, color='#ff6b6b', line=dict(width=2, color='white')),
-                        text=str(i+2),
-                        textfont=dict(size=14, color='white', family="Arial Black"),
-                        textposition='middle center',
-                        name=f'Fib({i+2})',
-                        hoverinfo='text',
-                        hovertext=f'Fibonacci {i+2}: {point}'
-                    ))
-            
-            fig.update_layout(
-                title=dict(
-                    text="🌻 Espiral de Fibonacci - Proporção Áurea na Natureza",
-                    font=dict(size=18, color='#ffd700')
-                ),
-                width=600,
-                height=500,
+        # Gerar espiral de Fibonacci aprimorada
+        r, theta = generate_fibonacci_spiral(2000)
+        x = r * np.cos(theta)
+        y = r * np.sin(theta)
+        
+        fig = go.Figure()
+        
+        # Adicionar fundo cósmico
+        for i in range(100):
+            star_x = np.random.uniform(min(x)-1, max(x)+1)
+            star_y = np.random.uniform(min(y)-1, max(y)+1)
+            fig.add_trace(go.Scatter(
+                x=[star_x], y=[star_y],
+                mode='markers',
+                marker=dict(size=np.random.uniform(1, 3), color='white', opacity=0.5),
                 showlegend=False,
-                paper_bgcolor='rgba(0,0,0,0)',
-                plot_bgcolor='rgba(0,0,0,0)',
-                xaxis=dict(visible=False, range=[min(x)-1, max(x)+1]),
-                yaxis=dict(visible=False, range=[min(y)-1, max(y)+1])
-            )
-            st.plotly_chart(fig, use_container_width=True)
-            
-        except NameError:
-            st.error("⚠️ Função `generate_fibonacci_spiral` não encontrada. Certifique-se de que ela está definida antes deste trecho.")
-            # Fallback: mostrar uma mensagem ou gráfico alternativo
-            st.info("Para usar esta funcionalidade, defina a função `generate_fibonacci_spiral(n_points)` que retorna arrays `r` e `theta`.")
+                hoverinfo='skip'
+            ))
+        
+        # Espiral Áurea com gradiente
+        spiral_colors = [f'rgba{tuple(int(c*255) for c in mcolors.to_rgb(px.colors.sequential.Viridis[i % len(px.colors.sequential.Viridis)])) + (0.8,)}' 
+                        for i in range(len(x))]
+        
+        for i in range(len(x)-1):
+            fig.add_trace(go.Scatter(
+                x=x[i:i+2], y=y[i:i+2],
+                mode='lines',
+                line=dict(width=4, color=spiral_colors[i]),
+                showlegend=False,
+                hoverinfo='skip'
+            ))
+        
+        # Pontos de Fibonacci com efeitos especiais
+        fibonacci_points = [1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+        for i, point in enumerate(fibonacci_points):
+            if point < len(x):
+                # Círculo de fundo
+                fig.add_trace(go.Scatter(
+                    x=[x[point]], y=[y[point]],
+                    mode='markers',
+                    marker=dict(size=25, color='rgba(255, 107, 107, 0.3)'),
+                    showlegend=False,
+                    hoverinfo='skip'
+                ))
+                
+                # Ponto principal
+                fig.add_trace(go.Scatter(
+                    x=[x[point]], y=[y[point]],
+                    mode='markers+text',
+                    marker=dict(size=15, color='#ff6b6b', line=dict(width=2, color='white')),
+                    text=str(i+2),
+                    textfont=dict(size=14, color='white', family="Arial Black"),
+                    textposition='middle center',
+                    name=f'Fib({i+2})',
+                    hoverinfo='text',
+                    hovertext=f'Fibonacci {i+2}: {point}'
+                ))
+        
+        fig.update_layout(
+            title=dict(
+                text="🌻 Espiral de Fibonacci - Proporção Áurea na Natureza",
+                font=dict(size=18, color='#ffd700')
+            ),
+            width=600,
+            height=500,
+            showlegend=False,
+            paper_bgcolor='rgba(0,0,0,0)',
+            plot_bgcolor='rgba(0,0,0,0)',
+            xaxis=dict(visible=False, range=[min(x)-1, max(x)+1]),
+            yaxis=dict(visible=False, range=[min(y)-1, max(y)+1])
+        )
+        st.plotly_chart(fig, use_container_width=True)
         
         st.markdown("""
         <div style='background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%); 
