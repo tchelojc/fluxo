@@ -5744,9 +5744,6 @@ Entre {nome} e a IA: Analisar, calcular tempo de respostas, avaliar nível conhe
 if section == "🌌 DEUS: JORNADA CÓSMICA":
     pagina_deus_caos()
     
-elif section == "🎭 MANIFESTO: Crítica Social":
-    pagina_manifesto_ignorantes()
-    
 # 2. FLUXO MATEMÁTICO SAGRADO
 elif section == "🔢 Fluxo Matemático Sagrado":
     st.header("🌀 O Fluxo Matemático Universal - A Linguagem de Deus")
@@ -5786,121 +5783,121 @@ elif section == "🔢 Fluxo Matemático Sagrado":
     col1, col2 = st.columns(2)
     
     with col1:
-            st.markdown("""
-            <div style='background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%); 
-                        padding: 25px; border-radius: 15px; border-left: 5px solid #ff6b6b; 
-                        box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);'>
-                
-                <b style='font-size: 1.2em; color: #e0e7ff;'>
-                    "A matemática é a linguagem com a qual Deus escreveu o universo." – Galileu Galilei
-                </b>
-                <br><br>
-                
-                <span style='color: #d1d5db;'>
-                    Uma jornada quântica através da consciência, da matemática cósmica e da dança entre o observador e a realidade. Acesse o portal no link abaixo:
-                </span>
-                <br><br>
-                
-                <a href="https://tchelojc.github.io/codigo_divino/" target="_blank" style="color: #9370db; text-decoration: none; font-weight: bold;">
-                    🌐 O Código Divino
-                </a>
-            </div>
-            """, unsafe_allow_html=True)
+        st.markdown("""
+        <div style='background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%); 
+                    padding: 25px; border-radius: 15px; border-left: 5px solid #ff6b6b; 
+                    box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);'>
             
-            st.markdown("""
-            <div style='background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%); 
-                        padding: 20px; border-radius: 15px; border: 2px solid rgba(255, 107, 107, 0.3);
-                        box-shadow: 0 5px 15px rgba(255, 107, 107, 0.2); margin: 20px 0;'>
-                <h3 style='color: #ff6b6b; text-align: center;'>🔢 Sequência 3-6-9 de Tesla</h3>
-            </div>
-            """, unsafe_allow_html=True)
+            <b style='font-size: 1.2em; color: #e0e7ff;'>
+                "A matemática é a linguagem com a qual Deus escreveu o universo." – Galileu Galilei
+            </b>
+            <br><br>
             
-            t = np.linspace(0, 4*np.pi, 1000)
-            fig = go.Figure()
+            <span style='color: #d1d5db;'>
+                Uma jornada quântica através da consciência, da matemática cósmica e da dança entre o observador e a realidade. Acesse o portal no link abaixo:
+            </span>
+            <br><br>
             
-            colors = ['#ff6b6b', '#4ecdc4', '#45b7d1']
-            
-            for i, n in enumerate([3, 6, 9]):
-                y = np.sin(n * t) * np.exp(-0.1 * t) * (1 + 0.5 * np.cos(n * t/2))
-                fig.add_trace(go.Scatter(
-                    x=t, y=y, 
-                    mode='lines', 
-                    name=f'Frequência {n} - Tesla',
-                    line=dict(width=5, color=colors[i]),
-                    fill='tozeroy',
-                    fillcolor=f'rgba{tuple(int(c*255) for c in mcolors.to_rgb(colors[i])) + (0.2,)}'
-                ))
-            
-            # Adicionar pontos de ressonância
-            resonance_points = []
-            for n in [3, 6, 9]:
-                for j in range(5):
-                    point = j * (4*np.pi/4)
-                    res_y = np.sin(n * point) * np.exp(-0.1 * point) * (1 + 0.5 * np.cos(n * point/2))
-                    resonance_points.append((point, res_y))
-            
-            resonance_x = [p[0] for p in resonance_points]
-            resonance_y = [p[1] for p in resonance_points]
-            
+            <a href="https://tchelojc.github.io/codigo_divino/" target="_blank" style="color: #9370db; text-decoration: none; font-weight: bold;">
+                🌐 O Código Divino
+            </a>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        st.markdown("""
+        <div style='background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%); 
+                    padding: 20px; border-radius: 15px; border: 2px solid rgba(255, 107, 107, 0.3);
+                    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.2); margin: 20px 0;'>
+            <h3 style='color: #ff6b6b; text-align: center;'>🔢 Sequência 3-6-9 de Tesla</h3>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        t = np.linspace(0, 4*np.pi, 1000)
+        fig = go.Figure()
+        
+        colors = ['#ff6b6b', '#4ecdc4', '#45b7d1']
+        
+        for i, n in enumerate([3, 6, 9]):
+            y = np.sin(n * t) * np.exp(-0.1 * t) * (1 + 0.5 * np.cos(n * t/2))
             fig.add_trace(go.Scatter(
-                x=resonance_x, y=resonance_y,
-                mode='markers',
-                marker=dict(size=8, color='gold', symbol='diamond'),
-                name='Pontos de Ressonância',
-                hoverinfo='skip'
+                x=t, y=y, 
+                mode='lines', 
+                name=f'Frequência {n} - Tesla',
+                line=dict(width=5, color=colors[i]),
+                fill='tozeroy',
+                fillcolor=f'rgba{tuple(int(c*255) for c in mcolors.to_rgb(colors[i])) + (0.2,)}'
             ))
-            
-            fig.update_layout(
-                height=500,
-                paper_bgcolor='rgba(0,0,0,0)',
-                plot_bgcolor='rgba(0,0,0,0)',
-                font=dict(color='white', size=14),
-                title=dict(
-                    text="⚡ Ressonância 3-6-9 - As Frequências Fundamentais de Tesla",
-                    font=dict(size=18, color='#ff6b6b')
-                ),
-                xaxis=dict(
-                    gridcolor='rgba(255,255,255,0.1)',
-                    zerolinecolor='rgba(255,255,255,0.3)',
-                    title='Tempo'
-                ),
-                yaxis=dict(
-                    gridcolor='rgba(255,255,255,0.1)',
-                    zerolinecolor='rgba(255,255,255,0.3)',
-                    title='Amplitude'
-                ),
-                legend=dict(
-                    bgcolor='rgba(15, 23, 42, 0.7)',
-                    bordercolor='rgba(255, 107, 107, 0.3)',
-                    borderwidth=1
-                )
+        
+        # Adicionar pontos de ressonância
+        resonance_points = []
+        for n in [3, 6, 9]:
+            for j in range(5):
+                point = j * (4*np.pi/4)
+                res_y = np.sin(n * point) * np.exp(-0.1 * point) * (1 + 0.5 * np.cos(n * point/2))
+                resonance_points.append((point, res_y))
+        
+        resonance_x = [p[0] for p in resonance_points]
+        resonance_y = [p[1] for p in resonance_points]
+        
+        fig.add_trace(go.Scatter(
+            x=resonance_x, y=resonance_y,
+            mode='markers',
+            marker=dict(size=8, color='gold', symbol='diamond'),
+            name='Pontos de Ressonância',
+            hoverinfo='skip'
+        ))
+        
+        fig.update_layout(
+            height=500,
+            paper_bgcolor='rgba(0,0,0,0)',
+            plot_bgcolor='rgba(0,0,0,0)',
+            font=dict(color='white', size=14),
+            title=dict(
+                text="⚡ Ressonância 3-6-9 - As Frequências Fundamentais de Tesla",
+                font=dict(size=18, color='#ff6b6b')
+            ),
+            xaxis=dict(
+                gridcolor='rgba(255,255,255,0.1)',
+                zerolinecolor='rgba(255,255,255,0.3)',
+                title='Tempo'
+            ),
+            yaxis=dict(
+                gridcolor='rgba(255,255,255,0.1)',
+                zerolinecolor='rgba(255,255,255,0.3)',
+                title='Amplitude'
+            ),
+            legend=dict(
+                bgcolor='rgba(15, 23, 42, 0.7)',
+                bordercolor='rgba(255, 107, 107, 0.3)',
+                borderwidth=1
             )
-            st.plotly_chart(fig, use_container_width=True)
+        )
+        st.plotly_chart(fig, use_container_width=True)
+        
+        st.markdown("""
+        <div style='background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%); 
+                    padding: 20px; border-radius: 15px; border: 2px solid rgba(255, 107, 107, 0.3);
+                    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.2);'>
+            <h4 style='color: #ff6b6b; text-align: center;'>Análise Matemática</h4>
             
-            st.markdown("""
-            <div style='background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%); 
-                        padding: 20px; border-radius: 15px; border: 2px solid rgba(255, 107, 107, 0.3);
-                        box-shadow: 0 5px 15px rgba(255, 107, 107, 0.2);'>
-                <h4 style='color: #ff6b6b; text-align: center;'>Análise Matemática</h4>
+            <div style='display: grid; grid-template-columns: 1fr; gap: 10px;'>
+                <div style='background: rgba(255, 107, 107, 0.1); padding: 12px; border-radius: 8px;'>
+                    <b style='color: #ff6b6b;'>3</b><br>
+                    <span style='color: #d1d5db; font-size: 0.9em;'>Representa a tríade cósmica (criação, preservação, transformação)</span>
+                </div>
                 
-                <div style='display: grid; grid-template-columns: 1fr; gap: 10px;'>
-                    <div style='background: rgba(255, 107, 107, 0.1); padding: 12px; border-radius: 8px;'>
-                        <b style='color: #ff6b6b;'>3</b><br>
-                        <span style='color: #d1d5db; font-size: 0.9em;'>Representa a tríade cósmica (criação, preservação, transformação)</span>
-                    </div>
-                    
-                    <div style='background: rgba(78, 205, 196, 0.1); padding: 12px; border-radius: 8px;'>
-                        <b style='color: #4ecdc4;'>6</b><br>
-                        <span style='color: #d1d5db; font-size: 0.9em;'>Harmonia e equilíbrio (hexagrama, estrela de David)</span>
-                    </div>
-                    
-                    <div style='background: rgba(69, 183, 209, 0.1); padding: 12px; border-radius: 8px;'>
-                        <b style='color: #45b7d1;'>9</b><br>
-                        <span style='color: #d1d5db; font-size: 0.9em;'>Singularidade e completude (3×3, ciclo máximo)</span>
-                    </div>
+                <div style='background: rgba(78, 205, 196, 0.1); padding: 12px; border-radius: 8px;'>
+                    <b style='color: #4ecdc4;'>6</b><br>
+                    <span style='color: #d1d5db; font-size: 0.9em;'>Harmonia e equilíbrio (hexagrama, estrela de David)</span>
+                </div>
+                
+                <div style='background: rgba(69, 183, 209, 0.1); padding: 12px; border-radius: 8px;'>
+                    <b style='color: #45b7d1;'>9</b><br>
+                    <span style='color: #d1d5db; font-size: 0.9em;'>Singularidade e completude (3×3, ciclo máximo)</span>
                 </div>
             </div>
-            """, unsafe_allow_html=True)
+        </div>
+        """, unsafe_allow_html=True)
     
     with col2:
         st.markdown("""
@@ -5911,78 +5908,85 @@ elif section == "🔢 Fluxo Matemático Sagrado":
         </div>
         """, unsafe_allow_html=True)
         
-        # Gerar espiral de Fibonacci aprimorada
-        r, theta = generate_fibonacci_spiral(2000)
-        x = r * np.cos(theta)
-        y = r * np.sin(theta)
-        
-        fig = go.Figure()
-        
-        # Adicionar fundo cósmico
-        for i in range(100):
-            star_x = np.random.uniform(min(x)-1, max(x)+1)
-            star_y = np.random.uniform(min(y)-1, max(y)+1)
-            fig.add_trace(go.Scatter(
-                x=[star_x], y=[star_y],
-                mode='markers',
-                marker=dict(size=np.random.uniform(1, 3), color='white', opacity=0.5),
-                showlegend=False,
-                hoverinfo='skip'
-            ))
-        
-        # Espiral Áurea com gradiente
-        spiral_colors = [f'rgba{tuple(int(c*255) for c in mcolors.to_rgb(px.colors.sequential.Viridis[i % len(px.colors.sequential.Viridis)])) + (0.8,)}' 
-                        for i in range(len(x))]
-        
-        for i in range(len(x)-1):
-            fig.add_trace(go.Scatter(
-                x=x[i:i+2], y=y[i:i+2],
-                mode='lines',
-                line=dict(width=4, color=spiral_colors[i]),
-                showlegend=False,
-                hoverinfo='skip'
-            ))
-        
-        # Pontos de Fibonacci com efeitos especiais
-        fibonacci_points = [1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
-        for i, point in enumerate(fibonacci_points):
-            if point < len(x):
-                # Círculo de fundo
+        # Verificar se a função generate_fibonacci_spiral existe
+        try:
+            # Gerar espiral de Fibonacci aprimorada
+            r, theta = generate_fibonacci_spiral(2000)
+            x = r * np.cos(theta)
+            y = r * np.sin(theta)
+            
+            fig = go.Figure()
+            
+            # Adicionar fundo cósmico
+            for i in range(100):
+                star_x = np.random.uniform(min(x)-1, max(x)+1)
+                star_y = np.random.uniform(min(y)-1, max(y)+1)
                 fig.add_trace(go.Scatter(
-                    x=[x[point]], y=[y[point]],
+                    x=[star_x], y=[star_y],
                     mode='markers',
-                    marker=dict(size=25, color='rgba(255, 107, 107, 0.3)'),
+                    marker=dict(size=np.random.uniform(1, 3), color='white', opacity=0.5),
                     showlegend=False,
                     hoverinfo='skip'
                 ))
-                
-                # Ponto principal
+            
+            # Espiral Áurea com gradiente
+            spiral_colors = [f'rgba{tuple(int(c*255) for c in mcolors.to_rgb(px.colors.sequential.Viridis[i % len(px.colors.sequential.Viridis)])) + (0.8,)}' 
+                            for i in range(len(x))]
+            
+            for i in range(len(x)-1):
                 fig.add_trace(go.Scatter(
-                    x=[x[point]], y=[y[point]],
-                    mode='markers+text',
-                    marker=dict(size=15, color='#ff6b6b', line=dict(width=2, color='white')),
-                    text=str(i+2),
-                    textfont=dict(size=14, color='white', family="Arial Black"),
-                    textposition='middle center',
-                    name=f'Fib({i+2})',
-                    hoverinfo='text',
-                    hovertext=f'Fibonacci {i+2}: {point}'
+                    x=x[i:i+2], y=y[i:i+2],
+                    mode='lines',
+                    line=dict(width=4, color=spiral_colors[i]),
+                    showlegend=False,
+                    hoverinfo='skip'
                 ))
-        
-        fig.update_layout(
-            title=dict(
-                text="🌻 Espiral de Fibonacci - Proporção Áurea na Natureza",
-                font=dict(size=18, color='#ffd700')
-            ),
-            width=600,
-            height=500,
-            showlegend=False,
-            paper_bgcolor='rgba(0,0,0,0)',
-            plot_bgcolor='rgba(0,0,0,0)',
-            xaxis=dict(visible=False, range=[min(x)-1, max(x)+1]),
-            yaxis=dict(visible=False, range=[min(y)-1, max(y)+1])
-        )
-        st.plotly_chart(fig, use_container_width=True)
+            
+            # Pontos de Fibonacci com efeitos especiais
+            fibonacci_points = [1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+            for i, point in enumerate(fibonacci_points):
+                if point < len(x):
+                    # Círculo de fundo
+                    fig.add_trace(go.Scatter(
+                        x=[x[point]], y=[y[point]],
+                        mode='markers',
+                        marker=dict(size=25, color='rgba(255, 107, 107, 0.3)'),
+                        showlegend=False,
+                        hoverinfo='skip'
+                    ))
+                    
+                    # Ponto principal
+                    fig.add_trace(go.Scatter(
+                        x=[x[point]], y=[y[point]],
+                        mode='markers+text',
+                        marker=dict(size=15, color='#ff6b6b', line=dict(width=2, color='white')),
+                        text=str(i+2),
+                        textfont=dict(size=14, color='white', family="Arial Black"),
+                        textposition='middle center',
+                        name=f'Fib({i+2})',
+                        hoverinfo='text',
+                        hovertext=f'Fibonacci {i+2}: {point}'
+                    ))
+            
+            fig.update_layout(
+                title=dict(
+                    text="🌻 Espiral de Fibonacci - Proporção Áurea na Natureza",
+                    font=dict(size=18, color='#ffd700')
+                ),
+                width=600,
+                height=500,
+                showlegend=False,
+                paper_bgcolor='rgba(0,0,0,0)',
+                plot_bgcolor='rgba(0,0,0,0)',
+                xaxis=dict(visible=False, range=[min(x)-1, max(x)+1]),
+                yaxis=dict(visible=False, range=[min(y)-1, max(y)+1])
+            )
+            st.plotly_chart(fig, use_container_width=True)
+            
+        except NameError:
+            st.error("⚠️ Função `generate_fibonacci_spiral` não encontrada. Certifique-se de que ela está definida antes deste trecho.")
+            # Fallback: mostrar uma mensagem ou gráfico alternativo
+            st.info("Para usar esta funcionalidade, defina a função `generate_fibonacci_spiral(n_points)` que retorna arrays `r` e `theta`.")
         
         st.markdown("""
         <div style='background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%); 
