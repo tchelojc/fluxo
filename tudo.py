@@ -5806,100 +5806,101 @@ elif section == "🔢 Fluxo Matemático Sagrado":
                 </a>
             </div>
             """, unsafe_allow_html=True)
-        
-        st.markdown("""
-        <div style='background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%); 
-                    padding: 20px; border-radius: 15px; border: 2px solid rgba(255, 107, 107, 0.3);
-                    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.2); margin: 20px 0;'>
-        <h3 style='color: #ff6b6b; text-align: center;'>🔢 Sequência 3-6-9 de Tesla</h3>
-        </div>
-        """, unsafe_allow_html=True)
-        
-        t = np.linspace(0, 4*np.pi, 1000)
-        fig = go.Figure()
-        
-        colors = ['#ff6b6b', '#4ecdc4', '#45b7d1']
-        
-        for i, n in enumerate([3, 6, 9]):
-            y = np.sin(n * t) * np.exp(-0.1 * t) * (1 + 0.5 * np.cos(n * t/2))
+            
+            st.markdown("""
+            <div style='background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%); 
+                        padding: 20px; border-radius: 15px; border: 2px solid rgba(255, 107, 107, 0.3);
+                        box-shadow: 0 5px 15px rgba(255, 107, 107, 0.2); margin: 20px 0;'>
+                <h3 style='color: #ff6b6b; text-align: center;'>🔢 Sequência 3-6-9 de Tesla</h3>
+            </div>
+            """, unsafe_allow_html=True)
+            
+            t = np.linspace(0, 4*np.pi, 1000)
+            fig = go.Figure()
+            
+            colors = ['#ff6b6b', '#4ecdc4', '#45b7d1']
+            
+            for i, n in enumerate([3, 6, 9]):
+                y = np.sin(n * t) * np.exp(-0.1 * t) * (1 + 0.5 * np.cos(n * t/2))
+                fig.add_trace(go.Scatter(
+                    x=t, y=y, 
+                    mode='lines', 
+                    name=f'Frequência {n} - Tesla',
+                    line=dict(width=5, color=colors[i]),
+                    fill='tozeroy',
+                    fillcolor=f'rgba{tuple(int(c*255) for c in mcolors.to_rgb(colors[i])) + (0.2,)}'
+                ))
+            
+            # Adicionar pontos de ressonância
+            resonance_points = []
+            for n in [3, 6, 9]:
+                for j in range(5):
+                    point = j * (4*np.pi/4)
+                    res_y = np.sin(n * point) * np.exp(-0.1 * point) * (1 + 0.5 * np.cos(n * point/2))
+                    resonance_points.append((point, res_y))
+            
+            resonance_x = [p[0] for p in resonance_points]
+            resonance_y = [p[1] for p in resonance_points]
+            
             fig.add_trace(go.Scatter(
-                x=t, y=y, 
-                mode='lines', 
-                name=f'Frequência {n} - Tesla',
-                line=dict(width=5, color=colors[i]),
-                fill='tozeroy',
-                fillcolor=f'rgba{tuple(int(c*255) for c in mcolors.to_rgb(colors[i])) + (0.2,)}'
+                x=resonance_x, y=resonance_y,
+                mode='markers',
+                marker=dict(size=8, color='gold', symbol='diamond'),
+                name='Pontos de Ressonância',
+                hoverinfo='skip'
             ))
-        
-        # Adicionar pontos de ressonância
-        resonance_points = []
-        for n in [3, 6, 9]:
-            for i in range(5):
-                point = i * (4*np.pi/4)
-                resonance_points.append((point, np.sin(n * point) * np.exp(-0.1 * point) * (1 + 0.5 * np.cos(n * point/2))))
-        
-        resonance_x = [p[0] for p in resonance_points]
-        resonance_y = [p[1] for p in resonance_points]
-        
-        fig.add_trace(go.Scatter(
-            x=resonance_x, y=resonance_y,
-            mode='markers',
-            marker=dict(size=8, color='gold', symbol='diamond'),
-            name='Pontos de Ressonância',
-            hoverinfo='skip'
-        ))
-        
-        fig.update_layout(
-            height=500,
-            paper_bgcolor='rgba(0,0,0,0)',
-            plot_bgcolor='rgba(0,0,0,0)',
-            font=dict(color='white', size=14),
-            title=dict(
-                text="⚡ Ressonância 3-6-9 - As Frequências Fundamentais de Tesla",
-                font=dict(size=18, color='#ff6b6b')
-            ),
-            xaxis=dict(
-                gridcolor='rgba(255,255,255,0.1)',
-                zerolinecolor='rgba(255,255,255,0.3)',
-                title='Tempo'
-            ),
-            yaxis=dict(
-                gridcolor='rgba(255,255,255,0.1)',
-                zerolinecolor='rgba(255,255,255,0.3)',
-                title='Amplitude'
-            ),
-            legend=dict(
-                bgcolor='rgba(15, 23, 42, 0.7)',
-                bordercolor='rgba(255, 107, 107, 0.3)',
-                borderwidth=1
+            
+            fig.update_layout(
+                height=500,
+                paper_bgcolor='rgba(0,0,0,0)',
+                plot_bgcolor='rgba(0,0,0,0)',
+                font=dict(color='white', size=14),
+                title=dict(
+                    text="⚡ Ressonância 3-6-9 - As Frequências Fundamentais de Tesla",
+                    font=dict(size=18, color='#ff6b6b')
+                ),
+                xaxis=dict(
+                    gridcolor='rgba(255,255,255,0.1)',
+                    zerolinecolor='rgba(255,255,255,0.3)',
+                    title='Tempo'
+                ),
+                yaxis=dict(
+                    gridcolor='rgba(255,255,255,0.1)',
+                    zerolinecolor='rgba(255,255,255,0.3)',
+                    title='Amplitude'
+                ),
+                legend=dict(
+                    bgcolor='rgba(15, 23, 42, 0.7)',
+                    bordercolor='rgba(255, 107, 107, 0.3)',
+                    borderwidth=1
+                )
             )
-        )
-        st.plotly_chart(fig, use_container_width=True)
-        
-        st.markdown("""
-        <div style='background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%); 
-                    padding: 20px; border-radius: 15px; border: 2px solid rgba(255, 107, 107, 0.3);
-                    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.2);'>
-        <h4 style='color: #ff6b6b; text-align: center;'>Análise Matemática</h4>
-        
-        <div style='display: grid; grid-template-columns: 1fr; gap: 10px;'>
-        <div style='background: rgba(255, 107, 107, 0.1); padding: 12px; border-radius: 8px;'>
-        <b style='color: #ff6b6b;'>3</b><br>
-        <span style='color: #d1d5db; font-size: 0.9em;'>Representa a tríade cósmica (criação, preservação, transformação)</span>
-        </div>
-        
-        <div style='background: rgba(78, 205, 196, 0.1); padding: 12px; border-radius: 8px;'>
-        <b style='color: #4ecdc4;'>6</b><br>
-        <span style='color: #d1d5db; font-size: 0.9em;'>Harmonia e equilíbrio (hexagrama, estrela de David)</span>
-        </div>
-        
-        <div style='background: rgba(69, 183, 209, 0.1); padding: 12px; border-radius: 8px;'>
-        <b style='color: #45b7d1;'>9</b><br>
-        <span style='color: #d1d5db; font-size: 0.9em;'>Singularidade e completude (3×3, ciclo máximo)</span>
-        </div>
-        </div>
-        </div>
-        """, unsafe_allow_html=True)
+            st.plotly_chart(fig, use_container_width=True)
+            
+            st.markdown("""
+            <div style='background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%); 
+                        padding: 20px; border-radius: 15px; border: 2px solid rgba(255, 107, 107, 0.3);
+                        box-shadow: 0 5px 15px rgba(255, 107, 107, 0.2);'>
+                <h4 style='color: #ff6b6b; text-align: center;'>Análise Matemática</h4>
+                
+                <div style='display: grid; grid-template-columns: 1fr; gap: 10px;'>
+                    <div style='background: rgba(255, 107, 107, 0.1); padding: 12px; border-radius: 8px;'>
+                        <b style='color: #ff6b6b;'>3</b><br>
+                        <span style='color: #d1d5db; font-size: 0.9em;'>Representa a tríade cósmica (criação, preservação, transformação)</span>
+                    </div>
+                    
+                    <div style='background: rgba(78, 205, 196, 0.1); padding: 12px; border-radius: 8px;'>
+                        <b style='color: #4ecdc4;'>6</b><br>
+                        <span style='color: #d1d5db; font-size: 0.9em;'>Harmonia e equilíbrio (hexagrama, estrela de David)</span>
+                    </div>
+                    
+                    <div style='background: rgba(69, 183, 209, 0.1); padding: 12px; border-radius: 8px;'>
+                        <b style='color: #45b7d1;'>9</b><br>
+                        <span style='color: #d1d5db; font-size: 0.9em;'>Singularidade e completude (3×3, ciclo máximo)</span>
+                    </div>
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
     
     with col2:
         st.markdown("""
