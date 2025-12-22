@@ -5786,15 +5786,26 @@ elif section == "🔢 Fluxo Matemático Sagrado":
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("""
-        <div style='background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%); 
-                    padding: 25px; border-radius: 15px; border-left: 5px solid #ff6b6b; 
-                    box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);'>
-        <b style='font-size: 1.2em; color: #e0e7ff;'>"A matemática é a linguagem com a qual Deus escreveu o universo." - Galileo Galilei</b><br><br>
-        
-        <span style='color: #d1d5db;'>O Fluxo Matemático revela os padrões fundamentais da criação:</span>
-        </div>
-        """, unsafe_allow_html=True)
+            st.markdown("""
+            <div style='background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%); 
+                        padding: 25px; border-radius: 15px; border-left: 5px solid #ff6b6b; 
+                        box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);'>
+                
+                <b style='font-size: 1.2em; color: #e0e7ff;'>
+                    "A matemática é a linguagem com a qual Deus escreveu o universo." – Galileu Galilei
+                </b>
+                <br><br>
+                
+                <span style='color: #d1d5db;'>
+                    Uma jornada quântica através da consciência, da matemática cósmica e da dança entre o observador e a realidade. Acesse o portal no link abaixo:
+                </span>
+                <br><br>
+                
+                <a href="https://tchelojc.github.io/codigo_divino/" target="_blank" style="color: #9370db; text-decoration: none; font-weight: bold;">
+                    🌐 O Código Divino
+                </a>
+            </div>
+            """, unsafe_allow_html=True)
         
         st.markdown("""
         <div style='background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%); 
