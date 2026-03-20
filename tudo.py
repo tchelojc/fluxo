@@ -5744,6 +5744,10 @@ Entre {nome} e a IA: Analisar, calcular tempo de respostas, avaliar nível conhe
 if section == "🌌 DEUS: JORNADA CÓSMICA":
     pagina_deus_caos()
     
+elif section == "🎭 MANIFESTO: Crítica Social":
+    pagina_manifesto_ignorantes()
+    
+# 2. FLUXO MATEMÁTICO SAGRADO
 elif section == "🔢 Fluxo Matemático Sagrado":
     st.header("🌀 O Fluxo Matemático Universal - A Linguagem de Deus")
     
