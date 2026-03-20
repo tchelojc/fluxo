@@ -5259,18 +5259,16 @@ Entre {nome} e a IA: Analisar, calcular tempo de respostas, avaliar nível conhe
                             """)
                     else:
                         st.warning("⚠️ Preencha todos os campos para começar a pedalar cosmicamente")
-            
-            with col_btn2:
-                if 'prompt_gerado' in st.session_state:
-                    if st.button("📋 COPIAR PROMPT CÓSMICO", use_container_width=True):
-                        # CORREÇÃO: Copiar para área de transferência
-                        import pyperclip
-                        pyperclip.copy(st.session_state.prompt_gerado)
-                        st.info("""
-                        **📋 PROMPT DA BICICLETA CÓSMICA COPIADO!**
-                        
-                        Cole em qualquer IA para análise do movimento divino
-                        """)
+                    
+        with col_btn2:
+            if 'prompt_gerado' in st.session_state:
+                if st.button("📋 COPIAR PROMPT CÓSMICO", use_container_width=True):
+                    st.code(st.session_state.prompt_gerado, language='text')
+                    st.info("""
+                    **📋 PROMPT DA BICICLETA CÓSMICA GERADO!**
+                    
+                    Copie o texto acima manualmente usando o botão de cópia no canto superior direito do bloco de código.
+                    """)
 
         # PROTOCOLO ZYON FLUX - CORRIGIDO E MELHORADO (SUBSTITUINDO O ANTERIOR)
         with st.expander("🌀 **PROTOCOLO ZYON FLUX - EQUILÍBRIO DA ALMA E ESPÍRITO**", expanded=False):
@@ -5494,16 +5492,15 @@ Entre {nome} e a IA: Analisar, calcular tempo de respostas, avaliar nível conhe
                 # CORREÇÃO AQUI: Botão para copiar o prompt COMPLETO (ambos combinados)
                 if 'prompt_completo' in st.session_state:
                     if st.button("📄 COPIAR PROMPT COMPLETO", use_container_width=True):
-                        import pyperclip
-                        pyperclip.copy(st.session_state.prompt_completo)
+                        st.code(st.session_state.prompt_completo, language='text')
                         st.success("""
-                        **🎉 PROMPT COMPLETO COPIADO!**
+                        **🎉 PROMPT COMPLETO GERADO!**
                         
-                        **📋 O que foi copiado:**
+                        **📋 O que foi gerado:**
                         - PROTOCOLO JOGADOR 01 (Bicicleta da Alma Cósmica)
                         - PROTOCOLO ZYON FLUX (Equilíbrio Alma-Espírito)
                         
-                        **🚀 Cole em qualquer IA para análise cósmica completa!**
+                        Copie o texto acima manualmente usando o botão de cópia no canto superior direito do bloco de código.
                         """)
                 else:
                     if st.button("📄 COPIAR PROMPT COMPLETO", use_container_width=True, disabled=True):
