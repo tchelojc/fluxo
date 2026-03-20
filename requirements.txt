@@ -10,4 +10,3 @@ streamlit-folium>=0.20
 sympy>=1.12
 astropy>=5.3.2
 networkx>=3.1
-pyperclip>=1.8.2
